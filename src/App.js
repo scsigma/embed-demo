@@ -27,7 +27,9 @@ const MainDiv = styled.div`
 const App = () => {
   return (
     <MainDiv className='main-div'>
-      <Navbar className='nav-bar'/>
+      <div className='navbar container'>
+        <Navbar className='nav-bar'/>
+      </div>
       <div className='below navbar div' style={{"height":"100%", "display":"flex"}}>
         <div className='sidebarcontainer-div' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
           <Sidebar className='side-bar' style={{"height": "100%"}}/>
