@@ -10,6 +10,11 @@ import { KPISection } from './components/KPIs/KPISection.js';
 import { OrdersKpi } from './components/SingleValueKPI/KPI.js';
 import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
 
+// NEW SECTION
+import { KPI } from './components/newKPIs/KPI.js';
+import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
+
+
 
 import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
 
@@ -30,23 +35,11 @@ const ClickPath = () => {
 
 }
 
-const Main = () => {
-  const [currPage, setCurrPage] = useState(2);
-  const [currClick, setCurrClick] = useState(2);
-
-  const changeClick = () => {
-    setCurrClick(currClick === 1 ? 2 : 1);
-  }
-
-  return { currPage, currClick };
-}
-
-
 
 const App = () => {
-  // const {currPage, currClick} = Main();
 
-  const [currPage, setCurrPage] = useState(2);
+
+  const [currPage, setCurrPage] = useState(3);
   const [currClick, setCurrClick] = useState(2);
 
   const changeClick = () => {
@@ -110,8 +103,47 @@ const App = () => {
 
   else if (currPage === 3) {
     return (
-      <div>
-        page3
+      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
+        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column","border":"1px solid blue"}}>
+          
+          <div className='navbar-container'>
+            <Navbar className='navbar'/>
+          </div>
+
+          <div className='below-navbar-container' style={{"height":"100%", "display":"flex", "border":"1px solid red"}}>
+            <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
+              <Sidebar className='side-bar' style={{"height": "100%"}}/>
+              <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
+                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"black"}}></img>
+              </div>
+            </div>
+
+            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "flexDirection":"column"}}>
+              <div className='kpis-div' style={{"width":"100%", "height":"200px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
+                <KPI mainNum={"218"} title={"Daily Orders"} firstNum={"-0.86"} secondNum={"+27.87"} thirdNum={"+32.33"}/>
+                <KPI mainNum={"$23,988"} title={"Daily Revenue"} firstNum={"-1.73"} secondNum={"+22.40"} thirdNum={"+28.06"}/>
+                <KPI mainNum={"197"} title={"Daily Customers"} firstNum={"-0.05"} secondNum={"+19.79"} thirdNum={"+32.34"}/>
+              </div>
+
+              <div className='table-and-embed-container' style={{"flex":"1", "display":"flex","backgroundColor":"beige", "justifyContent":"space-evenly","alignItems":"center"}}>
+                
+                <div className='table container' style={{"width":"40%"}} >
+                  <StyledTable />
+                </div>
+                
+                <div className='embed-container'>
+                  <PageEmbed />
+                </div>
+
+              
+              </div>
+            </div>
+          </div>
+
+          
+          
+          
+        </div>
       </div>
     );
   }
