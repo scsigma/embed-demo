@@ -43,10 +43,18 @@ const StyledProductFamily = styled.div`
   }
 `;
 
-export const ProductFamily = () => {
-  return (
+const renderProductFamily = (currStep) => {
+    if (currStep < 5) {
+        return "All Product Families"
+    } else {
+        return "Computers"
+    }
+}
+
+export const ProductFamily = ({ currStep }) => {
+    return (
     <StyledProductFamily>
-      <div className="text-wrapper-18">All Product Families</div>
+      <div className="text-wrapper-18">{renderProductFamily(currStep)}</div>
       {/* <Caret className="caret-instance" color="#8F8F8F" /> */}
     </StyledProductFamily>
   );

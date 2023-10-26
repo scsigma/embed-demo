@@ -1,6 +1,6 @@
 import React from "react";
-import { MagnifyingGlass } from "./icons/MagnifyingGlass";
-import { SizeMediumStyleFilled1 } from "./icons/StyleMediumStyleFilled1";
+import { MagnifyingGlass } from "./icons/MagnifyingGlass/MagnifyingGlass.js";
+import { SizeMediumStyleFilled1 } from "./icons/SizeMediumStyleFilled1/SizeMediumStyleFilled1.js";
 import styled from "styled-components";
 
 const StyledFilterDropdown = styled.div`
@@ -11,7 +11,7 @@ const StyledFilterDropdown = styled.div`
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  z-index: 1;
+  width: 240px;
 
   & .frame {
     align-items: flex-start;
@@ -149,7 +149,7 @@ const StyledFilterDropdown = styled.div`
   }
 
   & .text-wrapper-3 {
-    color: black;
+    color: var(--textneutral-soft);
     font-family: var(--presets-copy-copy-default-font-family);
     font-size: var(--presets-copy-copy-default-font-size);
     font-style: var(--presets-copy-copy-default-font-style);
@@ -162,14 +162,14 @@ const StyledFilterDropdown = styled.div`
   }
 `;
 
-export const FilterDropdown = () => {
+export const ProductFamilyDropdown = () => {
   return (
     <StyledFilterDropdown>
       <div className="frame">
         <div className="div" style={{"backgroundColor":"#f8f8f8"}}>
           <MagnifyingGlass className="magnifying-glass" color="#B0B0B0" />
           <div className="text-wrapper">Search</div>
-          <div className="sort-descending-wrapper" >
+          <div className="sort-descending-wrapper">
             <SizeMediumStyleFilled1 className="sort-descending" />
           </div>
         </div>
@@ -178,27 +178,27 @@ export const FilterDropdown = () => {
         <div className="frame-2">
           <div className="list-item">
             <div className="text">
-              <div className="text-wrapper-2">Nick Holmes</div>
+              <div className="text-wrapper-2">Computers</div>
             </div>
           </div>
           <div className="list-item-2">
             <div className="text">
-              <div className="text-wrapper-3">Lucy Daniels</div>
+              <div className="text-wrapper-3">Mobiles</div>
             </div>
           </div>
           <div className="list-item-2">
             <div className="text">
-              <div className="text-wrapper-3">Charlize Richardson</div>
+              <div className="text-wrapper-3">Music</div>
             </div>
           </div>
           <div className="list-item-2">
             <div className="text">
-              <div className="text-wrapper-3">Julius Squire</div>
+              <div className="text-wrapper-3">Media &amp; Entertainment</div>
             </div>
           </div>
           <div className="list-item-2">
             <div className="text">
-              <div className="text-wrapper-3">Ethan Khan</div>
+              <div className="text-wrapper-3">Accessories</div>
             </div>
           </div>
         </div>

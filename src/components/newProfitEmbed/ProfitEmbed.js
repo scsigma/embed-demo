@@ -4,6 +4,8 @@ import { BarChart } from "./sections/BarChart/BarChart.js";
 import { CustomerName } from "./sections/CustomerName/CustomerName.js";
 import { KpIs } from "./sections/KPIs/KPIs.js";
 import { ProductFamily } from "./sections/ProductFamily/ProductFamily.js";
+import { FilterDropdown } from "../filterDropdown/FilterDropdown.js";
+import { ProductFamilyDropdown } from "../productFamilyDropdown/ProductFamilyDropdown.js";
 
 const StyledPageEmbed = styled.div`
   display: flex;
@@ -36,15 +38,27 @@ const StyledPageEmbed = styled.div`
   }
 `;
 
-export const PageEmbed = () => {
+export const PageEmbed = ({ currStep }) => {
   return (
     <StyledPageEmbed>
       <div className="div-2">
         <div className="text-wrapper-19">Profit Snapshot</div>
-        <KpIs />
-        <BarChart />
-        <CustomerName />
-        <ProductFamily />
+        <KpIs currStep={currStep} />
+        {currStep === 1 ? 
+          <div className="filter-modal-container" style={{"width":"245px", "height":"195px", "paddingLeft":"5px", "paddingRight":"5px", "paddingTop":"5px", "top":"88px","left":"69px","zIndex":"1","position":"absolute", "backgroundColor":"#ffffff", "borderRadius":"5px","boxShadow":"0px 2px 5px rgba(0, 0, 0, 0.2)"}}>
+            <FilterDropdown style={{"z-index":"1"}} />
+          </div> 
+          : <div className="empty-placeholder"></div>
+        }
+        {currStep === 4 ? 
+          <div className="productfamily-filter-modal-container" style={{"width":"245px", "height":"195px", "paddingLeft":"5px", "paddingRight":"5px", "paddingTop":"5px", "top":"88px","left":"343px","zIndex":"1","position":"absolute", "backgroundColor":"#ffffff", "borderRadius":"5px","boxShadow":"0px 2px 5px rgba(0, 0, 0, 0.2)"}}>
+            <ProductFamilyDropdown style={{"z-index":"1"}} />
+          </div> 
+          : <div className="empty-placeholder"></div>
+        }
+        <BarChart currStep={currStep} />
+        <CustomerName currStep={currStep} />
+        <ProductFamily currStep={currStep}/>
       </div>
     </StyledPageEmbed>
   );

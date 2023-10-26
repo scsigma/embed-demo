@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React from "react";
 import styled from "styled-components";
 
@@ -104,7 +105,29 @@ const StyledKpIs = styled.div`
   }
 `;
 
-export const KpIs = () => {
+const renderValues = (currStep) => {
+    if (currStep < 2) {
+        return {
+            "percentage": "100.0%",
+            "totalProfit": "$3.18M",
+            "customerRank": "0"
+        }
+    } else if (currStep === 2) {
+        return {
+            "percentage": "2.8%",
+            "totalProfit": "$89.4k",
+            "customerRank": "2"
+        }
+    } else {
+        return {
+            "percentage": "1.4%",
+            "totalProfit": "$44.5k",
+            "customerRank": "3"
+        }
+    }
+}
+
+export const KpIs = ({ currStep }) => {
   return (
     <StyledKpIs>
       <div className="total-profit">
@@ -118,7 +141,7 @@ export const KpIs = () => {
           </div>
           <div className="frame-wrapper">
             <div className="div">
-              <div className="text-wrapper-2">100.0%</div>
+              <div className="text-wrapper-2">{renderValues(currStep).percentage}</div>
             </div>
           </div>
         </div>
@@ -134,7 +157,7 @@ export const KpIs = () => {
           </div>
           <div className="frame-wrapper">
             <div className="div">
-              <div className="text-wrapper-2">$3.18M</div>
+              <div className="text-wrapper-2">{renderValues(currStep).totalProfit}</div>
             </div>
           </div>
         </div>
@@ -150,7 +173,7 @@ export const KpIs = () => {
           </div>
           <div className="frame-wrapper">
             <div className="div">
-              <div className="text-wrapper-2">0</div>
+              <div className="text-wrapper-2">{renderValues(currStep).customerRank}</div>
             </div>
           </div>
         </div>

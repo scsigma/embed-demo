@@ -13,7 +13,7 @@ import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
 // NEW SECTION
 import { KPI } from './components/newKPIs/KPI.js';
 import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
-
+import { FilterDropdown } from './components/filterDropdown/FilterDropdown.js';
 
 
 import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
@@ -31,16 +31,21 @@ const MainDiv = styled.div`
   right: 0;
 `;
 
-const ClickPath = () => {
 
-}
 
 
 const App = () => {
 
 
   const [currPage, setCurrPage] = useState(3);
+
   const [currClick, setCurrClick] = useState(2);
+
+  const [currStep, setCurrStep] = useState(0);
+
+  const nextStep = () => {
+    setCurrStep(currStep + 1);
+  }
 
   const changeClick = () => {
     setCurrClick(currClick === 1 ? 2 : 1);
@@ -104,6 +109,9 @@ const App = () => {
   else if (currPage === 3) {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
+        
+        <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
+        
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column","border":"1px solid blue"}}>
           
           <div className='navbar-container'>
@@ -132,7 +140,7 @@ const App = () => {
                 </div>
                 
                 <div className='embed-container'>
-                  <PageEmbed />
+                  <PageEmbed currStep={currStep}/>
                 </div>
 
               

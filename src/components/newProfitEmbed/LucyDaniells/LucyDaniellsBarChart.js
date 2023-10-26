@@ -1,21 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { NickHolmes } from "../../NickHolmes/NickHolmesBarChart";
-import { LucyDaniells } from "../../LucyDaniells/LucyDaniellsBarChart";
 
-const StyledBarChart = styled.div`
+const StyledBox = styled.div`
   height: 302px;
-  left: 8px;
-  position: absolute;
-  top: 177px;
-  width: 594px;
+  position: relative;
+  width: 596px;
+
+  & .bar-chart {
+    height: 302px;
+    position: relative;
+    top: 177px;
+    left: 8px;
+    width: 594px;
+  }
 
   & .overlap-group {
     height: 270px;
     left: 0;
     position: absolute;
     top: 32px;
-    width: 592px;
+    width: 596px;
   }
 
   & .y-axis {
@@ -32,7 +36,7 @@ const StyledBarChart = styled.div`
     left: 0;
     position: absolute;
     top: 4px;
-    width: 592px;
+    width: 596px;
   }
 
   & .product {
@@ -40,7 +44,7 @@ const StyledBarChart = styled.div`
     left: 5px;
     position: absolute;
     top: 0;
-    width: 591px;
+    width: 595px;
   }
 
   & .rectangle {
@@ -54,8 +58,8 @@ const StyledBarChart = styled.div`
     width: 26px;
   }
 
-  & .text-wrapper-4 {
-    color: #858585;
+  & .text-wrapper {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
@@ -66,6 +70,104 @@ const StyledBarChart = styled.div`
     position: absolute;
     text-align: right;
     top: 0;
+    width: 130px;
+  }
+
+  & .div {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 544px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 7px;
+    width: 47px;
+  }
+
+  & .product-2 {
+    height: 26px;
+    left: 0;
+    position: absolute;
+    top: 48px;
+    width: 419px;
+  }
+
+  & .rectangle-2 {
+    background-color: #0270e0;
+    border-radius: 2.38px 2.38px 0px 0px;
+    height: 216px;
+    left: 244px;
+    position: absolute;
+    top: -95px;
+    transform: rotate(90deg);
+    width: 26px;
+  }
+
+  & .text-wrapper-2 {
+    color: #8f8f8f;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 26px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 136px;
+  }
+
+  & .text-wrapper-3 {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 365px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 3px;
+    width: 50px;
+  }
+
+  & .product-3 {
+    height: 26px;
+    left: 6px;
+    position: absolute;
+    top: 93px;
+    width: 363px;
+  }
+
+  & .rectangle-3 {
+    background-color: #0270e0;
+    border-radius: 2.38px 2.38px 0px 0px;
+    height: 166px;
+    left: 213px;
+    position: absolute;
+    top: -70px;
+    transform: rotate(90deg);
+    width: 26px;
+  }
+
+  & .text-wrapper-4 {
+    color: #8f8f8f;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    height: 17px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 4px;
     width: 130px;
   }
 
@@ -75,46 +177,46 @@ const StyledBarChart = styled.div`
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 552px;
+    left: 310px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 8px;
-    width: 35px;
+    top: 3px;
+    width: 49px;
   }
 
-  & .product-2 {
-    height: 26px;
+  & .product-4 {
+    height: 27px;
     left: 0;
     position: absolute;
-    top: 48px;
-    width: 522px;
+    top: 137px;
+    width: 350px;
   }
 
-  & .rectangle-2 {
+  & .rectangle-4 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 330px;
-    left: 301px;
+    height: 157px;
+    left: 214px;
     position: absolute;
-    top: -152px;
+    top: -65px;
     transform: rotate(90deg);
-    width: 26px;
+    width: 27px;
   }
 
   & .text-wrapper-6 {
-    color: #858585;
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
-    height: 26px;
+    height: 17px;
     left: 0;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 0;
+    top: 5px;
     width: 136px;
   }
 
@@ -124,111 +226,13 @@ const StyledBarChart = styled.div`
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 480px;
+    left: 299px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
     top: 4px;
-    width: 38px;
-  }
-
-  & .product-3 {
-    height: 26px;
-    left: 6px;
-    position: absolute;
-    top: 93px;
-    width: 494px;
-  }
-
-  & .rectangle-3 {
-    background-color: #0270e0;
-    border-radius: 2.38px 2.38px 0px 0px;
-    height: 309px;
-    left: 284px;
-    position: absolute;
-    top: -141px;
-    transform: rotate(90deg);
-    width: 26px;
-  }
-
-  & .text-wrapper-8 {
-    color: #858585;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 17px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 130px;
-  }
-
-  & .text-wrapper-9 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 452px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 4px;
-    width: 38px;
-  }
-
-  & .product-4 {
-    height: 26px;
-    left: 0;
-    position: absolute;
-    top: 137px;
-    width: 421px;
-  }
-
-  & .rectangle-4 {
-    background-color: #0270e0;
-    border-radius: 2.38px 2.38px 0px 0px;
-    height: 231px;
-    left: 251px;
-    position: absolute;
-    top: -102px;
-    transform: rotate(90deg);
-    width: 26px;
-  }
-
-  & .text-wrapper-10 {
-    color: #858585;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 17px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 136px;
-  }
-
-  & .text-wrapper-11 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 383px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 34px;
+    width: 47px;
   }
 
   & .product-5 {
@@ -236,24 +240,24 @@ const StyledBarChart = styled.div`
     left: 23px;
     position: absolute;
     top: 182px;
-    width: 322px;
+    width: 223px;
   }
 
   & .rectangle-5 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 154px;
-    left: 190px;
+    height: 55px;
+    left: 140px;
     position: absolute;
-    top: -64px;
+    top: -14px;
     transform: rotate(90deg);
     width: 26px;
   }
 
-  & .text-wrapper-12 {
-    color: #858585;
+  & .text-wrapper-8 {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     height: 17px;
     left: 0;
@@ -265,19 +269,19 @@ const StyledBarChart = styled.div`
     width: 113px;
   }
 
-  & .text-wrapper-13 {
+  & .text-wrapper-9 {
     color: #000000;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 280px;
+    left: 173px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 4px;
-    width: 38px;
+    top: 3px;
+    width: 46px;
   }
 
   & .product-6 {
@@ -285,22 +289,22 @@ const StyledBarChart = styled.div`
     left: 1px;
     position: absolute;
     top: 227px;
-    width: 287px;
+    width: 234px;
   }
 
   & .rectangle-6 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 104px;
-    left: 187px;
+    height: 48px;
+    left: 159px;
     position: absolute;
-    top: -39px;
+    top: -11px;
     transform: rotate(90deg);
     width: 26px;
   }
 
-  & .text-wrapper-14 {
-    color: #858585;
+  & .text-wrapper-10 {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
@@ -314,23 +318,23 @@ const StyledBarChart = styled.div`
     width: 135px;
   }
 
-  & .text-wrapper-15 {
+  & .text-wrapper-11 {
     color: #000000;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 252px;
+    left: 186px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 4px;
-    width: 31px;
+    top: 3px;
+    width: 44px;
   }
 
-  & .text-wrapper-16 {
-    color: #181818;
+  & .text-wrapper-12 {
+    color: #171717;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 20px;
     font-weight: 600;
@@ -343,62 +347,47 @@ const StyledBarChart = styled.div`
   }
 `;
 
-export const BarChart = ({ currStep }) => {
-    
-    if (currStep < 2) {
-        return (
-          <StyledBarChart>
-            <div className="overlap-group">
-                <img className="y-axis" alt="Y axis" src="https://c.animaapp.com/sZtkOaW4/img/y-axis.svg" />
-                <div className="bars-and-labels">
-                <div className="product">
-                    <div className="rectangle" />
-                    <div className="text-wrapper-4">Finger and Hand Cymbals</div>
-                    <div className="text-wrapper-5">$547k</div>
-                </div>
-                <div className="product-2">
-                    <div className="rectangle-2" />
-                    <div className="text-wrapper-6">Brickaroid Digital Camera</div>
-                    <div className="text-wrapper-7">$322k</div>
-                </div>
-                <div className="product-3">
-                    <div className="rectangle-3" />
-                    <div className="text-wrapper-8">Aviz 15 Inch Laptop</div>
-                    <div className="text-wrapper-9">$301k</div>
-                </div>
-                <div className="product-4">
-                    <div className="rectangle-4" />
-                    <div className="text-wrapper-10">LP InkMaster Printer</div>
-                    <div className="text-wrapper-11">$219k</div>
-                </div>
-                <div className="product-5">
-                    <div className="rectangle-5" />
-                    <div className="text-wrapper-12">LiteFone 6 Edge</div>
-                    <div className="text-wrapper-13">$134k</div>
-                </div>
-                <div className="product-6">
-                    <div className="rectangle-6" />
-                    <div className="text-wrapper-14">USB-C Compatible Portable Charger</div>
-                    <div className="text-wrapper-15">$67k</div>
-                </div>
-                </div>
+export const LucyDaniells = () => {
+  return (
+    <StyledBox>
+      <div className="bar-chart">
+        <div className="overlap-group">
+          <img className="y-axis" alt="Y axis" src="https://c.animaapp.com/0wbB20wP/img/y-axis.svg" />
+          <div className="bars-and-labels">
+            <div className="product">
+              <div className="rectangle" />
+              <div className="text-wrapper">Aviz 15 Inch Laptop</div>
+              <div className="div">$8.02k</div>
             </div>
-            <div className="text-wrapper-16">Most Profitable Products</div>
-          </StyledBarChart>
-        );
-    }
-    // Nick Holmes BarChart
-    else if (currStep === 2) {
-      return (
-        <NickHolmes />
-      ); 
-    }
-
-    else if (currStep > 2) {
-      return (
-        <LucyDaniells />
-      );
-    }
-
-    
+            <div className="product-2">
+              <div className="rectangle-2" />
+              <div className="text-wrapper-2">BigView 55 Inch TV</div>
+              <div className="text-wrapper-3">$4.24k</div>
+            </div>
+            <div className="product-3">
+              <div className="rectangle-3" />
+              <div className="text-wrapper-4">SmartPhone 7 Neuro</div>
+              <div className="text-wrapper-5">$3.32k</div>
+            </div>
+            <div className="product-4">
+              <div className="rectangle-4" />
+              <div className="text-wrapper-6">Wireless Charger</div>
+              <div className="text-wrapper-7">$3.1k</div>
+            </div>
+            <div className="product-5">
+              <div className="rectangle-5" />
+              <div className="text-wrapper-8">Remote Controlled Vacuum</div>
+              <div className="text-wrapper-9">$970</div>
+            </div>
+            <div className="product-6">
+              <div className="rectangle-6" />
+              <div className="text-wrapper-10">OLED TriColor Floor Lamp</div>
+              <div className="text-wrapper-11">$746</div>
+            </div>
+          </div>
+        </div>
+        <div className="text-wrapper-12">Most Profitable Products</div>
+      </div>
+    </StyledBox>
+  );
 };

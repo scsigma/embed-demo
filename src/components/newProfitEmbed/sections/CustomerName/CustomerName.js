@@ -43,10 +43,20 @@ const StyledCustomerName = styled.div`
   }
 `;
 
-export const CustomerName = () => {
+const renderCustomerName = (currStep) => {
+    if (currStep < 2) {
+        return "All Customers"
+    } else if (currStep === 2) {
+        return "Nick Holmes"
+    } else if (currStep > 2) {
+        return "Lucy Daniells"
+    }
+}
+
+export const CustomerName = ({ currStep }) => {
   return (
     <StyledCustomerName>
-      <div className="text-wrapper-17">All Customers</div>
+      <div className="text-wrapper-17">{renderCustomerName(currStep)}</div>
       {/* <Caret className="size-24px-direction-down" color="#8F8F8F" /> */}
     </StyledCustomerName>
   );
