@@ -1,22 +1,25 @@
 import React from "react";
 import styled from "styled-components";
-import { NickHolmes } from "../../NickHolmes/NickHolmesBarChart";
-import { LucyDaniells } from "../../LucyDaniells/LucyDaniellsBarChart";
-import { ComputerBarChart } from "../../ComputerBarChart/ComputerBarChart";
 
-const StyledBarChart = styled.div`
+const StyledBox = styled.div`
   height: 302px;
-  left: 8px;
-  position: absolute;
-  top: 177px;
-  width: 594px;
+  position: relative;
+  width: 596px;
 
-  & .overlap-group {
+  & .bar-chart {
+    height: 302px;
+    position: relative;
+    top: 177px;
+    left: 8px;
+    width: 594px;
+  }
+
+  & .overlap {
     height: 270px;
     left: 0;
     position: absolute;
     top: 32px;
-    width: 592px;
+    width: 596px;
   }
 
   & .y-axis {
@@ -33,7 +36,7 @@ const StyledBarChart = styled.div`
     left: 0;
     position: absolute;
     top: 4px;
-    width: 592px;
+    width: 596px;
   }
 
   & .product {
@@ -41,7 +44,7 @@ const StyledBarChart = styled.div`
     left: 5px;
     position: absolute;
     top: 0;
-    width: 591px;
+    width: 595px;
   }
 
   & .rectangle {
@@ -55,8 +58,8 @@ const StyledBarChart = styled.div`
     width: 26px;
   }
 
-  & .text-wrapper-4 {
-    color: #858585;
+  & .text-wrapper {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
@@ -67,6 +70,104 @@ const StyledBarChart = styled.div`
     position: absolute;
     text-align: right;
     top: 0;
+    width: 130px;
+  }
+
+  & .div {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 544px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 7px;
+    width: 47px;
+  }
+
+  & .product-2 {
+    height: 26px;
+    left: 0;
+    position: absolute;
+    top: 48px;
+    width: 353px;
+  }
+
+  & .rectangle-2 {
+    background-color: #0270e0;
+    border-radius: 2.38px 2.38px 0px 0px;
+    height: 156px;
+    left: 214px;
+    position: absolute;
+    top: -65px;
+    transform: rotate(90deg);
+    width: 26px;
+  }
+
+  & .text-wrapper-2 {
+    color: #8f8f8f;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 26px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 136px;
+  }
+
+  & .text-wrapper-3 {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 299px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 3px;
+    width: 50px;
+  }
+
+  & .product-3 {
+    height: 26px;
+    left: 6px;
+    position: absolute;
+    top: 93px;
+    width: 332px;
+  }
+
+  & .rectangle-3 {
+    background-color: #0270e0;
+    border-radius: 2.38px 2.38px 0px 0px;
+    height: 148px;
+    left: 204px;
+    position: absolute;
+    top: -61px;
+    transform: rotate(90deg);
+    width: 26px;
+  }
+
+  & .text-wrapper-4 {
+    color: #8f8f8f;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 17px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 4px;
     width: 130px;
   }
 
@@ -76,46 +177,46 @@ const StyledBarChart = styled.div`
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 552px;
+    left: 279px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 8px;
-    width: 35px;
+    top: 3px;
+    width: 49px;
   }
 
-  & .product-2 {
-    height: 26px;
+  & .product-4 {
+    height: 27px;
     left: 0;
     position: absolute;
-    top: 48px;
-    width: 522px;
+    top: 137px;
+    width: 242px;
   }
 
-  & .rectangle-2 {
+  & .rectangle-4 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 330px;
-    left: 301px;
+    height: 55px;
+    left: 163px;
     position: absolute;
-    top: -152px;
+    top: -14px;
     transform: rotate(90deg);
-    width: 26px;
+    width: 27px;
   }
 
   & .text-wrapper-6 {
-    color: #858585;
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
-    height: 26px;
+    height: 17px;
     left: 0;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
-    top: 0;
+    top: 5px;
     width: 136px;
   }
 
@@ -125,111 +226,13 @@ const StyledBarChart = styled.div`
     font-size: 14px;
     font-weight: 400;
     height: 19px;
-    left: 480px;
+    left: 191px;
     letter-spacing: 0;
     line-height: 14px;
     position: absolute;
     text-align: right;
     top: 4px;
-    width: 38px;
-  }
-
-  & .product-3 {
-    height: 26px;
-    left: 6px;
-    position: absolute;
-    top: 93px;
-    width: 494px;
-  }
-
-  & .rectangle-3 {
-    background-color: #0270e0;
-    border-radius: 2.38px 2.38px 0px 0px;
-    height: 309px;
-    left: 284px;
-    position: absolute;
-    top: -141px;
-    transform: rotate(90deg);
-    width: 26px;
-  }
-
-  & .text-wrapper-8 {
-    color: #858585;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 17px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 130px;
-  }
-
-  & .text-wrapper-9 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 452px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 4px;
-    width: 38px;
-  }
-
-  & .product-4 {
-    height: 26px;
-    left: 0;
-    position: absolute;
-    top: 137px;
-    width: 421px;
-  }
-
-  & .rectangle-4 {
-    background-color: #0270e0;
-    border-radius: 2.38px 2.38px 0px 0px;
-    height: 231px;
-    left: 251px;
-    position: absolute;
-    top: -102px;
-    transform: rotate(90deg);
-    width: 26px;
-  }
-
-  & .text-wrapper-10 {
-    color: #858585;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 17px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 136px;
-  }
-
-  & .text-wrapper-11 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 383px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 5px;
-    width: 34px;
+    width: 47px;
   }
 
   & .product-5 {
@@ -237,22 +240,45 @@ const StyledBarChart = styled.div`
     left: 23px;
     position: absolute;
     top: 182px;
-    width: 322px;
+    width: 209px;
+  }
+
+  & .overlap-group {
+    height: 26px;
+    left: 126px;
+    position: absolute;
+    top: 0;
+    width: 79px;
   }
 
   & .rectangle-5 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 154px;
-    left: 190px;
+    height: 44px;
+    left: 9px;
     position: absolute;
-    top: -64px;
+    top: -9px;
     transform: rotate(90deg);
     width: 26px;
   }
 
-  & .text-wrapper-12 {
-    color: #858585;
+  & .text-wrapper-8 {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 33px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 3px;
+    width: 46px;
+  }
+
+  & .text-wrapper-9 {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
@@ -266,42 +292,50 @@ const StyledBarChart = styled.div`
     width: 113px;
   }
 
-  & .text-wrapper-13 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 280px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 4px;
-    width: 38px;
-  }
-
   & .product-6 {
     height: 26px;
     left: 1px;
     position: absolute;
     top: 227px;
-    width: 287px;
+    width: 222px;
+  }
+
+  & .overlap-2 {
+    height: 26px;
+    left: 148px;
+    position: absolute;
+    top: 0;
+    width: 70px;
   }
 
   & .rectangle-6 {
     background-color: #0270e0;
     border-radius: 2.38px 2.38px 0px 0px;
-    height: 104px;
-    left: 187px;
+    height: 33px;
+    left: 4px;
     position: absolute;
-    top: -39px;
+    top: -3px;
     transform: rotate(90deg);
     width: 26px;
   }
 
-  & .text-wrapper-14 {
-    color: #858585;
+  & .text-wrapper-10 {
+    color: #000000;
+    font-family: "Source Sans Pro", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    height: 19px;
+    left: 26px;
+    letter-spacing: 0;
+    line-height: 14px;
+    position: absolute;
+    text-align: right;
+    top: 3px;
+    width: 44px;
+  }
+
+  & .text-wrapper-11 {
+    color: #8f8f8f;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 14px;
     font-weight: 400;
@@ -315,23 +349,8 @@ const StyledBarChart = styled.div`
     width: 135px;
   }
 
-  & .text-wrapper-15 {
-    color: #000000;
-    font-family: "Source Sans Pro", Helvetica;
-    font-size: 14px;
-    font-weight: 400;
-    height: 19px;
-    left: 252px;
-    letter-spacing: 0;
-    line-height: 14px;
-    position: absolute;
-    text-align: right;
-    top: 4px;
-    width: 31px;
-  }
-
-  & .text-wrapper-16 {
-    color: #181818;
+  & .text-wrapper-12 {
+    color: #171717;
     font-family: "Source Sans Pro", Helvetica;
     font-size: 20px;
     font-weight: 600;
@@ -344,68 +363,51 @@ const StyledBarChart = styled.div`
   }
 `;
 
-export const BarChart = ({ currStep }) => {
-    
-    if (currStep < 2) {
-        return (
-          <StyledBarChart>
-            <div className="overlap-group">
-                <img className="y-axis" alt="Y axis" src="https://c.animaapp.com/sZtkOaW4/img/y-axis.svg" />
-                <div className="bars-and-labels">
-                <div className="product">
-                    <div className="rectangle" />
-                    <div className="text-wrapper-4">Finger and Hand Cymbals</div>
-                    <div className="text-wrapper-5">$547k</div>
-                </div>
-                <div className="product-2">
-                    <div className="rectangle-2" />
-                    <div className="text-wrapper-6">Brickaroid Digital Camera</div>
-                    <div className="text-wrapper-7">$322k</div>
-                </div>
-                <div className="product-3">
-                    <div className="rectangle-3" />
-                    <div className="text-wrapper-8">Aviz 15 Inch Laptop</div>
-                    <div className="text-wrapper-9">$301k</div>
-                </div>
-                <div className="product-4">
-                    <div className="rectangle-4" />
-                    <div className="text-wrapper-10">LP InkMaster Printer</div>
-                    <div className="text-wrapper-11">$219k</div>
-                </div>
-                <div className="product-5">
-                    <div className="rectangle-5" />
-                    <div className="text-wrapper-12">LiteFone 6 Edge</div>
-                    <div className="text-wrapper-13">$134k</div>
-                </div>
-                <div className="product-6">
-                    <div className="rectangle-6" />
-                    <div className="text-wrapper-14">USB-C Compatible Portable Charger</div>
-                    <div className="text-wrapper-15">$67k</div>
-                </div>
-                </div>
+export const ComputerBarChart = () => {
+  return (
+    <StyledBox>
+      <div className="bar-chart">
+        <div className="overlap">
+          <img className="y-axis" alt="Y axis" src="https://c.animaapp.com/qbf2hvpL/img/y-axis.svg" />
+          <div className="bars-and-labels">
+            <div className="product">
+              <div className="rectangle" />
+              <div className="text-wrapper">Aviz 15 Inch Laptop</div>
+              <div className="div">$8.02k</div>
             </div>
-            <div className="text-wrapper-16">Most Profitable Products</div>
-          </StyledBarChart>
-        );
-    }
-    // Nick Holmes BarChart
-    else if (currStep === 2) {
-      return (
-        <NickHolmes />
-      ); 
-    }
-
-    else if (currStep > 2 & currStep < 5) {
-      return (
-        <LucyDaniells />
-      );
-    }
-
-    else if (currStep >= 5) {
-      return (
-        <ComputerBarChart />
-      )
-    }
-
-    
+            <div className="product-2">
+              <div className="rectangle-2" />
+              <div className="text-wrapper-2">G15 Gaming Laptop</div>
+              <div className="text-wrapper-3">$3.32k</div>
+            </div>
+            <div className="product-3">
+              <div className="rectangle-3" />
+              <div className="text-wrapper-4">Airbook 8GB PC</div>
+              <div className="text-wrapper-5">$3.1k</div>
+            </div>
+            <div className="product-4">
+              <div className="rectangle-4" />
+              <div className="text-wrapper-6">24” OLED Monitor</div>
+              <div className="text-wrapper-7">$717</div>
+            </div>
+            <div className="product-5">
+              <div className="overlap-group">
+                <div className="rectangle-5" />
+                <div className="text-wrapper-8">$558</div>
+              </div>
+              <div className="text-wrapper-9">S100 GPU</div>
+            </div>
+            <div className="product-6">
+              <div className="overlap-2">
+                <div className="rectangle-6" />
+                <div className="text-wrapper-10">$437</div>
+              </div>
+              <div className="text-wrapper-11">External SSD</div>
+            </div>
+          </div>
+        </div>
+        <div className="text-wrapper-12">Most Profitable Products</div>
+      </div>
+    </StyledBox>
+  );
 };

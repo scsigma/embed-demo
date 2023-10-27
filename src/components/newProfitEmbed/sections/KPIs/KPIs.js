@@ -118,10 +118,16 @@ const renderValues = (currStep) => {
             "totalProfit": "$89.4k",
             "customerRank": "2"
         }
-    } else {
+    } else if (currStep > 2 & currStep < 5) {
         return {
             "percentage": "1.4%",
             "totalProfit": "$44.5k",
+            "customerRank": "3"
+        }
+    } else if (currStep >= 5) {
+        return {
+            "percentage": "0.8%",
+            "totalProfit": "$25.3k",
             "customerRank": "3"
         }
     }
