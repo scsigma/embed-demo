@@ -35,7 +35,7 @@ const MainDiv = styled.div`
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(4);
+  const [currPage, setCurrPage] = useState(3);
 
   const [currClick, setCurrClick] = useState(2);
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
@@ -133,9 +133,11 @@ const App = () => {
 
               <div className='table-and-embed-container' style={{"flex":"1", "display":"flex","backgroundColor":"beige", "justifyContent":"space-evenly","alignItems":"center"}}>
                 
-                <div className='table container' style={{"width":"40%"}} >
-                  <StyledTable />
+                <div className='table container' style={{backgroundColor: "lightgrey", padding: "13px", borderRadius: "14px", color: "black"}}>
+                  {/* <StyledTable /> */}
                   {/* <PlugsTable /> */}
+                  Recent Orders
+                  <SimpleTable currStep={currStep} />
                 </div>
                 
                 <div className='embed-container'>
