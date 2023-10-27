@@ -14,6 +14,7 @@ import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
 import { KPI } from './components/newKPIs/KPI.js';
 import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
 import { PlugsTable } from './components/tableComponent/plugsTable.js';
+import { SimpleTable } from './components/tableComponent/chakraTable.js';
 
 
 
@@ -33,11 +34,11 @@ const MainDiv = styled.div`
 
 const App = () => {
 
-
-  const [currPage, setCurrPage] = useState(3);
+  // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
+  const [currPage, setCurrPage] = useState(4);
 
   const [currClick, setCurrClick] = useState(2);
-
+  // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
   const [currStep, setCurrStep] = useState(0);
 
   const nextStep = () => {
@@ -145,13 +146,15 @@ const App = () => {
               </div>
             </div>
           </div>
-
-          
-          
-          
         </div>
       </div>
     );
+  }
+
+  else if (currPage === 4) {
+    return (
+      <SimpleTable />
+    )
   }
 }
 
