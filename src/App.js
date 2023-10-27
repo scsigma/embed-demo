@@ -13,7 +13,7 @@ import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
 // NEW SECTION
 import { KPI } from './components/newKPIs/KPI.js';
 import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
-import { FilterDropdown } from './components/filterDropdown/FilterDropdown.js';
+import { PlugsTable } from './components/tableComponent/plugsTable.js';
 
 
 import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
@@ -137,6 +137,7 @@ const App = () => {
                 
                 <div className='table container' style={{"width":"40%"}} >
                   <StyledTable />
+                  {/* <PlugsTable /> */}
                 </div>
                 
                 <div className='embed-container'>
