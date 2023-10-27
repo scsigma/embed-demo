@@ -16,9 +16,6 @@ import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
 import { PlugsTable } from './components/tableComponent/plugsTable.js';
 
 
-import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
-
-
 
 const MainDiv = styled.div`
   // border: 2px solid red;
