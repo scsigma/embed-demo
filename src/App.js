@@ -35,7 +35,7 @@ const MainDiv = styled.div`
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(3);
+  const [currPage, setCurrPage] = useState(4);
 
   const [currClick, setCurrClick] = useState(2);
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
@@ -104,6 +104,7 @@ const App = () => {
     );
   }
 
+  // THIS IS THE SUMMARY PAGE
   else if (currPage === 3) {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
@@ -153,10 +154,35 @@ const App = () => {
     );
   }
 
+  // THIS IS THE ANALYTICS PAGE
   else if (currPage === 4) {
     return (
-      <SimpleTable />
-    )
+      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
+        
+        <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
+        
+        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column","border":"1px solid blue"}}>
+          
+          <div className='navbar-container'>
+            <Navbar className='navbar'/>
+          </div>
+
+          <div className='below-navbar-container' style={{"height":"100%", "display":"flex", "border":"1px solid red"}}>
+            <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
+              <Sidebar className='side-bar' style={{"height": "100%"}}/>
+              <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
+                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
+              </div>
+            </div>
+
+            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "flexDirection":"column"}}>
+              HELLO
+            </div>
+
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
