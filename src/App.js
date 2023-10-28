@@ -174,7 +174,7 @@ const App = () => {
             </div>
 
             <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-              <AnalyticsPage />
+              <AnalyticsPage currStep={currStep} />
             </div>
 
           </div>

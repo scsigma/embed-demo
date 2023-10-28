@@ -4,12 +4,16 @@ import { TitleFilterKPIs } from "./title-filters-kpis/TitleFilterKpis";
 import { SigmaFooter } from "./footerNavBar/SigmaFooter";
 import { BarChart } from "./charts/barchart/BarChart";
 import PivotTable from './charts/pivot/pivot_table.png';
+import DrillDownPNG from './images/drill_down.png';
 
 
-export const AnalyticsPage = () => {
+export const AnalyticsPage = ({ currStep }) => {
   return (
    <div className="analytics-page-container" style={{"width":"1222px", "height":"723px", borderRadius: "18px", backgroundColor: "#ffffff", display: "flex", flexDirection:"column", position:"relative", alignItems:"center"}}>
     
+    {currStep > 0 ? <div className="opaque-div" style={{width: "1222px", height: "652px", backgroundColor: "rgb(217, 217, 217, 0.65)", zIndex:"1", display: "flex", justifyContent: "center", alignItems: "center"}}>
+        <img src={DrillDownPNG} style={{width:"500px"}}/>
+    </div> : <></>}
     
     <div className="title-filters-kpis-container" style={{"width":"1176px", height:"201px", position:"absolute", top:"20px"}}>
         <TitleFilterKPIs />
