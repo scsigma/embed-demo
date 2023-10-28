@@ -13,8 +13,8 @@ import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
 // NEW SECTION
 import { KPI } from './components/newKPIs/KPI.js';
 import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
-import { PlugsTable } from './components/tableComponent/plugsTable.js';
 import { SimpleTable } from './components/tableComponent/chakraTable.js';
+import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
 
 
 
@@ -135,8 +135,6 @@ const App = () => {
               <div className='table-and-embed-container' style={{"flex":"1", "display":"flex","backgroundColor":"#F4F4F4", "justifyContent":"space-evenly","alignItems":"center"}}>
                 
                 <div className='table container' style={{backgroundColor: "lightgrey", padding: "13px", borderRadius: "14px", color: "black"}}>
-                  {/* <StyledTable /> */}
-                  {/* <PlugsTable /> */}
                   Recent Orders
                   <SimpleTable currStep={currStep} />
                 </div>
@@ -175,8 +173,8 @@ const App = () => {
               </div>
             </div>
 
-            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "flexDirection":"column"}}>
-              HELLO
+            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
+              <AnalyticsPage />
             </div>
 
           </div>
