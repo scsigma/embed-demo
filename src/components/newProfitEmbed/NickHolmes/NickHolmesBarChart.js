@@ -48,7 +48,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 405px;
     left: 333px;
@@ -97,7 +97,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle-2 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 374px;
     left: 323px;
@@ -146,7 +146,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle-3 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 354px;
     left: 307px;
@@ -195,7 +195,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle-4 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 231px;
     left: 251px;
@@ -244,7 +244,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle-5 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 101px;
     left: 164px;
@@ -293,7 +293,7 @@ const StyledBox = styled.div`
   }
 
   & .rectangle-6 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 58px;
     left: 164px;

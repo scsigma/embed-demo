@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SidebarContainer = styled.div`
-  background-color: #f4f4f4;
+  background-color: #DFDFDF;
   height: 100%;
   min-width: 200px
 `;
@@ -20,13 +20,11 @@ const SubSection = styled.div`
 export const Sidebar = () => {
   return (
     <SidebarContainer>
-      <SidebarOption>Summary</SidebarOption>
-      <SidebarOption>KPIs</SidebarOption>
+      <SubSection>Summary</SubSection>
+      <SidebarOption>Analytics</SidebarOption>
       <SidebarOption>Awaiting Fulfillment</SidebarOption>
       <SidebarOption>Late</SidebarOption>
-      <SubSection>Payments</SubSection>
-      <SidebarOption>Summary</SidebarOption>
-      <SidebarOption>Late</SidebarOption>
+      <SidebarOption>Payments</SidebarOption>
     </SidebarContainer>
   );
 }

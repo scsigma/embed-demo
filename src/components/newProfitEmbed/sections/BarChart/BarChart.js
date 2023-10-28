@@ -45,7 +45,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 405px;
     left: 333px;
@@ -94,7 +94,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle-2 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 330px;
     left: 301px;
@@ -143,7 +143,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle-3 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 309px;
     left: 284px;
@@ -192,7 +192,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle-4 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 231px;
     left: 251px;
@@ -241,7 +241,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle-5 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 154px;
     left: 190px;
@@ -290,7 +290,7 @@ const StyledBarChart = styled.div`
   }
 
   & .rectangle-6 {
-    background-color: #0270e0;
+    background-color: #124342;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 104px;
     left: 187px;

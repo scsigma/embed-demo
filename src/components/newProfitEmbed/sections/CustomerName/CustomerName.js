@@ -24,7 +24,7 @@ const StyledCustomerName = styled.div`
     display: -webkit-box;
     flex: 1;
     font-family: "Source Sans Pro", Helvetica;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0;
     line-height: 20px;
@@ -49,7 +49,7 @@ const renderCustomerName = (currStep) => {
     } else if (currStep === 2) {
         return "Nick Holmes"
     } else if (currStep > 2) {
-        return "Lucy Daniells"
+        return "Lucy Daniels"
     }
 }
 

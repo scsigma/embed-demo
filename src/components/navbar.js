@@ -8,8 +8,8 @@ const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: grey;
-  color: #fff;
+  background-color: #124342;
+  color: #124342;
 `;
 
 const Logo = styled.img`
