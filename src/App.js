@@ -107,17 +107,17 @@ const App = () => {
   // THIS IS THE SUMMARY PAGE
   else if (currPage === 3) {
     return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
+      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         
         <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
         
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column","border":"1px solid blue"}}>
+        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
           
           <div className='navbar-container'>
             <Navbar className='navbar'/>
           </div>
 
-          <div className='below-navbar-container' style={{"height":"100%", "display":"flex", "border":"1px solid red"}}>
+          <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
             <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
               <Sidebar className='side-bar' style={{"height": "100%"}}/>
               <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
@@ -155,17 +155,17 @@ const App = () => {
   // THIS IS THE ANALYTICS PAGE
   else if (currPage === 4) {
     return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed", "border":"1px solid red"}}>
+      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         
         <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
         
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column","border":"1px solid blue"}}>
+        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
           
           <div className='navbar-container'>
             <Navbar className='navbar'/>
           </div>
 
-          <div className='below-navbar-container' style={{"height":"100%", "display":"flex", "border":"1px solid red"}}>
+          <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
             <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
               <Sidebar className='side-bar' style={{"height": "100%"}}/>
               <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
