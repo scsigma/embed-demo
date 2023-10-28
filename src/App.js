@@ -4,7 +4,7 @@ import { ModalPage }from './components/loginModal';
 import { Navbar } from './components/navbar.js';
 import { Sidebar } from './components/sidebar.js';
 import styled from 'styled-components';
-import PlugsLogo from './graphics/PlugsElect_White.png';
+import PlugsLogo from './graphics/plugs_electronics_logo_green.png';
 import { StyledTable } from './components/tableComponent.js';
 import { KPISection } from './components/KPIs/KPISection.js';
 import { OrdersKpi } from './components/SingleValueKPI/KPI.js';
@@ -71,7 +71,7 @@ const App = () => {
           <div className='sidebarcontainer-div' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
             <Sidebar className='side-bar' style={{"height": "100%"}}/>
             <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
-              <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"black"}}></img>
+              <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"white"}}></img>
             </div>
           </div>
           
@@ -120,18 +120,18 @@ const App = () => {
             <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
               <Sidebar className='side-bar' style={{"height": "100%"}}/>
               <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
-                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"black"}}></img>
+                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
               </div>
             </div>
 
             <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "flexDirection":"column"}}>
-              <div className='kpis-div' style={{"width":"100%", "height":"200px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
+              <div className='kpis-div' style={{"backgroundColor":"#F4f4f4", "width":"100%", "height":"200px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
                 <KPI mainNum={"218"} title={"Daily Orders"} firstNum={"-0.86"} secondNum={"+27.87"} thirdNum={"+32.33"}/>
                 <KPI mainNum={"$23,988"} title={"Daily Revenue"} firstNum={"-1.73"} secondNum={"+22.40"} thirdNum={"+28.06"}/>
                 <KPI mainNum={"197"} title={"Daily Customers"} firstNum={"-0.05"} secondNum={"+19.79"} thirdNum={"+32.34"}/>
               </div>
 
-              <div className='table-and-embed-container' style={{"flex":"1", "display":"flex","backgroundColor":"beige", "justifyContent":"space-evenly","alignItems":"center"}}>
+              <div className='table-and-embed-container' style={{"flex":"1", "display":"flex","backgroundColor":"#F4F4F4", "justifyContent":"space-evenly","alignItems":"center"}}>
                 
                 <div className='table container' style={{backgroundColor: "lightgrey", padding: "13px", borderRadius: "14px", color: "black"}}>
                   {/* <StyledTable /> */}

@@ -37,7 +37,7 @@ const TableCell = styled.td`
 
 export const PlugsTable = () => {
   
-  const columns = Object.keys(plugsData[0]);
+  const columns = Object.keys(plugsData);
   console.log(columns);
   
   return (

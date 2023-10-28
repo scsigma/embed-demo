@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledOrdersKpi = styled.div`
-  background-color: transparent;
+  background-color: #F4F4F4;
   display: flex;
   flex-direction: row;
   justify-content: center;

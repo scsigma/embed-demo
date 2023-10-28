@@ -76,7 +76,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 500px;
     left: 484px;
@@ -110,7 +110,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle-2 {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 330px;
     left: 399px;
@@ -129,7 +129,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle-3 {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 309px;
     left: 388px;
@@ -163,7 +163,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle-4 {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 231px;
     left: 350px;
@@ -182,7 +182,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle-5 {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 154px;
     left: 311px;
@@ -201,7 +201,7 @@ const StyledChartElement = styled.div`
   }
 
   & .rectangle-6 {
-    background-color: #0270e0;
+    background-color: #ffffff;
     border-radius: 2.38px 2.38px 0px 0px;
     height: 104px;
     left: 286px;
