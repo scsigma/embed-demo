@@ -15,7 +15,7 @@ import { KPI } from './components/newKPIs/KPI.js';
 import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
 import { SimpleTable } from './components/tableComponent/chakraTable.js';
 import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
-
+import { SummaryPage } from './components/summaryPage/SummaryPage.js';
 
 
 const MainDiv = styled.div`
@@ -35,7 +35,7 @@ const MainDiv = styled.div`
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(4);
+  const [currPage, setCurrPage] = useState(3);
 
   const [currClick, setCurrClick] = useState(2);
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
@@ -125,8 +125,22 @@ const App = () => {
               </div>
             </div>
 
-            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "flexDirection":"column"}}>
-              <div className='kpis-div' style={{"backgroundColor":"#F4f4f4", "width":"100%", "height":"200px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
+            <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center", border: "1px solid red"}}>
+              
+              <SummaryPage />
+              
+              {/* <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column",justifyContent: "center", alignItems: "center", position: "absolute",border: "1px solid blue"}}>
+                
+                <div className='kpis-container' style={{width: "1189px", height: "154px", position: "absolute", top:"0px",border: "1px solid red"}}>
+                  i am kpis
+                </div>
+
+                <div className='table-and-profit-container' style={{width: "1182px", height: "499px", position: "absolute", top: "175px",border: "1px solid red"}}>
+                  i am table and profit
+                </div>
+              </div> */}
+              
+              {/* <div className='kpis-div' style={{"backgroundColor":"#F4f4f4", "width":"100%", "height":"200px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
                 <KPI mainNum={"218"} title={"Daily Orders"} firstNum={"-0.86"} secondNum={"+27.87"} thirdNum={"+32.33"}/>
                 <KPI mainNum={"$23,988"} title={"Daily Revenue"} firstNum={"-1.73"} secondNum={"+22.40"} thirdNum={"+28.06"}/>
                 <KPI mainNum={"197"} title={"Daily Customers"} firstNum={"-0.05"} secondNum={"+19.79"} thirdNum={"+32.34"}/>
@@ -142,9 +156,8 @@ const App = () => {
                 <div className='embed-container'>
                   <PageEmbed currStep={currStep}/>
                 </div>
+              </div> */}
 
-              
-              </div>
             </div>
           </div>
         </div>
