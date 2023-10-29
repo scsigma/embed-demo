@@ -110,9 +110,11 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             </div>
         </div>
 
-        <div 
+        <div
+            className="filterClick"
             style={{
                 zIndex: "1"
+                , display: currStep === 0 ? "inline" : "none"
                 , color: "black"
                 , width: "200px"
                 , height:"20px"
@@ -120,11 +122,105 @@ export const SummaryPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "227px"
                 , left: "647px"
-                ,border: "1px solid red"}}
+                , border: "1px solid red"}}
             onClick={() => nextStep()}
         >
                 clickable div
         </div>
+
+
+        <div
+            className="NickHolmes" 
+            style={{
+                zIndex: "1"
+                , display: currStep === 1 ? "inline" : "none"
+                , color: "black"
+                , width: "274px"
+                , height:"27px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "303px"
+                , left: "647px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="LucyDaniels" 
+            style={{
+                zIndex: "1"
+                , display: currStep === 2 ? "inline" : "none"
+                , color: "black"
+                , width: "528px"
+                , height:"23px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "240px"
+                , left: "12px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="productFamily"
+            style={{
+                zIndex: "1"
+                , display: currStep === 3 ? "inline" : "none"
+                , color: "black"
+                , width: "200px"
+                , height:"20px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "227px"
+                , left: "920px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+
+        <div
+            className="Computers" 
+            style={{
+                zIndex: "1"
+                , display: currStep === 4 ? "inline" : "none"
+                , color: "black"
+                , width: "224px"
+                , height:"27px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "303px"
+                , left: "924px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="AnalyticsTab" 
+            style={{
+                zIndex: "1"
+                , display: currStep === 5 ? "inline" : "none"
+                , color: "black"
+                , width: "200px"
+                , height:"27px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "0px"
+                , left: "-241px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+
     </div>
   );
 };
