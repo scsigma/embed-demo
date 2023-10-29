@@ -21,7 +21,7 @@ import FullPageEmbedShareModalPNG from './images/full_page_embed_share_modal.png
 import FullPageEmbedScheduledExportPNG from './images/full_page_embed_scheduled_export.png';
 
 
-export const AnalyticsPage = ({ currStep }) => {
+export const AnalyticsPage = ({ currStep, nextStep }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -71,6 +71,215 @@ export const AnalyticsPage = ({ currStep }) => {
   return (
     <div className="analytics-page-container" style={{"width":"1222px", "height":"723px", borderRadius: "18px", backgroundColor: "#ffffff", display: "flex", flexDirection:"column", position:"relative", alignItems:"center"}}>
         {screenshotRender(currStep)}
+
+        <div
+            className="computerBarChart"
+            style={{
+                zIndex: "1"
+                , display: currStep === 0 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "353px"
+                , height:"27px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "307px"
+                , left: "183px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="computerBarChart"
+            style={{
+                zIndex: "1"
+                , display: currStep === 1 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "456px"
+                , height:"34px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "200px"
+                , left: "372px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="createBookmark"
+            style={{
+                zIndex: "1"
+                , display: currStep === 2 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "38px"
+                , height:"34px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "668px"
+                , left: "859px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="saveBookmark"
+            style={{
+                zIndex: "1"
+                , display: currStep === 3 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "106px"
+                , height:"34px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "390px"
+                , left: "787px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="explore"
+            style={{
+                zIndex: "1"
+                , display: currStep === 4 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "145px"
+                , height:"36px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "668px"
+                , left: "931px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="addViz"
+            style={{
+                zIndex: "1"
+                , display: currStep === 5 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "105px"
+                , height:"82px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "145px"
+                , left: "42px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="addMonth"
+            style={{
+                zIndex: "1"
+                , display: currStep === 6 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "211px"
+                , height:"25px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "459px"
+                , left: "42px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="addRevenue"
+            style={{
+                zIndex: "1"
+                , display: currStep === 7 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "211px"
+                , height:"25px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "460px"
+                , left: "42px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="openMenu"
+            style={{
+                zIndex: "1"
+                , display: currStep === 8 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "25px"
+                , height:"25px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "673px"
+                , left: "256px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="scheduledExports"
+            style={{
+                zIndex: "1"
+                , display: currStep === 9 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "187px"
+                , height:"27px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "571px"
+                , left: "90px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
+
+        <div
+            className="createScheduledExport"
+            style={{
+                zIndex: "1"
+                , display: currStep === 10 ? "inline" : "none"
+                , opacity: "0"
+                , color: "black"
+                , width: "72px"
+                , height:"31px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "574px"
+                , left: "808px"
+                , border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
+        </div>
     </div>
   );
 };
