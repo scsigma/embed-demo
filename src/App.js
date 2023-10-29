@@ -127,7 +127,7 @@ const App = () => {
 
             <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center", border: "1px solid red"}}>
               
-              <SummaryPage />
+              <SummaryPage currStep={currStep} />
               
               {/* <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column",justifyContent: "center", alignItems: "center", position: "absolute",border: "1px solid blue"}}>
                 
