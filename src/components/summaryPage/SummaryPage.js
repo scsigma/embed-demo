@@ -115,6 +115,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 0 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "200px"
                 , height:"20px"
@@ -134,6 +135,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 1 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "274px"
                 , height:"27px"
@@ -152,6 +154,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 2 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "528px"
                 , height:"23px"
@@ -170,6 +173,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 3 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "200px"
                 , height:"20px"
@@ -189,6 +193,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 4 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "224px"
                 , height:"27px"
@@ -207,6 +212,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
             style={{
                 zIndex: "1"
                 , display: currStep === 5 ? "inline" : "none"
+                , opacity: "0"
                 , color: "black"
                 , width: "200px"
                 , height:"27px"
