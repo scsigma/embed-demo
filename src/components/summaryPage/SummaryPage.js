@@ -14,7 +14,7 @@ import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
 
-export const SummaryPage = ({ currStep, nextStep }) => {
+export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -221,7 +221,7 @@ export const SummaryPage = ({ currStep, nextStep }) => {
                 , top: "0px"
                 , left: "-241px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => nextPage()}
         >
                 clickable div
         </div>

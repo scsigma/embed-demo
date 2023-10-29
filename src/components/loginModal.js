@@ -6,7 +6,8 @@ const AppContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   border: 2px red solid;
 `;
 
@@ -16,12 +17,17 @@ const Modal = styled.div`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const LoginForm = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 230px;
 `;
 
 const Input = styled.input`
@@ -40,11 +46,13 @@ const Button = styled.button`
 `;
 
 const Logo = styled.img`
-    height: 100px;
-    width: auto;
+    height: 75%;
+    width: 75%;
 `;
 
-export const ModalPage = () => {
+export const ModalPage = ({ nextPage, nextStep, currStep }) => {
+
+
   return (
     <AppContainer>
       <Modal>
@@ -53,9 +61,8 @@ export const ModalPage = () => {
           <Input type="email" placeholder="Email" />
           <Input type="password" placeholder="Password" />
           <Input type="text" placeholder="Cloud Provider" />
-          <Button onClick={() => console.log('login button clicked')}>Login</Button>
+          <Button onClick={nextPage}>Login</Button>
         </LoginForm>
-        {/* <img src={PlugsLogo}></img> */}
         <Logo src={PlugsLogo}/>
       </Modal>
     </AppContainer>
