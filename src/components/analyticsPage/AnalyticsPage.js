@@ -14,6 +14,11 @@ import FullPageEmbedWithDrilldownPNG from './images/full_page_embed_drilldown.pn
 import FullPageEmbedWithComputerBarchartPNG from './images/full_page_embed_computer_barchart.png';
 import FullPageEmbedSaveBookmarkPNG from './images/full_page_embed_save_bookmark.png';
 import FullPageEmbedEditorModePNG from './images/full_page_embed_editor_mode.png';
+import FullPageEmbedAddVizPNG from './images/full_page_embed_add_viz.png';
+import FullPageEmbedAddMonthPNG from './images/full_page_embed_add_viz_month.png';
+import FullPageEmbedLinechartPNG from './images/full_page_embed_with_linechart.png';
+import FullPageEmbedShareModalPNG from './images/full_page_embed_share_modal.png';
+import FullPageEmbedScheduledExportPNG from './images/full_page_embed_scheduled_export.png';
 
 
 export const AnalyticsPage = ({ currStep }) => {
@@ -35,9 +40,29 @@ export const AnalyticsPage = ({ currStep }) => {
         return (
             <img src={FullPageEmbedSaveBookmarkPNG} style={{width: "100%"}} />
         )
-    } else if (currStep >= 5) {
+    } else if (currStep >= 5 & currStep < 6) {
         return (
             <img src={FullPageEmbedEditorModePNG} style={{width: "100%"}} />
+        )
+    } else if (currStep >=6 & currStep < 7) {
+        return (
+            <img src={FullPageEmbedAddVizPNG} style={{width: "100%"}} />
+        )
+    } else if (currStep >= 7 & currStep < 8) {
+        return (
+            <img src={FullPageEmbedAddMonthPNG} style={{width: "100%"}} />
+        )
+    } else if (currStep >= 8 & currStep < 9) {
+        return (
+            <img src={FullPageEmbedLinechartPNG} style={{width: "100%"}} />
+        )
+    } else if (currStep >= 9 & currStep < 10) {
+        return (
+            <img src={FullPageEmbedShareModalPNG} style={{width: "100%"}} />
+        )
+    } else if (currStep >= 10) {
+        return (
+            <img src={FullPageEmbedScheduledExportPNG} style={{width: "100%"}} />
         )
     }
   }
