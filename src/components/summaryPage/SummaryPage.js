@@ -14,7 +14,7 @@ import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
 
-export const SummaryPage = ({ currStep }) => {
+export const SummaryPage = ({ currStep, nextStep }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -108,6 +108,22 @@ export const SummaryPage = ({ currStep }) => {
             <div className='embed-container' style={{width: "612px", height: "499px"}}>
                 {profitEmbedRender(currStep)}
             </div>
+        </div>
+
+        <div 
+            style={{
+                zIndex: "1"
+                , color: "black"
+                , width: "200px"
+                , height:"20px"
+                , cursor: "pointer"
+                , position: "absolute"
+                , top: "227px"
+                , left: "647px"
+                ,border: "1px solid red"}}
+            onClick={() => nextStep()}
+        >
+                clickable div
         </div>
     </div>
   );
