@@ -11,6 +11,9 @@ import ProfitEmbedLucyDanielsPNG from './images/ProfitEmbed_Lucy_Daniels.png';
 import ProfitEmbedProductFamilyDropdownPNG from './images/ProfitEmbed_Product_Family_Dropdown.png';
 import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
 
+// Table Import
+import { SimpleTable } from "../tableComponent/chakraTable";
+
 export const SummaryPage = ({ currStep }) => {
 
   const screenshotRender = (currStep) => {
@@ -78,7 +81,7 @@ export const SummaryPage = ({ currStep }) => {
         return (
             <img src={ProfitEmbedProductFamilyDropdownPNG} style={{width: "612px"}}/>
         )
-    } else if (currStep === 5) {
+    } else if (currStep >= 5) {
         return (
             <img src={ProfitEmbedCustomersFamilyPNG} style={{width: "612px"}}/>
         )
@@ -87,22 +90,22 @@ export const SummaryPage = ({ currStep }) => {
 
 
   return (
-    <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column",justifyContent: "center", alignItems: "center", position: "absolute",border: "1px solid blue"}}>
+    <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column",justifyContent: "center", alignItems: "center", position: "absolute"}}>
                 
-        <div className='kpis-container' style={{width: "1189px", height: "154px", position: "absolute", display: "flex", alignItems: "center", justifyContent: "space-around",top:"0px",border: "1px solid red"}}>
+        <div className='kpis-container' style={{width: "1189px", height: "154px", position: "absolute", display: "flex", alignItems: "center", justifyContent: "space-around",top:"0px"}}>
             <img src={OrderKPIPNG} style={{width: "352px"}}/>
             <img src={RevenueKPIPNG} style={{width: "352px"}}/>
             <img src={CustomerKPIPNG} style={{width: "352px"}}/>
         </div>
 
-        <div className='table-and-profit-container' style={{width: "1189px", height: "499px", position: "absolute", top: "175px",border: "1px solid red", "display":"flex", "justifyContent":"space-evenly","alignItems":"center"}}>
+        <div className='table-and-profit-container' style={{width: "1189px", height: "499px", position: "absolute", top: "175px", "display":"flex", "justifyContent":"space-evenly","alignItems":"center"}}>
         
-            <div className='table container' style={{width: "577px", height: "499px", border: "1px solid red"}}>
-                Table Container
-                {/* <SimpleTable currStep={currStep} /> */}
+            <div className='table container' style={{width: "577px", height: "499px", backgroundColor: "lightgrey", padding: "13px", borderRadius: "14px", color: "black"}}>
+                Recent Orders
+                <SimpleTable currStep={currStep} />
             </div>
 
-            <div className='embed-container' style={{width: "612px", height: "499px", border: "1px solid red"}}>
+            <div className='embed-container' style={{width: "612px", height: "499px"}}>
                 {profitEmbedRender(currStep)}
             </div>
         </div>

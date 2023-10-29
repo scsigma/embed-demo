@@ -125,7 +125,7 @@ const App = () => {
               </div>
             </div>
 
-            <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center", border: "1px solid red"}}>
+            <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
               
               <SummaryPage currStep={currStep} />
               
