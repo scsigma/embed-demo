@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 import { TitleFilterKPIs } from "./title-filters-kpis/TitleFilterKpis";
 import { SigmaFooter } from "./footerNavBar/SigmaFooter";
@@ -20,6 +20,11 @@ import FullPageEmbedLinechartPNG from './images/full_page_embed_with_linechart.p
 import FullPageEmbedShareModalPNG from './images/full_page_embed_share_modal.png';
 import FullPageEmbedScheduledExportPNG from './images/full_page_embed_scheduled_export.png';
 
+
+const FadingDiv = styled.div`
+  opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
+  transition: opacity 1s;
+`;
 
 export const AnalyticsPage = ({ currStep, nextStep }) => {
 
@@ -67,10 +72,126 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
     }
   }
 
+  const resetVisbility = () => {
+    setIsVisible("false");
+    const timer = setTimeout(() => {
+        setIsVisible("true");
+      }, 3000);
+    setModalStep(modalStep + 1);
+  }
+
+  const [modalStep, setModalStep] = useState(1);
+
+  const [isVisible, setIsVisible] = useState("false");
+
+  useEffect(() => {
+    // Use setTimeout to change the state after 3 seconds
+    const timer = setTimeout(() => {
+      setIsVisible("true");
+    }, 3000);
+
+    // Clear the timeout to prevent memory leaks
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="analytics-page-container" style={{"width":"1222px", "height":"723px", borderRadius: "18px", backgroundColor: "#ffffff", display: "flex", flexDirection:"column", position:"relative", alignItems:"center"}}>
         {screenshotRender(currStep)}
+
+        {isVisible && modalStep === 1 && (
+            <FadingDiv isvisible={isVisible} className="first-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px", backgroundColor: "white", border: "1px solid red"}}>
+                This is a power-user experience, for users who want to ask follow up questions
+
+                Usually that means the Plugs dev/data team will take that request into their backlog, but Sigma allows those users to answer their own questions and customize their analysis.
+                <button onClick={resetVisbility}>next</button>
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 2 && (
+            <FadingDiv isvisible={isVisible} className="second-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "530px", backgroundColor: "white", border: "1px solid red"}}>
+                One advanced functionality is drill down, which allows users to drill into any dimension of a pivot table or bar chart.
+
+                Click on the bar for Computers to drill into performance for specific products.
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 3 && (
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "100px", left: "868px", backgroundColor: "white", border: "1px solid red"}}>
+                Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you don’t need to preconfigure drill paths.
+
+                Click on Product Name to drill into it
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 4 && (
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "500px", left: "868px", backgroundColor: "white", border: "1px solid red"}}>
+                Now you see the top computer products.  From here you could drill down again or show the underlying data.
+
+                After continuing this ad hoc analysis, users can create a Bookmark to save their changes for the next time they come back into the portal.
+
+                Click here to create a bookmark
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 5 && (
+            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "300px", left: "0px", backgroundColor: "white", border: "1px solid red"}}>
+                Users also have the option to set this bookmark as their default view (without overriding any other users’ preferences).
+
+                Click Save. 
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 6 && (
+            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "579px", left: "875px", backgroundColor: "white", border: "1px solid red"}}>
+                You can also allow users to build their own analyses and add elements to this page.
+
+                Click explore to see what users can add. 
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 7 && (
+            <FadingDiv isvisible={isVisible} className="seventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "150px", left: "270px", backgroundColor: "white", border: "1px solid red"}}>
+                Users can add a whole variety of elements to enhance / customize their analysis
+
+                Select VIZ to add a viz
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 8 && (
+            <FadingDiv isvisible={isVisible} className="eigth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
+                Click on Month to add it to the X axis
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 9 && (
+            <FadingDiv isvisible={isVisible} className="ninth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
+                Click on Revenue to add it to the Y axis
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 10 && (
+            <FadingDiv isvisible={isVisible} className="tenth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
+                Congrats! You just added a chart.  Open the menu at the bottom left his workbook can now be shared or exported
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 11 && (
+            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "502px", left: "372px", backgroundColor: "white", border: "1px solid red"}}>
+                Users can share their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).
+
+                They can also created scheduled or conditional alerts.  Click “Schedule exports” to learn more
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 12 && (
+            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "220px", left: "-3px", backgroundColor: "white", border: "1px solid red"}}>
+                There are many options here:users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.
+
+                And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.
+
+                This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.
+            </FadingDiv>
+        )}
 
         <div
             className="computerBarChart"
@@ -86,7 +207,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "307px"
                 , left: "183px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -105,7 +229,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "200px"
                 , left: "372px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -124,7 +251,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "668px"
                 , left: "859px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -143,7 +273,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "390px"
                 , left: "787px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -162,7 +295,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "668px"
                 , left: "931px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -181,7 +317,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "145px"
                 , left: "42px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -200,7 +339,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "459px"
                 , left: "42px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -219,7 +361,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "460px"
                 , left: "42px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -238,7 +383,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "673px"
                 , left: "256px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>
@@ -257,7 +405,10 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "571px"
                 , left: "90px"
                 , border: "1px solid red"}}
-            onClick={() => nextStep()}
+            onClick={() => {
+                nextStep();
+                resetVisbility();
+            }}
         >
                 clickable div
         </div>

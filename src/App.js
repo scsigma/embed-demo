@@ -35,7 +35,7 @@ const MainDiv = styled.div`
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(1);
+  const [currPage, setCurrPage] = useState(3);
 
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
   const [currStep, setCurrStep] = useState(0);
