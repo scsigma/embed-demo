@@ -57,7 +57,7 @@ const App = () => {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         
-        <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
+        {/* <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button> */}
 
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
           <ModalPage nextPage={nextPage} currStep={currStep} />
@@ -72,7 +72,7 @@ const App = () => {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         
-        <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
+        {/* <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button> */}
         
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
           
@@ -104,7 +104,7 @@ const App = () => {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         
-        <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button>
+        {/* <button style={{"position":"fixed", "top":"15px"}} onClick={nextStep}>NEXT STEP</button> */}
         
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
           
