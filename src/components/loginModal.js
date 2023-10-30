@@ -8,7 +8,7 @@ const AppContainer = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  border: 2px red solid;
+  border: 1px solid grey;
 `;
 
 const Modal = styled.div`
@@ -54,18 +54,33 @@ export const ModalPage = ({ nextPage, nextStep, currStep }) => {
 
 
   return (
-    <AppContainer>
-      <Modal>
-        <h2 style={{"color":"white"}}>Supplier Portal</h2>
-        <LoginForm>
-          <Input type="email" placeholder="Email" />
-          <Input type="password" placeholder="Password" />
-          <Input type="text" placeholder="Cloud Provider" />
-          <Button onClick={nextPage}>Login</Button>
-        </LoginForm>
-        <Logo src={PlugsLogo}/>
-      </Modal>
-    </AppContainer>
+    <div className='modal-container' style={{display: "flex", position: "relative", justifyContent:"center", alignItems: "center", width: "100%", height: "100%"}}> 
+      <AppContainer>
+        <Modal>
+          <h2 style={{"color":"white"}}>Supplier Portal</h2>
+          <LoginForm>
+            <Input type="email" placeholder="Email" />
+            <Input type="password" placeholder="Password" />
+            <Input type="text" placeholder="Cloud Provider" />
+            <Button onClick={nextPage}>Login</Button>
+          </LoginForm>
+          <Logo src={PlugsLogo}/>
+        </Modal>
+      </AppContainer>
+
+      <div className='modal-div' style={{width: "300px", height: "auto", position: "absolute", left: "200px", top: "300px", border: "1px solid red"}}>
+        Plugs Electronics is an electronics retailer with many suppliers.  They created this portal for their suppliers to track orders and to provide them with analytics on product sales.
+      </div>
+
+      <div className='modal-div' style={{width: "300px", height:"auto", position: "absolute", left: "1000px", top: "300px", border: "1px solid red"}}>
+      We’ll start by logging in as Alfonso, a manager at the Acme supplier.
+
+      The Plugs Portal uses username + password, but Sigma embedding works with any authentication framework.
+
+      Click “Log In” to enter the portal
+      </div>
+    </div>
+
   );
 }
 
