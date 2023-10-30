@@ -9,19 +9,17 @@ const SidebarContainer = styled.div`
 
 const SidebarOption = styled.div`
   padding: 10px;
-  cursor: pointer;
 `;
 
-const SubSection = styled.div`
-  padding: 10px;
-  color: #777;
-`;
-
-export const Sidebar = () => {
+export const Sidebar = ({ currPage }) => {
   return (
     <SidebarContainer>
-      <SubSection>Summary</SubSection>
-      <SidebarOption>Analytics</SidebarOption>
+      <SidebarOption style={{
+        color: currPage === 2 ? "#777" : "black"
+      }}>Summary</SidebarOption>
+      <SidebarOption style={{
+        color: currPage === 3 ? "#777" : "black"
+      }}>Analytics</SidebarOption>
       <SidebarOption>Awaiting Fulfillment</SidebarOption>
       <SidebarOption>Late</SidebarOption>
       <SidebarOption>Payments</SidebarOption>

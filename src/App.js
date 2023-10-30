@@ -82,7 +82,7 @@ const App = () => {
 
           <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
             <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
-              <Sidebar className='side-bar' style={{"height": "100%"}}/>
+              <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage}/>
               <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
                 <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
               </div>
@@ -114,7 +114,7 @@ const App = () => {
 
           <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
             <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
-              <Sidebar className='side-bar' style={{"height": "100%"}}/>
+              <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage} />
               <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
                 <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
               </div>
