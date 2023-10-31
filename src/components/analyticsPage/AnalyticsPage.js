@@ -93,9 +93,9 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
 
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px", backgroundColor: "white", border: "1px solid red"}}>
-                This is a power-user experience, for users who want to ask follow up questions
+                Plugs has embedded an entire Sigma workbook here for a power-user experience, perfect for users who want to ask follow up questions.
 
-                Usually that means the Plugs dev/data team will take that request into their backlog, but Sigma allows those users to answer their own questions and customize their analysis.
+                These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.
                 <button onClick={resetVisbility}>next</button>
             </FadingDiv>
         )}

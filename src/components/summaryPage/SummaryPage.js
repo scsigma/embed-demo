@@ -176,9 +176,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px", backgroundColor: "white", border: "1px solid red"}}>
                 So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.
 
-                Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.
+                Plugs has monetized premium features like drilldown, Explore mode and scheduled exports, to name a few.
 
-                Click on the Analytics tab to check it out
+                Click on the Analytics tab to check them out!
             </FadingDiv>
         )}
 
