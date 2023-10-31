@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import PlugsLogo from '../graphics/plugs_electronics_logo_green.png';
+import PlugsLogo from '../graphics/plugs_electronics_logo_green.png'
 
 const AppContainer = styled.div`
   display: flex;

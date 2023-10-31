@@ -24,6 +24,7 @@ const UserInfo = styled.div`
 const CloudProviderIcon = styled.p`
   width: 30px; /* Adjust the size as needed */
   margin-right: 10px;
+  color: white;
 `;
 
 const UserAvatar = styled.img`

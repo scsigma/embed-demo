@@ -1,36 +1,11 @@
 import { React, useContext, useEffect, useState } from 'react';
-import { Frame }from './components/singlevalue.js';
-import { ModalPage }from './components/loginModal';
-import { Navbar } from './components/navbar.js';
-import { Sidebar } from './components/sidebar.js';
-import styled from 'styled-components';
-import PlugsLogo from './graphics/plugs_electronics_logo_green.png';
-import { StyledTable } from './components/tableComponent.js';
-import { KPISection } from './components/KPIs/KPISection.js';
-import { OrdersKpi } from './components/SingleValueKPI/KPI.js';
-import { ProfitEmbed } from './components/ProfitEmbed/ProfitEmbed.js';
-
-// NEW SECTION
-import { KPI } from './components/newKPIs/KPI.js';
-import { PageEmbed } from './components/newProfitEmbed/ProfitEmbed.js';
-import { SimpleTable } from './components/tableComponent/chakraTable.js';
+import { ModalPage }from './components/nativeAppComponents/loginModal.js';
+import { Navbar } from './components/nativeAppComponents/navbar.js';
+import { Sidebar } from './components/nativeAppComponents/sidebar.js';
+// import PlugsLogo from './graphics/plugs_electronics_logo_green.png';
+import PlugsLogo from './components/graphics/plugs_electronics_logo_green.png';
 import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
 import { SummaryPage } from './components/summaryPage/SummaryPage.js';
-
-
-const MainDiv = styled.div`
-  // border: 2px solid red;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`;
-
-
-
 
 const App = () => {
 

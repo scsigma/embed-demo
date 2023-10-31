@@ -1,14 +1,7 @@
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
-import { TitleFilterKPIs } from "./title-filters-kpis/TitleFilterKpis";
-import { SigmaFooter } from "./footerNavBar/SigmaFooter";
-import { BarChart } from "./charts/barchart/BarChart";
-import PivotTable from './charts/pivot/pivot_table.png';
-import DrillDownPNG from './images/drill_down.png';
-import BarChartComputerDrillDown from './images/drill_down_comuter_analytics_page.png';
-import SaveBookmarkPNG from './images/save_bookmark.png';
 
-// Correct Import
+// PNG Imports
 import FullPageEmbedPNG from './images/full_page_embed.png';
 import FullPageEmbedWithDrilldownPNG from './images/full_page_embed_drilldown.png';
 import FullPageEmbedWithComputerBarchartPNG from './images/full_page_embed_computer_barchart.png';
