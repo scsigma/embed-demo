@@ -8,9 +8,9 @@ import CustomerKPIPNG from './images/CustomerKPI.png';
 import ProfitEmbedMainPNG from './images/ProfitEmbed_Main.png';
 import ProfitEmbedCustomerDropdownPNG from './images/ProfitEmbed_Customers_Dropdown.png';
 import ProfitEmbedNickHolmesPNG from './images/ProfitEmbed_Nick_Holmes.png';
-import ProfitEmbedLucyDanielsComputersPNG from './images/ProfitEmbed_Lucy_Daniels_Computers.png';
+import ProfitEmbedLucyDanielsPNG from './images/ProfitEmbed_Lucy_Daniels.png';
 import ProfitEmbedProductTypeDropdownPNG from './images/ProfitEmbed_Product_Type_Dropdown.png';
-import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
+import ProfitEmbedLucyDanielsComputersPNG from './images/ProfitEmbed_Lucy_Daniels_Computers.png';
 
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
@@ -38,7 +38,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )
     } else if (currStep === 3) {
         return (
-            <img src={ProfitEmbedLucyDanielsComputersPNG} style={{width: "612px"}}/>
+            <img src={ProfitEmbedLucyDanielsPNG} style={{width: "612px"}}/>
         )
     } else if (currStep === 4) {
         return (
@@ -46,7 +46,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )
     } else if (currStep >= 5) {
         return (
-            <img src={ProfitEmbedCustomersFamilyPNG} style={{width: "612px"}}/>
+            <img src={ProfitEmbedLucyDanielsComputersPNG} style={{width: "612px"}}/>
         )
     }
   }
