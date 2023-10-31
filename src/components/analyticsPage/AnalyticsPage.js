@@ -2,16 +2,16 @@ import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
 // PNG Imports
-import FullPageEmbedPNG from './images/full_page_embed.png';
-import FullPageEmbedWithDrilldownPNG from './images/full_page_embed_drilldown.png';
-import FullPageEmbedWithComputerBarchartPNG from './images/full_page_embed_computer_barchart.png';
-import FullPageEmbedSaveBookmarkPNG from './images/full_page_embed_save_bookmark.png';
-import FullPageEmbedEditorModePNG from './images/full_page_embed_editor_mode.png';
-import FullPageEmbedAddVizPNG from './images/full_page_embed_add_viz.png';
-import FullPageEmbedAddMonthPNG from './images/full_page_embed_add_viz_month.png';
-import FullPageEmbedLinechartPNG from './images/full_page_embed_with_linechart.png';
-import FullPageEmbedShareModalPNG from './images/full_page_embed_share_modal.png';
-import FullPageEmbedScheduledExportPNG from './images/full_page_embed_scheduled_export.png';
+import FullWorkbookEmbedPNG from './images/full_workbook_embed.png';
+import FullWorkbookEmbedWithDrilldownPNG from './images/full_workbook_embed_drilldown.png';
+import FullWorkbookEmbedWithComputerBarchartPNG from './images/full_workbook_embed_computer_barchart.png';
+import FullWorkbookEmbedSaveBookmarkPNG from './images/full_workbook_embed_save_bookmark.png';
+import FullWorkbookEmbedExploreModePNG from './images/full_workbook_embed_explore_mode.png';
+import FullWorkbookEmbedAddVizPNG from './images/full_workbook_embed_add_viz.png';
+import FullWorkbookEmbedAddMonthPNG from './images/full_workbook_embed_add_viz_month.png';
+import FullWorkbookEmbedAreachartPNG from './images/full_workbook_embed_with_area_chart.png';
+import FullWorkbookEmbedMenuPNG from './images/full_workbook_embed_menu.png';
+import FullWorkbookEmbedScheduledExportPNG from './images/full_workbook_embed_scheduled_export.png';
 
 
 const FadingDiv = styled.div`
@@ -24,43 +24,43 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
         return (
-            <img src={FullPageEmbedPNG} style={{width: "100%"}}/>
+            <img src={FullWorkbookEmbedPNG} style={{width: "100%"}}/>
         )
     } else if (currStep > 0 & currStep < 2) {
         return (
-            <img src={FullPageEmbedWithDrilldownPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedWithDrilldownPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 2 & currStep < 3 || currStep >= 4 & currStep < 5) {
         return (
-            <img src={FullPageEmbedWithComputerBarchartPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedWithComputerBarchartPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 3 & currStep < 4){
         return (
-            <img src={FullPageEmbedSaveBookmarkPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedSaveBookmarkPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 5 & currStep < 6) {
         return (
-            <img src={FullPageEmbedEditorModePNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedExploreModePNG} style={{width: "100%"}} />
         )
     } else if (currStep >=6 & currStep < 7) {
         return (
-            <img src={FullPageEmbedAddVizPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedAddVizPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 7 & currStep < 8) {
         return (
-            <img src={FullPageEmbedAddMonthPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedAddMonthPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 8 & currStep < 9) {
         return (
-            <img src={FullPageEmbedLinechartPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedAreachartPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 9 & currStep < 10) {
         return (
-            <img src={FullPageEmbedShareModalPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedMenuPNG} style={{width: "100%"}} />
         )
     } else if (currStep >= 10) {
         return (
-            <img src={FullPageEmbedScheduledExportPNG} style={{width: "100%"}} />
+            <img src={FullWorkbookEmbedScheduledExportPNG} style={{width: "100%"}} />
         )
     }
   }
