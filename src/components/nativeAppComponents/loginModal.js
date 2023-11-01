@@ -12,7 +12,7 @@ const AppContainer = styled.div`
 `;
 
 const Modal = styled.div`
-  background: #fefefe;
+  background: #f4f4f4;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
