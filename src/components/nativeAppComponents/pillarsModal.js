@@ -90,7 +90,6 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
             <LoginForm>
               <Input type="email" placeholder="Email" />
               <Input type="password" placeholder="Password" />
-              <Input type="text" placeholder="Cloud Provider" />
               <Button onClick={resetVisbility}>Login</Button>
             </LoginForm>
             <Logo src={PlugsLogo}/>

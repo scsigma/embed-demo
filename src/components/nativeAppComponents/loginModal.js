@@ -61,7 +61,6 @@ export const ModalPage = ({ nextPage, nextStep, currStep }) => {
           <LoginForm>
             <Input type="email" placeholder="Email" defaultValue="alfonso@acme+plugs.com"/>
             <Input type="password" placeholder="Password" defaultValue="password" />
-            <Input type="text" placeholder="Cloud Provider" defaultValue={"GCP"}/>
             <Button onClick={nextPage}>Login</Button>
           </LoginForm>
           <Logo src={PlugsLogo}/>
