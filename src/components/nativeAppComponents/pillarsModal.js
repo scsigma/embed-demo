@@ -85,7 +85,7 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
   return (
       <AppContainer>
         {isVisible && modalStep === 1 && (
-          <Modal style={{"opacity": ".5"}}>
+          <Modal>
             <h2 style={{"color":"#124342"}}>Supplier Portal</h2>
             <LoginForm>
               <Input type="email" placeholder="Email" />
