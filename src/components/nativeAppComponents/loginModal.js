@@ -12,7 +12,7 @@ const AppContainer = styled.div`
 `;
 
 const Modal = styled.div`
-  background: #1f263c;
+  background: #fefefe;
   padding: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
@@ -38,7 +38,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   padding: 10px;
-  background-color: #007bff;
+  background-color: #124342;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -57,7 +57,7 @@ export const ModalPage = ({ nextPage, nextStep, currStep }) => {
     <div className='modal-container' style={{display: "flex", position: "relative", justifyContent:"center", alignItems: "center", width: "100%", height: "100%"}}> 
       <AppContainer>
         <Modal>
-          <h2 style={{"color":"white"}}>Supplier Portal</h2>
+          <h2 style={{"color":"#124342"}}>Supplier Portal</h2>
           <LoginForm>
             <Input type="email" placeholder="Email" />
             <Input type="password" placeholder="Password" />

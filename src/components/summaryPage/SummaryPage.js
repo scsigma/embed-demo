@@ -9,8 +9,8 @@ import ProfitEmbedMainPNG from './images/ProfitEmbed_Main.png';
 import ProfitEmbedCustomerDropdownPNG from './images/ProfitEmbed_Customers_Dropdown.png';
 import ProfitEmbedNickHolmesPNG from './images/ProfitEmbed_Nick_Holmes.png';
 import ProfitEmbedLucyDanielsPNG from './images/ProfitEmbed_Lucy_Daniels.png';
-import ProfitEmbedProductFamilyDropdownPNG from './images/ProfitEmbed_Product_Family_Dropdown.png';
-import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
+import ProfitEmbedProductTypeDropdownPNG from './images/ProfitEmbed_Product_Type_Dropdown.png';
+import ProfitEmbedLucyDanielsComputersPNG from './images/ProfitEmbed_Lucy_Daniels_Computers.png';
 
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
@@ -42,11 +42,11 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )
     } else if (currStep === 4) {
         return (
-            <img src={ProfitEmbedProductFamilyDropdownPNG} style={{width: "612px"}}/>
+            <img src={ProfitEmbedProductTypeDropdownPNG} style={{width: "612px"}}/>
         )
     } else if (currStep >= 5) {
         return (
-            <img src={ProfitEmbedCustomersFamilyPNG} style={{width: "612px"}}/>
+            <img src={ProfitEmbedLucyDanielsComputersPNG} style={{width: "612px"}}/>
         )
     }
   }
@@ -176,9 +176,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px", backgroundColor: "white", border: "1px solid red"}}>
                 So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.
 
-                Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.
+                Plugs has monetized premium features like drilldown, Explore mode and scheduled exports, to name a few.
 
-                Click on the Analytics tab to check it out
+                Click on the Analytics tab to check them out!
             </FadingDiv>
         )}
 
