@@ -59,9 +59,9 @@ export const ModalPage = ({ nextPage, nextStep, currStep }) => {
         <Modal>
           <h2 style={{"color":"#124342"}}>Supplier Portal</h2>
           <LoginForm>
-            <Input type="email" placeholder="Email" />
-            <Input type="password" placeholder="Password" />
-            <Input type="text" placeholder="Cloud Provider" />
+            <Input type="email" placeholder="Email" defaultValue="alfonso@acme+plugs.com"/>
+            <Input type="password" placeholder="Password" defaultValue="password" />
+            <Input type="text" placeholder="Cloud Provider" defaultValue={"GCP"}/>
             <Button onClick={nextPage}>Login</Button>
           </LoginForm>
           <Logo src={PlugsLogo}/>

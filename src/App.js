@@ -2,10 +2,11 @@ import { React, useContext, useEffect, useState } from 'react';
 import { ModalPage }from './components/nativeAppComponents/loginModal.js';
 import { Navbar } from './components/nativeAppComponents/navbar.js';
 import { Sidebar } from './components/nativeAppComponents/sidebar.js';
-// import PlugsLogo from './graphics/plugs_electronics_logo_green.png';
 import PlugsLogo from './components/graphics/plugs_electronics_logo_green.png';
 import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
 import { SummaryPage } from './components/summaryPage/SummaryPage.js';
+import { ProgressBar } from './components/progressBar/ProgressBar.js';
+
 
 const App = () => {
 
@@ -15,15 +16,22 @@ const App = () => {
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
   const [currStep, setCurrStep] = useState(0);
 
+  // Global Step Counter for progress bar
+  const [globalStep, setGlobalStep] = useState(0);
+
+  const increaseGlobalStep = () => {
+    setGlobalStep(globalStep + 1);
+  }
+
   const nextStep = () => {
     setCurrStep(currStep + 1);
-    console.log("currStep", currStep)
+    increaseGlobalStep();
   }
 
   const nextPage = () => {
     setCurrPage(currPage + 1);
     setCurrStep(0);
-    console.log("currPage", currPage);
+    increaseGlobalStep();
   }
 
 
@@ -43,8 +51,12 @@ const App = () => {
   else if (currPage === 2) {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-                
+
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+
+          <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
+            <ProgressBar globalStep={globalStep}/>
+          </div>
           
           <div className='navbar-container'>
             <Navbar className='navbar'/>
@@ -73,8 +85,13 @@ const App = () => {
   else if (currPage === 3) {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-                
+
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+
+          <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
+            <ProgressBar globalStep={globalStep}/>
+          </div>
+          
           
           <div className='navbar-container'>
             <Navbar className='navbar'/>
