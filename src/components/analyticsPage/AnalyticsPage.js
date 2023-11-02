@@ -17,6 +17,12 @@ import FullWorkbookEmbedScheduledExportPNG from './images/full_workbook_embed_sc
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
   transition: opacity 1s;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 3px 2px 8px 2px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const AnalyticsPage = ({ currStep, nextStep }) => {
@@ -92,97 +98,121 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         {screenshotRender(currStep)}
 
         {isVisible && modalStep === 1 && (
-            <FadingDiv isvisible={isVisible} className="first-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px", backgroundColor: "white", border: "1px solid red"}}>
-                Plugs has embedded an entire Sigma workbook here for a power-user experience, perfect for users who want to ask follow up questions.
+            <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
+                    <p>Plugs has embedded an entire Sigma workbook here for a power-user experience, perfect for users who want to ask follow up questions.</p>
 
-                These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.
-                <button onClick={resetVisbility}>next</button>
+                    <p>These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.</p>
+                </div>                
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 2 && (
-            <FadingDiv isvisible={isVisible} className="second-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "530px", backgroundColor: "white", border: "1px solid red"}}>
-                One advanced functionality is drill down, which allows users to drill into any dimension of a pivot table or bar chart.
+            <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "49px", left: "330px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
+                    <p>One advanced functionality is drill down, which allows users to drill into any dimension of a pivot table or bar chart.</p>
 
-                Click on the bar for Computers to drill into performance for specific products.
+                    <p>Click on the bar for "Computers" to drill into performance for specific products.</p>
+                </div>   
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 3 && (
-            <FadingDiv isvisible={isVisible} className="third-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "100px", left: "868px", backgroundColor: "white", border: "1px solid red"}}>
-                Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you don’t need to preconfigure drill paths.
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "-105px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
+                    <p>Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you don’t need to preconfigure drill paths.</p>
 
-                Click on Product Name to drill into it
+                    <p>Click on "Product Name" to drill into it</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 4 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "500px", left: "868px", backgroundColor: "white", border: "1px solid red"}}>
-                Now you see the top computer products.  From here you could drill down again or show the underlying data.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "300px", left: "700px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
+                    <p>Now you see the top computer products.  From here you could drill down again or show the underlying data.</p>
 
-                After continuing this ad hoc analysis, users can create a Bookmark to save their changes for the next time they come back into the portal.
+                    <p>After continuing this ad hoc analysis, users can create a Bookmark to save their changes for the next time they come back into the portal.</p>
 
-                Click here to create a bookmark
+                    <p>Click here to create a bookmark.</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "300px", left: "0px", backgroundColor: "white", border: "1px solid red"}}>
-                Users also have the option to set this bookmark as their default view (without overriding any other users’ preferences).
+            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "450px", left: "500px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
+                    <p>Users also have the option to set this bookmark as their default view (without overriding any other users’ preferences).</p>
 
-                Click Save. 
+                    <p>Click the "Save" Button</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
-            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "579px", left: "875px", backgroundColor: "white", border: "1px solid red"}}>
-                You can also allow users to build their own analyses and add elements to this page.
+            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "435px", left: "750px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
+                    <p>You can also allow users to build their own analyses and add elements to this page.</p>
 
-                Click explore to see what users can add. 
+                    <p>Click "Explore" to see what users can add.</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 7 && (
-            <FadingDiv isvisible={isVisible} className="seventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "150px", left: "270px", backgroundColor: "white", border: "1px solid red"}}>
-                Users can add a whole variety of elements to enhance / customize their analysis
+            <FadingDiv isvisible={isVisible} className="seventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "270px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "330px", margin:"20px"}}>
+                    <p>Users can add a whole variety of elements to enhance / customize their analysis</p>
 
-                Select VIZ to add a viz
+                    <p>Select "VIZ" to add a viz</p>
+                </div>                 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 8 && (
-            <FadingDiv isvisible={isVisible} className="eigth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
-                Click on Month to add it to the X axis
+            <FadingDiv isvisible={isVisible} className="eigth-modal" style={{  height: "60px", position: "absolute", color: "black", top: "437px", left: "257px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "383px", margin:"20px"}}>
+                    <p>Click on "Month" to add it to the X axis</p>
+                </div>  
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 9 && (
-            <FadingDiv isvisible={isVisible} className="ninth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
-                Click on Revenue to add it to the Y axis
+            <FadingDiv isvisible={isVisible} className="ninth-modal" style={{  height: "60px", position: "absolute", color: "black", top: "438px", left: "257px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
+                    <p>Click on "Revenue" to add it to the Y axis</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 10 && (
-            <FadingDiv isvisible={isVisible} className="tenth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
-                Congrats! You just added a chart.  This workbook can now be shared or exported.  Open the menu at the bottom left.
+            <FadingDiv isvisible={isVisible} className="tenth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "459px", left: "120px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
+                    <p>Congrats! You just added a chart.  This workbook can now be shared or exported.  Open the menu at the bottom left.</p>
+                </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 11 && (
-            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "502px", left: "372px", backgroundColor: "white", border: "1px solid red"}}>
-                Users can share their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).
+            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "411px", left: "372px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
+                    <p>Users can share their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).</p>
 
-                They can also created scheduled or conditional alerts.  Click “Schedule exports” to learn more
+                    <p>They can also created scheduled or conditional alerts.  Click “Schedule exports” to learn more</p>
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 12 && (
-            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "220px", left: "-3px", backgroundColor: "white", border: "1px solid red"}}>
-                There are many options here:users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.
+            <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "121px", left: "-219px"      }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
+                    <p>There are many options here:users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.</p>
 
-                And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.
+                    <p>And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.</p>
 
-                This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.
+                    <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
+                </div>
             </FadingDiv>
         )}
 
@@ -199,7 +229,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "307px"
                 , left: "183px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -221,7 +251,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "200px"
                 , left: "372px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -243,7 +273,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "668px"
                 , left: "859px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -265,7 +295,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "390px"
                 , left: "787px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -287,7 +317,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "668px"
                 , left: "931px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -309,7 +339,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "145px"
                 , left: "42px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -331,7 +361,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "459px"
                 , left: "42px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -353,7 +383,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "460px"
                 , left: "42px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -375,7 +405,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "673px"
                 , left: "256px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -397,7 +427,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "571px"
                 , left: "90px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -419,7 +449,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , position: "absolute"
                 , top: "574px"
                 , left: "808px"
-                , border: "1px solid red"}}
+                   }}
             onClick={() => nextStep()}
         >
                 clickable div
