@@ -1,5 +1,6 @@
 import { React, useContext, useEffect, useState } from 'react';
 import { ModalPage }from './components/nativeAppComponents/loginModal.js';
+import { PillarsPage } from './components/nativeAppComponents/pillarsModal.js';
 import { Navbar } from './components/nativeAppComponents/navbar.js';
 import { Sidebar } from './components/nativeAppComponents/sidebar.js';
 import PlugsLogo from './components/graphics/plugs_electronics_logo_green.png';
@@ -11,7 +12,7 @@ import { ProgressBar } from './components/progressBar/ProgressBar.js';
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(1);
+  const [currPage, setCurrPage] = useState(0);
 
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
   const [currStep, setCurrStep] = useState(0);
@@ -34,9 +35,19 @@ const App = () => {
     increaseGlobalStep();
   }
 
+  // PILLARS
+  if (currPage === 0) {
+    return (
+      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
+        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+          <PillarsPage nextPage={nextPage} currStep={currStep} />
+        </div>
+      </div>
+    )
+  }
 
-  // PAGE RENDERING
-  if (currPage === 1) {
+  // LOGIN MODAL
+  else if (currPage === 1) {
     return (
       <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
         <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
