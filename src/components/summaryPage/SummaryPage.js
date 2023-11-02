@@ -9,8 +9,8 @@ import ProfitEmbedMainPNG from './images/ProfitEmbed_Main.png';
 import ProfitEmbedCustomerDropdownPNG from './images/ProfitEmbed_Customers_Dropdown.png';
 import ProfitEmbedNickHolmesPNG from './images/ProfitEmbed_Nick_Holmes.png';
 import ProfitEmbedLucyDanielsPNG from './images/ProfitEmbed_Lucy_Daniels.png';
-import ProfitEmbedProductFamilyDropdownPNG from './images/ProfitEmbed_Product_Family_Dropdown.png';
-import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Computers.png';
+import ProfitEmbedProductFamilyDropdownPNG from './images/ProfitEmbed_Product_Type_Dropdown.png';
+import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Lucy_Daniels_Computers.png';
 
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
@@ -118,7 +118,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 4 && (
             <FadingDiv isvisible={isVisible} className="third-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "400px", backgroundColor: "white", border: "1px solid red"}}>
-                Click on Customer Name to get the Profit Snapshot for an individual customer.
+                Click on the All Customers filter to set the Profit Snapshot to an individual customer.
             </FadingDiv>
         )}
 
@@ -144,7 +144,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "272px", backgroundColor: "white", border: "1px solid red"}}>
                 We have now filtered to see profitability info for only Lucy. We used a POST request to pass information from the recent orders list to the embedded iframe.
 
-                See the payload here: [payload]
+                <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
+
                 <button onClick={resetVisbility}>next</button>
             </FadingDiv>
         )}
@@ -168,6 +169,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     Now we see only computer products in Recent Orders.
 
                     Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.
+
+                    <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
+
                 <button onClick={resetVisbility}>next</button>
             </FadingDiv>
         )}

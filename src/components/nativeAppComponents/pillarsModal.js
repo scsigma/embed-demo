@@ -60,6 +60,11 @@ const FadingDiv = styled.div`
 
 export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
   //const [modalStep, setModalStep] = useState(1);
+  const [modalStep, setModalStep] = useState(1);
+  const [isVisible, setIsVisible] = useState("false");
+  const [showElement, setShowElement] = useState(false)
+  const [modalOpacity, setModalOpacity] = useState(1);
+
   const resetVisbility = () => {
     setIsVisible("false");
     const timer = setTimeout(() => {
@@ -68,28 +73,40 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
     setModalStep(modalStep + 1);
   }
 
-  const [modalStep, setModalStep] = useState(1);
-
-  const [isVisible, setIsVisible] = useState("false");
-
   useEffect(() => {
     // Use setTimeout to change the state after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible("true");
     }, 3000);
-
     // Clear the timeout to prevent memory leaks
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(()=>{
+    setTimeout(function() {
+      setShowElement(true);
+      setModalOpacity(0.5);
+        }, 1000);
+      },
+  []);
+
+  
+  const handleButtonClick = () => {
+    resetVisbility();
+  }
+
   return (
       <AppContainer>
         {isVisible && modalStep === 1 && (
-        <div id="intro-page" style={{display: "flex", flexDirection: "column", alignContent: "center", justifyContent:"center"}}>
-          <div style={{height: "50px", display: "flex", alignContent: "center", justifyContent: "center", padding:"25px"}}>
-            <Button onClick={resetVisbility} style={{backgroundColor: "white", border:"2px solid #1976d2", borderRadius: "8px", fontFamily: "Lato", fontSize: "24px", color: "#1976d2"}}>Start the tutorial</Button>
+        <div id="intro-page" style={{display: "flex", height: "350px", width: "350px", flexDirection: "column", alignContent: "center", justifyContent:"center"}}>
+          
+          <div id="start-button" style={{height: "50px", position: "absolute", top: "450px", zIndex: "2", width: "300px", display:"flex", alignContent: "center", justifyContent: "center", padding:"25px"}}>
+            {showElement && isVisible ? (
+              <Button onClick={handleButtonClick} style={{ backgroundColor: 'white', border: '2px solid #1976d2', borderRadius: '8px', fontFamily: 'Lato', fontSize: '24px', color: '#1976d2' }}>Start the tutorial</Button>
+              ) : null}
           </div>
-          <Modal>
+
+          <Modal style={{position:"absolute", zIndex: "1", opacity: modalOpacity, width: "300px"}}>
             <h2 style={{"color":"#124342"}}>Supplier Portal</h2>
             <LoginForm>
               <Input type="email" placeholder="Email" />

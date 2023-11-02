@@ -164,7 +164,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
 
         {isVisible && modalStep === 10 && (
             <FadingDiv isvisible={isVisible} className="tenth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "459px", left: "257px", backgroundColor: "white", border: "1px solid red"}}>
-                Congrats! You just added a chart.  Open the menu at the bottom left his workbook can now be shared or exported
+                Congrats! You just added a chart.  This workbook can now be shared or exported.  Open the menu at the bottom left.
             </FadingDiv>
         )}
 
