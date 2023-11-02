@@ -184,31 +184,34 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 9 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "0px"}}>
+                <div className="text-container" style={{fontSize: "23px", margin: "10px"}}>
                     <p>Select "Computers"</p>                     
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 10 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "262px", left: "500px"   }}>
-                    Now we see only computer products in Recent Orders.
-
-                    Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-100px", left: "300px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px", marginBottom: "50px"}}>
+                    <p>Now we see only computer products in Recent Orders.</p> 
+                    
+                    <p>Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.</p>
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
-
-                <button onClick={resetVisbility}>next</button>
+                </div>
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 11 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
-                So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
+                    <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
+                    
+                    <p>Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.</p>
 
-                Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.
-
-                Click on the Analytics tab to check it out
+                    <p>Click on the "Analytics" tab to check it out</p>
+                </div>
             </FadingDiv>
         )}
 
