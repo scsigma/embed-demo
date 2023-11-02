@@ -36,97 +36,73 @@ const App = () => {
     setCurrPage(currPage + 1);
     setCurrStep(0);
   }
-
-  // PILLARS
-  if (currPage === 0) {
-    return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+  return (
+    <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
+      <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+        {/* INTRO / PILLARS SCREEN */}
+        { currPage === 0 && (
           <PillarsPage nextPage={nextPage} currStep={currStep} />
-        </div>
-      </div>
-    )
-  }
-
-  // LOGIN MODAL
-  else if (currPage === 1) {
-    return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+        )}
+        {/* LOGIN SCREEN */}
+        { currPage === 1 && (
           <ModalPage nextPage={nextPage} currStep={currStep} />
-        </div>
-      </div>
-    )
-  }
+        )}
+        {/* SUMMARY PAGE */}
+        { currPage === 2 && (
+          <div style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
+            <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
+              <ProgressBar globalStep={globalStep}/>
+            </div>
+            
+            <div className='navbar-container'>
+              <Navbar className='navbar'/>
+            </div>
 
+            <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
+              <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
+                <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage}/>
+                <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
+                  <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
+                </div>
+              </div>
 
-  // THIS IS THE SUMMARY PAGE
-  else if (currPage === 2) {
-    return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
-
-          <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
-            <ProgressBar globalStep={globalStep}/>
-          </div>
-          
-          <div className='navbar-container'>
-            <Navbar className='navbar'/>
-          </div>
-
-          <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
-            <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
-              <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage}/>
-              <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
-                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
+              <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
+                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} />
               </div>
             </div>
+          </div>
+        )}
+        {/* ANALYTICS PAGE */}
+        { currPage === 3 && (
+          <div style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
 
-            <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
-              
-              <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} />
-              
+            <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
+              <ProgressBar globalStep={globalStep}/>
             </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+            
+            
+            <div className='navbar-container'>
+              <Navbar className='navbar'/>
+            </div>
 
-  // THIS IS THE ANALYTICS PAGE
-  else if (currPage === 3) {
-    return (
-      <div className='page-container' style={{"display":"flex", "justifyContent":"center","alignItems":"center","minHeight":"100vh","minWidth":"100vw","position":"fixed"}}>
-
-        <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
-
-          <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
-            <ProgressBar globalStep={globalStep}/>
-          </div>
-          
-          
-          <div className='navbar-container'>
-            <Navbar className='navbar'/>
-          </div>
-
-          <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
-            <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
-              <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage} />
-              <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
-                <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
+            <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
+              <div className='sidebar-container' style={{"height":"100%", "width":"200px", "display":"flex","flexDirection":"column"}}>
+                <Sidebar className='side-bar' style={{"height": "100%"}} currPage={currPage} />
+                <div className='logo div sidebar' style={{"height":"100px", "width":"100%" }}>
+                  <img src={PlugsLogo} style={{"height":"100%", "width":"100%", "backgroundColor":"#DFDFDF"}}></img>
+                </div>
               </div>
-            </div>
 
-            <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-              <AnalyticsPage currStep={currStep} nextStep={nextStep} />
-            </div>
+              <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
+                <AnalyticsPage currStep={currStep} nextStep={nextStep} />
+              </div>
 
+            </div>
           </div>
-        </div>
+        )}
       </div>
-    );
-  }
+    </div>
+  )
 }
 
 
