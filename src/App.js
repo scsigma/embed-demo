@@ -30,9 +30,11 @@ const App = () => {
   }
 
   const nextPage = () => {
+    if (currPage !== 0) {
+      increaseGlobalStep();
+    }
     setCurrPage(currPage + 1);
     setCurrStep(0);
-    increaseGlobalStep();
   }
 
   // PILLARS

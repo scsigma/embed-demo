@@ -139,7 +139,7 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
             </div>
 
             <div id="title" style={{width: "100%", height:"50px", display: "flex", alignContent:"center", justifyContent:"center"}}>
-              <Button onClick={nextPage} style={{backgroundColor: "white", border:"2px solid #1976d2", borderRadius: "8px", fontFamily: "Lato", fontSize: "24px", color: "#1976d2"}}>Enter Plugs Portal</Button>
+              <Button onClick={nextPage}  style={{backgroundColor: "white", border:"2px solid #1976d2", borderRadius: "8px", fontFamily: "Lato", fontSize: "24px", color: "#1976d2"}}>Enter Plugs Portal</Button>
             </div>
         </div>
         )}
