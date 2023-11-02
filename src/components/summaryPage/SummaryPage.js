@@ -19,6 +19,12 @@ import { SimpleTable } from "../tableComponent/chakraTable";
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
   transition: opacity 1s;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 3px 2px 8px 2px grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
@@ -96,76 +102,96 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         </div>
 
         {isVisible && modalStep === 1 && (
-            <FadingDiv isvisible={isVisible} className="first-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px", backgroundColor: "white", border: "1px solid red"}}>
-                This portal has some features that are native to the app and some that are embedded from Sigma.
-                <button onClick={resetVisbility}>next</button>
+            <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
+                    This portal has some features that are native to the app and some that are embedded from Sigma.
+                </div>
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 2 && (
-            <FadingDiv isvisible={isVisible} className="second-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "243px", backgroundColor: "white", border: "1px solid red"}}>
-                These KPI tiles are individual visualizations from Sigma
-                <button onClick={resetVisbility}>next</button>
+            <FadingDiv isvisible={isVisible} className="second-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "243px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "300px", margin: "20px", marginBottom: "50px"}}>
+                    These KPI tiles are individual visualizations from Sigma
+                </div>
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 3 && (
-            <FadingDiv isvisible={isVisible} className="third-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "400px", backgroundColor: "white", border: "1px solid red"}}>
-                And this is a full page from a Sigma workbook, with multiple filters and visualizations.
-                <button onClick={resetVisbility}>next</button>
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "167px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px"}}>
+                    And this is a full page from a Sigma workbook, with multiple filters and visualizations.
+                </div>
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 4 && (
-            <FadingDiv isvisible={isVisible} className="third-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "400px", backgroundColor: "white", border: "1px solid red"}}>
-                Click on the All Customers filter to set the Profit Snapshot to an individual customer.
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "226px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
+                    Click on the All Customers filter to set the Profit Snapshot to an individual customer.
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "400px", backgroundColor: "white", border: "1px solid red"}}>
-                Click on Nick Holmes to see his lifetime profit and top products.
- 
-                This will execute a live query against the CDW to show you the latest information.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "236px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
+                    Click on Nick Holmes to see his lifetime profit and top products.
+
+                    This will execute a live query against the CDW to show you the latest information.
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "400px", backgroundColor: "white", border: "1px solid red"}}>
-                And now the Profit Snapshot shows Nick’s latest info.
-                
-                This Recent Orders list is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "20px"}}>
+                    <p>And now the Profit Snapshot shows Nick’s latest info.</p> 
+                    
+                    <p>This Recent Orders list is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
 
-                Click on Lucy Daniels and watch the Profit Snapshot filter down to Lucy:
+                    <p>Click on Lucy Daniels and watch the Profit Snapshot filter down to Lucy:</p>
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 7 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "272px", backgroundColor: "white", border: "1px solid red"}}>
-                We have now filtered to see profitability info for only Lucy. We used a POST request to pass information from the recent orders list to the embedded iframe.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-97px", left: "272px"   }}>
 
-                <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
 
-                <button onClick={resetVisbility}>next</button>
+                    <p>We have now filtered to see profitability info for only Lucy. We used a POST request to pass information from the recent orders list to the embedded iframe.</p>
+
+                    <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
+                </div>
+
+                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 8 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "160px", left: "600px", backgroundColor: "white", border: "1px solid red"}}>
-                Plugs has also created interactions in the other direction, capturing events in Sigma and applying them to other components of the portal.
-
-                Click on the Product Type filter to set a value and see that filter applied to the Recent Orders list.
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-76px", left: "600px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
+                    <p>Plugs has also created interactions in the other direction, capturing events in Sigma and applying them to other components of the portal.</p> 
+                    
+                    <p>Click on the Product Type filter to set a value and see that filter applied to the Recent Orders list.</p>
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 9 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "100px", height: "auto", position: "absolute", color: "black", top: "278px", left: "820px", backgroundColor: "white", border: "1px solid red"}}>
-                Select Computers
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "0px"}}>
+                    <p>Select "Computers"</p>                     
+                </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 10 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "262px", left: "500px", backgroundColor: "white", border: "1px solid red"}}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "262px", left: "500px"   }}>
                     Now we see only computer products in Recent Orders.
 
                     Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.
@@ -177,7 +203,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )}
 
         {isVisible && modalStep === 11 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px", backgroundColor: "white", border: "1px solid red"}}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{width: "300px", height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
                 So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.
 
                 Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.
@@ -200,7 +226,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "227px"
                 , left: "647px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -223,7 +249,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "303px"
                 , left: "647px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -245,7 +271,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "240px"
                 , left: "12px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -267,7 +293,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "227px"
                 , left: "920px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -290,7 +316,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "303px"
                 , left: "924px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => {
                 nextStep();
                 resetVisbility();
@@ -312,7 +338,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 , position: "absolute"
                 , top: "0px"
                 , left: "-241px"
-                , border: "1px solid red"}}
+                 }}
             onClick={() => nextPage()}
         >
                 clickable div

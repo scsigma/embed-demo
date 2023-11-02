@@ -12,7 +12,7 @@ import { ProgressBar } from './components/progressBar/ProgressBar.js';
 const App = () => {
 
   // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
-  const [currPage, setCurrPage] = useState(0);
+  const [currPage, setCurrPage] = useState(2);
 
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
   const [currStep, setCurrStep] = useState(0);
