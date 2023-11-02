@@ -85,15 +85,20 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
   return (
       <AppContainer>
         {isVisible && modalStep === 1 && (
+        <div id="intro-page" style={{display: "flex", flexDirection: "column", alignContent: "center", justifyContent:"center"}}>
+          <div style={{height: "50px", display: "flex", alignContent: "center", justifyContent: "center", padding:"25px"}}>
+            <Button onClick={resetVisbility} style={{backgroundColor: "white", border:"2px solid #1976d2", borderRadius: "8px", fontFamily: "Lato", fontSize: "24px", color: "#1976d2"}}>Start the tutorial</Button>
+          </div>
           <Modal>
             <h2 style={{"color":"#124342"}}>Supplier Portal</h2>
             <LoginForm>
               <Input type="email" placeholder="Email" />
               <Input type="password" placeholder="Password" />
-              <Button onClick={resetVisbility}>Login</Button>
+              <Button>Login</Button>
             </LoginForm>
             <Logo src={PlugsLogo}/>
           </Modal>
+        </div>
       )}
 
       {isVisible && modalStep === 2 && (
@@ -117,7 +122,7 @@ export const PillarsPage = ({ currStep, nextStep, nextPage }) => {
             </div>
 
             <div id="title" style={{width: "100%", height:"50px", display: "flex", alignContent:"center", justifyContent:"center"}}>
-              <button onClick={nextPage} style={{alignSelf: "center", fontSize: "24px", fontFamily: "Lato", padding: "12px", backgroundColor: "white"}}>I'm ready to start the tutorial</button>
+              <Button onClick={nextPage} style={{backgroundColor: "white", border:"2px solid #1976d2", borderRadius: "8px", fontFamily: "Lato", fontSize: "24px", color: "#1976d2"}}>Enter Plugs Portal</Button>
             </div>
         </div>
         )}
