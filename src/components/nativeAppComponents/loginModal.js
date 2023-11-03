@@ -68,18 +68,18 @@ export const ModalPage = ({ nextPage, nextStep, currStep }) => {
       </AppContainer>
 
       <div className='modal-div' style={{height: "auto", position: "absolute", left: "100px", top: "300px", backgroundCcolor: "#f4f4f4", borderRadius: "10px", boxShadow: "3px 2px 8px 2px grey"}}>
-        <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px" }}>
+        <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px", fontFamily: "Lato" }}>
           Plugs Electronics is an electronics retailer with many suppliers.  They created this portal for their suppliers to track orders and to provide them with analytics on product sales.
         </div>
       </div>
 
       <div className='modal-div-2' style={{height: "auto", position: "absolute", left: "979px", top: "264px", backgroundCcolor: "#f4f4f4", borderRadius: "10px", boxShadow: "3px 2px 8px 2px grey"}}>
-        <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px" }}>
+        <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px", fontFamily: "Lato"}}>
           <p>We’ll start by logging in as Alfonso, a manager at the Acme supplier.</p>
 
           <p>The Plugs Portal uses username + password, but Sigma embedding works with any authentication framework.</p>
 
-          <p>Click “Log In” to enter the portal</p>
+          <p>Click <strong>Login</strong> to enter the portal</p>
         </div>
       </div>
     </div>

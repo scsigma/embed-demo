@@ -144,7 +144,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"}}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
-                    This portal has some features that are native to the app and some that are embedded from Sigma.
+                    This portal has some features that are native to the Plugs application and some that are embedded from Sigma.
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
@@ -191,7 +191,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "20px"}}>
                     <p>Now the Profit Snapshot shows Nick’s information.</p> 
                     
-                    <p>The <strong>Recent Orders</strong> list below is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
+                    <p>The <strong>Recent Orders</strong> list below is a native piece of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
 
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
@@ -387,7 +387,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 15 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>And finally, the signature is the unique product of hashing this URL with your secret key.</p> 
+                    <p>And finally, the signature is the unique result of hashing this URL with your secret key.</p> 
                     
                     <p>iframe embedding is secure for two reasons:</p>
 
@@ -430,7 +430,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "700px", margin: "20px"}}>
                     <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
                     
-                    <p>Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.</p>
+                    <p>Plugs also offers a premium analytics experience and charges customers who want more analytical capabilities.</p>
 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
