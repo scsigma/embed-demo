@@ -25,6 +25,19 @@ const FadingDiv = styled.div`
   justify-content: center;
 `;
 
+const NextButton = styled.button`
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 2px solid #0004E1;     
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    color: #0004E1;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 18px;
+`;
+
 export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
   const screenshotRender = (currStep) => {
@@ -104,8 +117,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.</p>
                 </div>                
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
-            </FadingDiv>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>            </FadingDiv>
         )}
 
         {isVisible && modalStep === 2 && (
