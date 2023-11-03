@@ -25,7 +25,7 @@ const FadingDiv = styled.div`
   justify-content: center;
 `;
 
-export const AnalyticsPage = ({ currStep, nextStep }) => {
+export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -109,11 +109,11 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         )}
 
         {isVisible && modalStep === 2 && (
-            <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "49px", left: "330px"}}>
-                <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
-                    <p>One advanced functionality is drill down, which allows users to drill into any dimension of a pivot table or bar chart.</p>
+            <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "29px", left: "330px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"10px"}}>
+                    <p>One advanced functionality is <strong>drill down</strong>, which allows users to drill into any dimension of a pivot table or bar chart.</p>
 
-                    <p>Click on the bar for "Computers" to drill into performance for specific products.</p>
+                    <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
                 </div>   
             </FadingDiv>
         )}
@@ -121,41 +121,41 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         {isVisible && modalStep === 3 && (
             <FadingDiv isvisible={isVisible} className="third-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "-105px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
-                    <p>Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you don’t need to preconfigure drill paths.</p>
+                    <p>Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you <strong>don’t need to preconfigure drill paths</strong>.</p>
 
-                    <p>Click on "Product Name" to drill into it</p>
+                    <p>Click on <strong>Product Name</strong> to drill into it</p>
                 </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 4 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "300px", left: "700px"      }}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "270px", left: "700px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
                     <p>Now you see the top computer products.  From here you could drill down again or show the underlying data.</p>
 
-                    <p>After continuing this ad hoc analysis, users can create a Bookmark to save their changes for the next time they come back into the portal.</p>
+                    <p>After continuing this ad hoc analysis, users can create a <strong>Bookmark</strong> to save their changes for the next time they come back into the portal.</p>
 
-                    <p>Click here to create a bookmark.</p>
+                    <p>Click on the icon below to create a bookmark.</p>
                 </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "450px", left: "500px"      }}>
+            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "440px", left: "500px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
                     <p>Users also have the option to set this bookmark as their default view (without overriding any other users’ preferences).</p>
 
-                    <p>Click the "Save" Button</p>
+                    <p>Click the <strong>Save</strong> Button</p>
                 </div> 
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
-            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "435px", left: "750px"      }}>
+            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "410px", left: "750px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin:"20px"}}>
                     <p>You can also allow users to build their own analyses and add elements to this page.</p>
 
-                    <p>Click "Explore" to see what users can add.</p>
+                    <p>Toggle into <strong>Explore</strong> mode to see what users can add.</p>
                 </div> 
             </FadingDiv>
         )}
@@ -165,7 +165,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "330px", margin:"20px"}}>
                     <p>Users can add a whole variety of elements to enhance / customize their analysis</p>
 
-                    <p>Select "VIZ" to add a viz</p>
+                    <p>Select <strong>VIZ</strong> to add a new chart</p>
                 </div>                 
             </FadingDiv>
         )}
@@ -173,7 +173,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         {isVisible && modalStep === 8 && (
             <FadingDiv isvisible={isVisible} className="eigth-modal" style={{  height: "60px", position: "absolute", color: "black", top: "437px", left: "257px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "383px", margin:"20px"}}>
-                    <p>Click on "Month" to add it to the X axis</p>
+                    <p>Click on <strong>Month</strong> to add it to the X axis</p>
                 </div>  
             </FadingDiv>
         )}
@@ -181,7 +181,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         {isVisible && modalStep === 9 && (
             <FadingDiv isvisible={isVisible} className="ninth-modal" style={{  height: "60px", position: "absolute", color: "black", top: "438px", left: "257px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
-                    <p>Click on "Revenue" to add it to the Y axis</p>
+                    <p>Click on <strong>Revenue</strong> to add it to the Y axis</p>
                 </div> 
             </FadingDiv>
         )}
@@ -197,9 +197,9 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
         {isVisible && modalStep === 11 && (
             <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "411px", left: "372px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
-                    <p>Users can share their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).</p>
+                    <p>Users can <strong>share</strong> their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).</p>
 
-                    <p>They can also created scheduled or conditional alerts.  Click “Schedule exports” to learn more</p>
+                    <p>They can also create <strong>scheduled or conditional alerts</strong>.  Click <strong>Schedule exports</strong> to learn more</p>
                 </div>
             </FadingDiv>
         )}
@@ -212,6 +212,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                     <p>And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.</p>
 
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
+                    <p>Click <strong>Create</strong>.</p>
                 </div>
             </FadingDiv>
         )}
@@ -450,7 +451,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "574px"
                 , left: "808px"
                    }}
-            onClick={() => nextStep()}
+            onClick={() => nextPage()}
         >
                 clickable div
         </div>
