@@ -203,7 +203,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "60px"}}>
 
-                    <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>POST</strong> request to pass information from the recent orders list to the embedded iframe.</p>
+                    <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>postMessage</strong> to pass information from the recent orders list to the embedded iframe.</p>
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
