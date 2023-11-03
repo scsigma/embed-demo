@@ -69,7 +69,7 @@ const App = () => {
                 </div>
               </div>
 
-              <div className='app-container' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
+              <div className='app-container' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
                 <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} />
               </div>
             </div>
@@ -96,7 +96,7 @@ const App = () => {
                 </div>
               </div>
 
-              <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#d6d6d6", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
+              <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
                 <AnalyticsPage currStep={currStep} nextStep={nextStep} />
               </div>
 

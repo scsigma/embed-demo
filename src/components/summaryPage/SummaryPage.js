@@ -81,7 +81,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
 
   return (
-    <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column",justifyContent: "center", alignItems: "center", position: "absolute"}}>
+    <div className='app-contents' style={{width: "1189px", height: "682px", display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center", position: "absolute"}}>
                 
         <div className='kpis-container' style={{width: "1189px", height: "154px", position: "absolute", display: "flex", alignItems: "center", justifyContent: "space-around",top:"0px"}}>
             <img src={OrderKPIPNG} style={{width: "352px"}}/>
@@ -89,11 +89,11 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
             <img src={CustomerKPIPNG} style={{width: "352px"}}/>
         </div>
 
-        <div className='table-and-profit-container' style={{width: "1189px", height: "499px", position: "absolute", top: "175px", "display":"flex", "justifyContent":"space-evenly","alignItems":"center"}}>
+        <div className='table-and-profit-container' style={{width: "1189px", height: "499px", position: "absolute", top: "175px", "display":"flex", "justifyContent":"space-evenly", "alignItems":"center"}}>
         
-            <div className='table container' style={{width: "577px", height: "499px", backgroundColor: "lightgrey", padding: "13px", borderRadius: "14px", color: "black"}}>
-                Recent Orders
-                <SimpleTable currStep={currStep} />
+            <div className='table container' style={{width: "577px", height: "499px", backgroundColor: "#ffffff", padding: "13px", borderRadius: "14px", color: "black"}}>
+                <div><p style={{margin: "0px", textAlign:"center", fontFamily: "Lato", fontSize: "20px", fontWeight: "700"}}>Recent Orders</p></div>
+                <SimpleTable currStep={currStep}/>
             </div>
 
             <div className='embed-container' style={{width: "612px", height: "499px"}}>
@@ -113,7 +113,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 2 && (
             <FadingDiv isvisible={isVisible} className="second-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "243px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "300px", margin: "20px", marginBottom: "50px"}}>
-                    These KPI tiles are individual visualizations from Sigma
+                    The three KPI tiles above are individual visualizations from Sigma.
                 </div>
                 <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
@@ -122,7 +122,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 3 && (
             <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "167px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px"}}>
-                    And this is a full page from a Sigma workbook, with multiple filters and visualizations.
+                    And the <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                 </div>
                 <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
             </FadingDiv>
@@ -131,7 +131,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 4 && (
             <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "226px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
-                    Click on the All Customers filter to set the Profit Snapshot to an individual customer.
+                    Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
             </FadingDiv>
         )}
@@ -139,7 +139,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 5 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "236px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
-                    Click on Nick Holmes to see his lifetime profit and top products.
+                    Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
                     This will execute a live query against the CDW to show you the latest information.
                 </div>
@@ -149,11 +149,11 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 6 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "20px"}}>
-                    <p>And now the Profit Snapshot shows Nick’s latest info.</p> 
+                    <p>Now the Profit Snapshot shows Nick’s information.</p> 
                     
-                    <p>This Recent Orders list is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
+                    <p>The <strong>Recent Orders</strong> list below is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
 
-                    <p>Click on Lucy Daniels and watch the Profit Snapshot filter down to Lucy:</p>
+                    <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
             </FadingDiv>
         )}
@@ -163,7 +163,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
 
-                    <p>We have now filtered to see profitability info for only Lucy. We used a POST request to pass information from the recent orders list to the embedded iframe.</p>
+                    <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>POST</strong> request to pass information from the recent orders list to the embedded iframe.</p>
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
@@ -177,7 +177,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
                     <p>Plugs has also created interactions in the other direction, capturing events in Sigma and applying them to other components of the portal.</p> 
                     
-                    <p>Click on the Product Type filter to set a value and see that filter applied to the Recent Orders list.</p>
+                    <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
             </FadingDiv>
         )}
@@ -185,7 +185,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 9 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
                 <div className="text-container" style={{fontSize: "23px", margin: "10px"}}>
-                    <p>Select "Computers"</p>                     
+                    <p>Select <strong>Computers</strong></p>                     
                 </div>
             </FadingDiv>
         )}
@@ -193,7 +193,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 10 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-100px", left: "300px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px", marginBottom: "50px"}}>
-                    <p>Now we see only computer products in Recent Orders.</p> 
+                    <p>Now we see only computer products in <strong>Recent Orders</strong>.</p> 
                     
                     <p>Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.</p>
 
@@ -210,7 +210,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     
                     <p>Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.</p>
 
-                    <p>Click on the "Analytics" tab to check it out</p>
+                    <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
             </FadingDiv>
         )}

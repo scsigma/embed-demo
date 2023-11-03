@@ -19,15 +19,15 @@ export const SimpleTable = ({ currStep }) => {
   };
 
   return (
-    <Box backgroundColor="lightgrey">
+    <Box backgroundColor="#ffffff">
       <Table variant="simple" style={{borderCollapse:"separate", borderSpacing:"0 1em", tableLayout: "fixed", width:"540px"}}>
         <col className='order-col' style={{width: "8%"}}/>
-        <col className='customer-col' style={{width: "16%"}}/>
-        <col className='amount-col' style={{width: "9%"}}/>
-        <col className='product-col' style={{width: "8%"}}/>
-        <col className='type-col' style={{width: "15%"}}/>
+        <col className='customer-col' style={{width: "12%"}}/>
+        <col className='amount-col' style={{width: "8%"}}/>
+        <col className='product-col' style={{width: "18%"}}/>
+        <col className='type-col' style={{width: "10%"}}/>
         <Thead>
-          <Tr color="black" style={{textAlign: "left"}}>
+          <Tr color="black" style={{textAlign: "left", fontSize: "14px"}}>
             {Object.keys(data[0]).map((column, index) => (
               <Th key={index}>{column}</Th>
             ))}
