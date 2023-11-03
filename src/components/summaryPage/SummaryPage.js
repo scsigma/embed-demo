@@ -18,13 +18,37 @@ import { SimpleTable } from "../tableComponent/chakraTable";
 
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
-  transition: opacity 1s;
+  transition: ${props => (props.notransition === "true" ? 'opacity 0s' : 'opacity 1s')};
   background-color: #f4f4f4;
   border-radius: 10px;
   box-shadow: 3px 2px 8px 2px grey;
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+// For the iframe modals
+const CodeBlockContainer = styled.div`
+  background-color: #f3f3f3;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  white-space: pre;
+  line-height: 1.4;
+  overflow-x: auto;
+  font-size: 12px;
+`;
+
+// For the iframe modals
+const Code = styled.code`
+  color: #333;
+`;
+
+// For the iframe modals
+const HighlightedText = styled.p`
+  background-color: yellow; /* Set your desired highlight color */
+  display: inline; /* Prevent the background color from spanning the entire width */
 `;
 
 export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
@@ -62,6 +86,10 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
     const timer = setTimeout(() => {
         setIsVisible("true");
       }, 3000);
+    setModalStep(modalStep + 1);
+  }
+
+  const increaseModalStep = () => {
     setModalStep(modalStep + 1);
   }
 
@@ -203,9 +231,191 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
             </FadingDiv>
         )}
 
+        {/* BEGINNING OF IFRAME CONTENT */}
         {isVisible && modalStep === 11 && (
+            <FadingDiv isvisible={isVisible} className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                    <p>Sigma uses iframe embedding, which is both secure and extensible, allowing us to work with all types of security/authentication frameworks.</p> 
+                    
+                    <p>We’ll use an example to explain how iframe embedding works.</p>
+
+                    <p>At a high level, your application will generate this URL and sign it using a secret key and a hashing function (HMAC-SHA256). This signature is unique to the parameters in the URL and cannot be modified.</p>
+
+                    <CodeBlockContainer>
+                        <pre>
+                            <Code>
+                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+
+                                <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
+
+                                <p>&:email=alfonso@acmesupply.com</p>
+
+                                <p>&:mode=userbacked</p>
+
+                                <p>&:session_length=3600</p>
+
+                                <p>&:time=1698644306</p>
+
+                                <p>&:client_id=c6c5391cd1b2a8b878a48351a36573decf133335e90d67d0851145a4676e5eaf</p>
+
+                                <p>&:ua_region=West,Southwest</p>
+
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                            </Code>
+                        </pre>
+                    </CodeBlockContainer>
+                </div>
+                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 12 && (
+            <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                    <p>The :email field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
+
+                    <CodeBlockContainer>
+                        <pre>
+                            <Code>
+                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+
+                                <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
+
+                                <p><HighlightedText>&:email=alfonso@acmesupply.com</HighlightedText></p>
+
+                                <p>&:mode=userbacked</p>
+
+                                <p>&:session_length=3600</p>
+
+                                <p>&:time=1698644306</p>
+
+                                <p>&:client_id=c6c5391cd1b2a8b878a48351a36573decf133335e90d67d0851145a4676e5eaf</p>
+
+                                <p>&:ua_region=West,Southwest</p>
+
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                            </Code>
+                        </pre>
+                    </CodeBlockContainer>
+                </div>
+                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 13 && (
+            <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                    <p>The :nonce field makes the URL (and therefore the signature) unique.</p> 
+                    
+                    <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p>
+
+                    <CodeBlockContainer>
+                        <pre>
+                            <Code>
+                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+
+                                <p><HighlightedText>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</HighlightedText></p>
+
+                                <p>&:email=alfonso@acmesupply.com</p>
+
+                                <p>&:mode=userbacked</p>
+
+                                <p>&:session_length=3600</p>
+
+                                <p>&:time=1698644306</p>
+
+                                <p>&:client_id=c6c5391cd1b2a8b878a48351a36573decf133335e90d67d0851145a4676e5eaf</p>
+
+                                <p>&:ua_region=West,Southwest</p>
+
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                            </Code>
+                        </pre>
+                    </CodeBlockContainer>
+                </div>
+                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 14 && (
+            <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                    <p>The :ua_region field is an example of a user attribute. User attributes allow you to administer security.</p> 
+                    
+                    <p>In this example, Alfonso can only see data from the West and Southwest regions, but a different user might be able to see East and Midwest regions.</p>
+
+                    <CodeBlockContainer>
+                        <pre>
+                            <Code>
+                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+
+                                <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
+
+                                <p>&:email=alfonso@acmesupply.com</p>
+
+                                <p>&:mode=userbacked</p>
+
+                                <p>&:session_length=3600</p>
+
+                                <p>&:time=1698644306</p>
+
+                                <p>&:client_id=c6c5391cd1b2a8b878a48351a36573decf133335e90d67d0851145a4676e5eaf</p>
+
+                                <p><HighlightedText>&:ua_region=West,Southwest</HighlightedText></p>
+
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                            </Code>
+                        </pre>
+                    </CodeBlockContainer>
+                </div>
+                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+            </FadingDiv>
+        )}
+
+        {isVisible && modalStep === 15 && (
+            <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                    <p>And finally, the signature is the unique product of hashing this URL with your secret key.</p> 
+                    
+                    <p>iframe embedding is secure for two reasons:</p>
+
+                    <p>   1. the URL cannot be reused because the nonce can only be used once.</p>
+                    <p>   2. the URL cannot be modified because modifying the URL invalidates the signature. To modify the URL one must then re-sign it, which requires the secret key.</p>
+
+                    <CodeBlockContainer>
+                        <pre>
+                            <Code>
+                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+
+                                <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
+
+                                <p>&:email=alfonso@acmesupply.com</p>
+
+                                <p>&:mode=userbacked</p>
+
+                                <p>&:session_length=3600</p>
+
+                                <p>&:time=1698644306</p>
+
+                                <p>&:client_id=c6c5391cd1b2a8b878a48351a36573decf133335e90d67d0851145a4676e5eaf</p>
+
+                                <p>&:ua_region=West,Southwest</p>
+
+                                <p><HighlightedText>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”</HighlightedText></p>
+                            </Code>
+                        </pre>
+                    </CodeBlockContainer>
+                </div>
+                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+            </FadingDiv>
+        )}
+
+        {/* END OF IFRAME CONTENT */}
+        
+
+        {isVisible && modalStep === 16 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "700px", margin: "20px"}}>
                     <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
                     
                     <p>Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.</p>
@@ -216,6 +426,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )}
 
 
+        {/* ALL OF THE CLICKABLE DIVS BELOW */}
         <div
             className="filterClick"
             style={{
