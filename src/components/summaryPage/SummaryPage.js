@@ -15,7 +15,6 @@ import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Lucy_Daniels_Com
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
 
-
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
   transition: ${props => (props.notransition === "true" ? 'opacity 0s' : 'opacity 1s')};
@@ -29,7 +28,7 @@ const FadingDiv = styled.div`
 
 // For the iframe modals
 const CodeBlockContainer = styled.div`
-  background-color: #f3f3f3;
+  background-color: #ffffff;
   padding: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -47,8 +46,21 @@ const Code = styled.code`
 
 // For the iframe modals
 const HighlightedText = styled.p`
-  background-color: yellow; /* Set your desired highlight color */
-  display: inline; /* Prevent the background color from spanning the entire width */
+  background-color: #A0CBE8; 
+  display: inline; 
+`;
+
+const NextButton = styled.button`
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 2px solid #0004E1;     
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    color: #0004E1;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 18px;
 `;
 
 export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
@@ -132,9 +144,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"}}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
-                    This portal has some features that are native to the app and some that are embedded from Sigma.
+                    This portal has some features that are native to the Plugs application and some that are embedded from Sigma.
                 </div>
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -143,7 +155,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "300px", margin: "20px", marginBottom: "50px"}}>
                     The three KPI tiles above are individual visualizations from Sigma.
                 </div>
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -152,7 +164,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px"}}>
                     And the <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                 </div>
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -169,17 +181,17 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
-                    This will execute a live query against the CDW to show you the latest information.
+                    This will execute a live query against the cloud data warehouse.
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "20px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "14px"}}>
                     <p>Now the Profit Snapshot shows Nick’s information.</p> 
                     
-                    <p>The <strong>Recent Orders</strong> list below is a custom part of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
+                    <p>The <strong>Recent Orders</strong> list below is a native piece of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
 
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
@@ -189,14 +201,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 7 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-97px", left: "272px"   }}>
 
-                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "60px"}}>
 
                     <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>POST</strong> request to pass information from the recent orders list to the embedded iframe.</p>
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
 
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -227,14 +239,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
                 </div>
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
         {/* BEGINNING OF IFRAME CONTENT */}
         {isVisible && modalStep === 11 && (
             <FadingDiv isvisible={isVisible} className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <p>Sigma uses iframe embedding, which is both secure and extensible, allowing us to work with all types of security/authentication frameworks.</p> 
                     
                     <p>We’ll use an example to explain how iframe embedding works.</p>
@@ -265,14 +277,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 12 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
-                    <p>The :email field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <p>The <strong>:email</strong> field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
 
                     <CodeBlockContainer>
                         <pre>
@@ -298,14 +310,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 13 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
-                    <p>The :nonce field makes the URL (and therefore the signature) unique.</p> 
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
                     
                     <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p>
 
@@ -333,14 +345,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 14 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
-                    <p>The :ua_region field is an example of a user attribute. User attributes allow you to administer security.</p> 
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <p>The <strong>:ua_region</strong> field is an example of a user attribute. User attributes allow you to administer security.</p> 
                     
                     <p>In this example, Alfonso can only see data from the West and Southwest regions, but a different user might be able to see East and Midwest regions.</p>
 
@@ -368,14 +380,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 15 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "50px"}}>
-                    <p>And finally, the signature is the unique product of hashing this URL with your secret key.</p> 
+                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <p>And finally, the <strong>signature</strong> is the unique result of hashing this URL with your secret key.</p> 
                     
                     <p>iframe embedding is secure for two reasons:</p>
 
@@ -406,7 +418,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <button onClick={increaseModalStep} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -418,7 +430,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "700px", margin: "20px"}}>
                     <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
                     
-                    <p>Plugs has restricted access to these more advanced features to a subset of users/clients and are charging clients more for it.</p>
+                    <p>Plugs also offers a premium analytics experience and charges customers who want more analytical capabilities.</p>
 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>

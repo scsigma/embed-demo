@@ -13,7 +13,7 @@ const ProgressBarContainer = styled.div`
 const ProgressBarFill = styled.div`
   width: ${props => props.globalStep}%;
   height: 100%;
-  background-color: red;
+  background-color: #A0CBE8;
   transition: width 0.5s; /* Add a transition for a smooth fill effect */
 `;
 

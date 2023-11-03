@@ -25,6 +25,19 @@ const FadingDiv = styled.div`
   justify-content: center;
 `;
 
+const NextButton = styled.button`
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border: 2px solid #0004E1;     
+    border-radius: 5px;
+    padding: 8px;
+    position: absolute;
+    color: #0004E1;
+    font-family: Lato;
+    font-weight: 700;
+    font-size: 18px;
+`;
+
 export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
   const screenshotRender = (currStep) => {
@@ -100,18 +113,18 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
-                    <p>Plugs has embedded an entire Sigma workbook here for a power-user experience, perfect for users who want to ask follow up questions.</p>
+                    <p>Plugs has embedded an entire Sigma workbook here for a power-user experience, perfect for users who need to perform ad-hoc analysis to answer follow-up questions.</p>
 
                     <p>These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.</p>
                 </div>                
-                <button onClick={resetVisbility} style={{width: "50px", position: "absolute", bottom: "10px", right: "10px"}}>next</button>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>            
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 2 && (
             <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "29px", left: "330px"}}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"10px"}}>
-                    <p>One advanced functionality is <strong>drill down</strong>, which allows users to drill into any dimension of a pivot table or bar chart.</p>
+                    <p>One advanced feature is <strong>drill down</strong>, which allows users to drill into any dimension of a pivot table or chart.</p>
 
                     <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
                 </div>   
@@ -163,7 +176,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 7 && (
             <FadingDiv isvisible={isVisible} className="seventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "270px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "330px", margin:"20px"}}>
-                    <p>Users can add a whole variety of elements to enhance / customize their analysis</p>
+                    <p>Users can add new elements to enhance / customize their analysis</p>
 
                     <p>Select <strong>VIZ</strong> to add a new chart</p>
                 </div>                 
@@ -188,8 +201,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 10 && (
             <FadingDiv isvisible={isVisible} className="tenth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "459px", left: "120px"      }}>
-                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
-                    <p>Congrats! You just added a chart.  This workbook can now be shared or exported.  Open the menu at the bottom left.</p>
+                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"10px"}}>
+                    <p>Congrats! You just added a chart.</p>
+                    <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
                 </div> 
             </FadingDiv>
         )}
@@ -197,7 +211,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 11 && (
             <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "411px", left: "372px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
-                    <p>Users can <strong>share</strong> their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).</p>
+                    <p>If enabled, users can <strong>share</strong> their analysis with other users at their company (Alfonso could share with other Acme employees, in our case).</p>
 
                     <p>They can also create <strong>scheduled or conditional alerts</strong>.  Click <strong>Schedule exports</strong> to learn more</p>
                 </div>
@@ -207,9 +221,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 12 && (
             <FadingDiv isvisible={isVisible} className="eleventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "121px", left: "-219px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
-                    <p>There are many options here:users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.</p>
+                    <p>There are many options here: users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.</p>
 
-                    <p>And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.</p>
+                    <p>Or they can set a conditional export, like sending an email when profit margin decreases by more than 3%.</p>
 
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
                     <p>Click <strong>Create</strong>.</p>
