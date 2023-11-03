@@ -176,7 +176,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 7 && (
             <FadingDiv isvisible={isVisible} className="seventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "270px"      }}>
                 <div className="text-container" style={{fontSize: "23px", width: "330px", margin:"20px"}}>
-                    <p>Users can also add new elements to enhance / customize their analysis</p>
+                    <p>Users can add new elements to enhance / customize their analysis</p>
 
                     <p>Select <strong>VIZ</strong> to add a new chart</p>
                 </div>                 
@@ -201,7 +201,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 10 && (
             <FadingDiv isvisible={isVisible} className="tenth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "459px", left: "120px"      }}>
-                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"10px"}}>
                     <p>Congrats! You just added a chart.</p>
                     <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
                 </div> 
@@ -223,7 +223,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin:"20px"}}>
                     <p>There are many options here: users can export the whole workbook or specific elements, export as a CSV/PDF/etc, and customize a schedule.</p>
 
-                    <p>Or you can set a conditional export, like sending an email when profit margin decreases by more than 3%.</p>
+                    <p>Or they can set a conditional export, like sending an email when profit margin decreases by more than 3%.</p>
 
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
                     <p>Click <strong>Create</strong>.</p>

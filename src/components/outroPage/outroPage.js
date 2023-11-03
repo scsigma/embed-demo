@@ -105,7 +105,7 @@ export const OutroPage = ({ currStep, nextStep, nextPage }) => {
             </div>
 
             <div id="title" style={{width: "100%", height:"200px", display: "flex", alignContent:"center", justifyContent:"center"}}>
-                <a href="https://www.sigmacomputing.com/product/embedded-analytics"  style={{textDecoration: "none", fontFamily: 'Lato', fontSize: '24px', textAlign: "center", color:"#0004E1"}}><h3>Back to Sigma</h3></a>
+                <a href="https://www.sigmacomputing.com/product/embedded-analytics"  style={{textDecoration: "none", fontFamily: 'Lato', fontSize: '24px', textAlign: "center", color:"#0004E1"}}><h3>&larr; Back to Sigma</h3></a>
             </div>
         </div>
       </AppContainer>

@@ -28,7 +28,7 @@ const FadingDiv = styled.div`
 
 // For the iframe modals
 const CodeBlockContainer = styled.div`
-  background-color: #f3f3f3;
+  background-color: #ffffff;
   padding: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -46,8 +46,8 @@ const Code = styled.code`
 
 // For the iframe modals
 const HighlightedText = styled.p`
-  background-color: yellow; /* Set your desired highlight color */
-  display: inline; /* Prevent the background color from spanning the entire width */
+  background-color: #A0CBE8; 
+  display: inline; 
 `;
 
 const NextButton = styled.button`
@@ -181,14 +181,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
-                    This will execute a live query against the CDW to show you the latest information.
+                    This will execute a live query against the cloud data warehouse.
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "20px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "14px"}}>
                     <p>Now the Profit Snapshot shows Nick’s information.</p> 
                     
                     <p>The <strong>Recent Orders</strong> list below is a native piece of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
@@ -201,7 +201,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 7 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-97px", left: "272px"   }}>
 
-                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "60px"}}>
 
                     <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>POST</strong> request to pass information from the recent orders list to the embedded iframe.</p>
 
@@ -284,7 +284,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 12 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The :email field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
+                    <p>The <strong>:email</strong> field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
 
                     <CodeBlockContainer>
                         <pre>
@@ -317,7 +317,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 13 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The :nonce field makes the URL (and therefore the signature) unique.</p> 
+                    <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
                     
                     <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p>
 
@@ -352,7 +352,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 14 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The :ua_region field is an example of a user attribute. User attributes allow you to administer security.</p> 
+                    <p>The <strong>:ua_region</strong> field is an example of a user attribute. User attributes allow you to administer security.</p> 
                     
                     <p>In this example, Alfonso can only see data from the West and Southwest regions, but a different user might be able to see East and Midwest regions.</p>
 
@@ -387,7 +387,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {isVisible && modalStep === 15 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>And finally, the signature is the unique result of hashing this URL with your secret key.</p> 
+                    <p>And finally, the <strong>signature</strong> is the unique result of hashing this URL with your secret key.</p> 
                     
                     <p>iframe embedding is secure for two reasons:</p>
 
