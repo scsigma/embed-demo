@@ -25,7 +25,7 @@ const FadingDiv = styled.div`
   justify-content: center;
 `;
 
-export const AnalyticsPage = ({ currStep, nextStep }) => {
+export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -212,6 +212,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                     <p>And you can even set a conditional export, like exporting the workbook when profit margin decreases by more than 3%.</p>
 
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
+                    <p>Click <strong>Create</strong>.</p>
                 </div>
             </FadingDiv>
         )}
@@ -450,7 +451,7 @@ export const AnalyticsPage = ({ currStep, nextStep }) => {
                 , top: "574px"
                 , left: "808px"
                    }}
-            onClick={() => nextStep()}
+            onClick={() => nextPage()}
         >
                 clickable div
         </div>

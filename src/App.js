@@ -8,7 +8,7 @@ import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
 import { SummaryPage } from './components/summaryPage/SummaryPage.js';
 import { ProgressBar } from './components/progressBar/ProgressBar.js';
 import { Header } from './components/nativeAppComponents/header.js';
-
+import { OutroPage } from './components/outroPage/outroPage.js';
 
 const App = () => {
 
@@ -97,11 +97,14 @@ const App = () => {
               </div>
 
               <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-                <AnalyticsPage currStep={currStep} nextStep={nextStep} />
+                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage}/>
               </div>
 
             </div>
           </div>
+        )}
+        { currPage === 4 && (
+          <OutroPage/>
         )}
       </div>
     </div>
