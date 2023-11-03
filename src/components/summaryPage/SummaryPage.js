@@ -244,7 +244,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <CodeBlockContainer>
                         <pre>
                             <Code>
-                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+                                <p>&lt;iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
 
                                 <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
 
@@ -260,7 +260,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                                 <p>&:ua_region=West,Southwest</p>
 
-                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”&gt;</p>
                             </Code>
                         </pre>
                     </CodeBlockContainer>
@@ -277,7 +277,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <CodeBlockContainer>
                         <pre>
                             <Code>
-                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+                                <p>&lt;iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
 
                                 <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
 
@@ -293,7 +293,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                                 <p>&:ua_region=West,Southwest</p>
 
-                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”&gt;</p>
                             </Code>
                         </pre>
                     </CodeBlockContainer>
@@ -312,7 +312,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <CodeBlockContainer>
                         <pre>
                             <Code>
-                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+                                <p>&lt;iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
 
                                 <p><HighlightedText>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</HighlightedText></p>
 
@@ -328,7 +328,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                                 <p>&:ua_region=West,Southwest</p>
 
-                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”&gt;</p>
                             </Code>
                         </pre>
                     </CodeBlockContainer>
@@ -347,7 +347,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <CodeBlockContainer>
                         <pre>
                             <Code>
-                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+                                <p>&lt;iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
 
                                 <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
 
@@ -363,7 +363,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                                 <p><HighlightedText>&:ua_region=West,Southwest</HighlightedText></p>
 
-                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”`</p>
+                                <p>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”&gt;</p>
                             </Code>
                         </pre>
                     </CodeBlockContainer>
@@ -385,7 +385,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <CodeBlockContainer>
                         <pre>
                             <Code>
-                                <p>iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
+                                <p>&lt;iframe src=”https://app.sigmacomputing.com/embed/DX5Dhyw0BPGlw3lyQHeqg?</p>
 
                                 <p>:nonce=f39c4be6-95cd-4fb8b06a-792c768428d7</p>
 
@@ -401,7 +401,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                                 <p>&:ua_region=West,Southwest</p>
 
-                                <p><HighlightedText>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”</HighlightedText></p>
+                                <p><HighlightedText>&:signature=ec3a7732d64ebba0d0bb255ce5ca27746a6c5c7063902075aea712b8c175bc21”&gt;</HighlightedText></p>
                             </Code>
                         </pre>
                     </CodeBlockContainer>
