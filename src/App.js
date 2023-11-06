@@ -39,7 +39,7 @@ const App = () => {
   }
 
   return (
-    <div className='page-container' style={{"display":"flex", flexDirection: "column", "alignItems":"center", "minHeight":"100vh", "minWidth":"100vw", "position":"fixed"}}>
+    <div className='page-container' style={{"display":"flex", flexDirection: "column", "alignItems":"center", "minHeight":"100vh", "minWidth":"100vw", "position":"absolute"}}>
       <Header/>
       <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
         {/* INTRO / PILLARS SCREEN */}
