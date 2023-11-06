@@ -92,6 +92,10 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
     setModalStep(modalStep + 1);
   }
 
+  const increaseModalStep = () => {
+    setModalStep(modalStep + 1);
+  }
+
   const [modalStep, setModalStep] = useState(1);
 
   const [isVisible, setIsVisible] = useState("false");
@@ -247,7 +251,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
@@ -291,7 +296,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
@@ -357,7 +363,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
@@ -379,7 +386,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
@@ -423,7 +431,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
