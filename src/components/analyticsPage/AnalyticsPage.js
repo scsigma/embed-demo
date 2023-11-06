@@ -38,7 +38,7 @@ const NextButton = styled.button`
     font-size: 18px;
 `;
 
-export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
+export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, globalStep }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -86,13 +86,14 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
   const resetVisbility = () => {
     setIsVisible("false");
+    increaseModalStep();
     const timer = setTimeout(() => {
         setIsVisible("true");
       }, 3000);
-    setModalStep(modalStep + 1);
   }
 
   const increaseModalStep = () => {
+    increaseGlobalStep();
     setModalStep(modalStep + 1);
   }
 
@@ -121,7 +122,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.</p>
                 </div>                
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>            
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>            
             </FadingDiv>
         )}
 
@@ -131,7 +133,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                     <p>One advanced feature is <strong>drill down</strong>, which allows users to drill into any dimension of a pivot table or chart.</p>
 
                     <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
-                </div>   
+                </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -142,6 +145,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>Click on <strong>Product Name</strong> to drill into it</p>
                 </div> 
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -154,6 +158,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>Click on the icon below to create a bookmark.</p>
                 </div> 
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -163,7 +168,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                     <p>Users also have the option to set this bookmark as their default view (without overriding any other users’ preferences).</p>
 
                     <p>Click the <strong>Save</strong> Button</p>
-                </div> 
+                </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div> 
             </FadingDiv>
         )}
 
@@ -174,6 +180,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>Toggle into <strong>Explore</strong> mode to see what users can add.</p>
                 </div> 
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -183,7 +190,8 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                     <p>Users can add new elements to enhance / customize their analysis</p>
 
                     <p>Select <strong>VIZ</strong> to add a new chart</p>
-                </div>                 
+                </div>    
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>             
             </FadingDiv>
         )}
 
@@ -209,6 +217,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                     <p>Congrats! You just added a chart.</p>
                     <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
                 </div> 
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -219,6 +228,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>They can also create <strong>scheduled or conditional alerts</strong>.  Click <strong>Schedule exports</strong> to learn more</p>
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -232,6 +242,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage }) => {
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
                     <p>Click <strong>Create</strong>.</p>
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 

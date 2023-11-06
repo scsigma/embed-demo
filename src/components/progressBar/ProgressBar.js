@@ -22,10 +22,10 @@ export const  ProgressBar = ({ globalStep }) => {
   return (
     <div>
       <ProgressBarContainer>
-        <ProgressBarFill globalStep={(globalStep / 18) * 100}>
+        <ProgressBarFill globalStep={(globalStep / 29) * 100}>
         </ProgressBarFill>
         <div style={{color: "black", position: "absolute", display: "flex", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", top: "0px"}}>
-            {Math.round((globalStep / 18) * 100)}%
+            {Math.round((globalStep / 29) * 100)}%
         </div>
       </ProgressBarContainer>
     </div>

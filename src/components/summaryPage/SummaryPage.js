@@ -63,7 +63,7 @@ const NextButton = styled.button`
     font-size: 18px;
 `;
 
-export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
+export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, globalStep }) => {
 
   const profitEmbedRender = (currStep) => {
     if (currStep === 0) {
@@ -95,13 +95,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
   const resetVisbility = () => {
     setIsVisible("false");
+    increaseModalStep();
     const timer = setTimeout(() => {
         setIsVisible("true");
       }, 3000);
-    setModalStep(modalStep + 1);
   }
 
   const increaseModalStep = () => {
+    increaseGlobalStep();
     setModalStep(modalStep + 1);
   }
 
@@ -147,6 +148,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     This portal has some features that are native to the Plugs application and some that are embedded from Sigma.
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -156,6 +158,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     The three KPI tiles above are individual visualizations from Sigma.
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -165,6 +168,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     And the <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -173,16 +177,18 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
                     Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "260px", left: "236px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
+                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "30px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
                     This will execute a live query against the cloud data warehouse.
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -195,6 +201,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -207,8 +214,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
-
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -219,6 +226,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -240,6 +248,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -279,6 +288,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -313,6 +323,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -349,6 +360,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -385,6 +397,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -424,6 +437,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -439,6 +453,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
+                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 

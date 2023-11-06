@@ -70,7 +70,7 @@ const App = () => {
               </div>
 
               <div className='app-container' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
-                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} />
+                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} increaseGlobalStep={increaseGlobalStep} globalStep={globalStep} />
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ const App = () => {
               </div>
 
               <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage}/>
+                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} increaseGlobalStep={increaseGlobalStep} globalStep={globalStep} />
               </div>
 
             </div>
