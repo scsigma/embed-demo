@@ -177,7 +177,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "236px"   }}>
+            <FadingDiv isvisible={isVisible} notransition="true" className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "260px", left: "236px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
@@ -418,7 +418,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
             </FadingDiv>
         )}
 
@@ -455,7 +455,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
@@ -478,7 +479,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisbility();                
             }}
         >
                 clickable div
@@ -522,7 +523,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                // resetVisbility();
+                increaseModalStep();
             }}
         >
                 clickable div
