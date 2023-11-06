@@ -246,13 +246,14 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
         {/* BEGINNING OF IFRAME CONTENT */}
         {isVisible && modalStep === 11 && (
             <FadingDiv isvisible={isVisible} className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>Sigma uses iframe embedding, which is both secure and extensible, allowing us to work with all types of security/authentication frameworks.</p> 
+                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <p>Sigma uses iframe embedding, which is both secure and extensible, allowing us to work with all types of security/authentication frameworks.</p> 
                     
-                    <p>We’ll use an example to explain how iframe embedding works.</p>
+                        <p>We’ll use an example to explain how iframe embedding works.</p>
 
-                    <p>At a high level, your application will generate this URL and sign it using a secret key and a hashing function (HMAC-SHA256). This signature is unique to the parameters in the URL and cannot be modified.</p>
-
+                        <p>At a high level, your application will generate this URL and sign it using a secret key and a hashing function (HMAC-SHA256). This signature is unique to the parameters in the URL and cannot be modified.</p>
+                    </div>
                     <CodeBlockContainer>
                         <pre>
                             <Code>
@@ -283,9 +284,10 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 12 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The <strong>:email</strong> field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
-
+                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <p>The <strong>:email</strong> field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
+                    </div>
                     <CodeBlockContainer>
                         <pre>
                             <Code>
@@ -316,11 +318,12 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 13 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
+                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
                     
-                    <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p>
-
+                        <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p> 
+                    </div>
                     <CodeBlockContainer>
                         <pre>
                             <Code>
@@ -351,11 +354,12 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 14 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>The <strong>:ua_region</strong> field is an example of a user attribute. User attributes allow you to administer security.</p> 
-                    
-                    <p>In this example, Alfonso can only see data from the West and Southwest regions, but a different user might be able to see East and Midwest regions.</p>
-
+                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <p>The <strong>:ua_region</strong> field is an example of a user attribute. User attributes allow you to administer security.</p> 
+                        
+                        <p>In this example, Alfonso can only see data from the West and Southwest regions, but a different user might be able to see East and Midwest regions.</p>
+                    </div>
                     <CodeBlockContainer>
                         <pre>
                             <Code>
@@ -386,14 +390,15 @@ export const SummaryPage = ({ currStep, nextStep, nextPage }) => {
 
         {isVisible && modalStep === 15 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
-                    <p>And finally, the <strong>signature</strong> is the unique result of hashing this URL with your secret key.</p> 
-                    
-                    <p>iframe embedding is secure for two reasons:</p>
+                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                    <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
+                        <p>And finally, the <strong>signature</strong> is the unique result of hashing this URL with your secret key.</p> 
+                        
+                        <p>iframe embedding is secure for two reasons:</p>
 
-                    <p>   1. the URL cannot be reused because the nonce can only be used once.</p>
-                    <p>   2. the URL cannot be modified because modifying the URL invalidates the signature. To modify the URL one must then re-sign it, which requires the secret key.</p>
-
+                        <p>   1. the URL cannot be reused because the nonce can only be used once.</p>
+                        <p>   2. the URL cannot be modified because modifying the URL invalidates the signature. To modify the URL one must then re-sign it, which requires the secret key.</p>
+                    </div>
                     <CodeBlockContainer>
                         <pre>
                             <Code>
