@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
-import { RippleCircle } from "../circleAnimation/RippleCircle.js";
-
-// Correct Import
+// Import PNGs
 import OrderKPIPNG from './images/OrdersKPI.png';
 import RevenueKPIPNG from './images/RevenueKPI.png';
 import CustomerKPIPNG from './images/CustomerKPI.png';
@@ -16,6 +14,10 @@ import ProfitEmbedCustomersFamilyPNG from './images/ProfitEmbed_Lucy_Daniels_Com
 
 // Table Import
 import { SimpleTable } from "../tableComponent/chakraTable";
+
+// Cursor Import
+import { RippleCircle } from "../circleAnimation/RippleCircle.js";
+import { ImArrowLeft2 } from 'react-icons/im';
 
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
@@ -65,7 +67,7 @@ const NextButton = styled.button`
     font-size: 18px;
 `;
 
-export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, globalStep }) => {
+export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, increaseGlobalStep, decreaseGlobalStep, globalStep }) => {
 
   const profitEmbedRender = (currStep) => {
     if (currStep === 0) {
@@ -95,17 +97,27 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
     }
   }
 
-  const resetVisbility = () => {
+  const resetVisbility = ({ direction, steps }) => {
     setIsVisible("false");
-    increaseModalStep();
-    const timer = setTimeout(() => {
+    if (direction === "next") {
+        increaseModalStep();
+        const timer = setTimeout(() => {
+            setIsVisible("true");
+          }, 1000);
+    } else {
+        decreaseModalStep(steps);
         setIsVisible("true");
-      }, 3000);
+    }
   }
 
   const increaseModalStep = () => {
     increaseGlobalStep();
     setModalStep(modalStep + 1);
+  }
+
+  const decreaseModalStep = (stepsBack) => {
+    decreaseGlobalStep(stepsBack);
+    setModalStep(modalStep - stepsBack);
   }
 
   const [modalStep, setModalStep] = useState(1);
@@ -149,7 +161,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
                     This portal has some features that are native to the Plugs application and some that are embedded from Sigma.
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -159,7 +171,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                 <div className="text-container" style={{fontSize: "23px", width: "300px", margin: "20px", marginBottom: "50px"}}>
                     The three KPI tiles above are individual visualizations from Sigma.
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -169,7 +181,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px"}}>
                     And the <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -225,7 +237,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -264,8 +276,13 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
+                    onClick={() => {
+                        resetVisbility({direction: "back", steps: 2});
+                        previousStep(2);
+                        }}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -305,7 +322,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back"})}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -340,7 +358,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back"})}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -377,7 +396,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back"})}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -414,7 +434,8 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back"})}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -453,8 +474,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <NextButton onClick={() => resetVisbility("next")} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back"})}/>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
 
@@ -471,6 +493,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} onClick={() => resetVisbility({direction: "back"})}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "34px", left: "-122px"}}>
                     <RippleCircle />
                 </div>
@@ -519,7 +542,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();                
+                resetVisbility({direction: "next"});                
             }}
         >
                 clickable div
@@ -541,7 +564,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisbility({direction: "next"});
             }}
         >
                 clickable div
@@ -587,7 +610,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisbility({direction: "next"});
             }}
         >
                 clickable div

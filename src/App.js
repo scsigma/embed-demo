@@ -27,9 +27,18 @@ const App = () => {
     setGlobalStep(globalStep + 1);
   }
 
+  const decreaseGlobalStep = (stepsBack) => {
+    setGlobalStep(globalStep - stepsBack);
+  }
+
   const nextStep = () => {
     setCurrStep(currStep + 1);
     increaseGlobalStep();
+  }
+
+  const previousStep = (stepsBack) => {
+    setCurrStep(currStep - stepsBack);
+    decreaseGlobalStep(stepsBack);
   }
 
   const nextPage = () => {
@@ -77,7 +86,7 @@ const App = () => {
               </div>
 
               <div className='app-container' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
-                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} increaseGlobalStep={increaseGlobalStep} globalStep={globalStep} />
+                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
               </div>
             </div>
           </div>
@@ -99,7 +108,7 @@ const App = () => {
               </div>
 
               <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} increaseGlobalStep={increaseGlobalStep} globalStep={globalStep} />
+                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
               </div>
 
             </div>
