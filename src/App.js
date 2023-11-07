@@ -49,6 +49,11 @@ const App = () => {
     setCurrStep(0);
   }
 
+  const previousPage = () => {
+    setCurrPage(currPage - 1);
+    setCurrStep(0);
+  }
+
   return (
     <div className='page-container' style={{"display":"flex", flexDirection: "column", "alignItems":"center", "minHeight":"100vh", "minWidth":"100vw", "position":"absolute"}}>
       <Header/>
@@ -86,7 +91,7 @@ const App = () => {
               </div>
 
               <div className='app-container' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", justifyContent: "center", alignItems: "center"}}>
-                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
+                <SummaryPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousPage={previousPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
               </div>
             </div>
           </div>
