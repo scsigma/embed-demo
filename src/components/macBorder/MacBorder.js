@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 export const MacWindow = styled.div`
@@ -37,16 +36,3 @@ export const YellowButton = styled(Button)`
 export const GreenButton = styled(Button)`
   background-color: #28c940;
 `;
-
-// export const MacBorder = ({ children }) => {
-//   return (
-//     <MacWindow>
-//       <TitleBar>
-//         <RedButton />
-//         <YellowButton />
-//         <GreenButton />
-//       </TitleBar>
-//       <Content>{children}</Content>
-//     </MacWindow>
-//   );
-// };
