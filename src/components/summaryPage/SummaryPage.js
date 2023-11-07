@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
+import { RippleCircle } from "../circleAnimation/RippleCircle.js";
+
 // Correct Import
 import OrderKPIPNG from './images/OrdersKPI.png';
 import RevenueKPIPNG from './images/RevenueKPI.png';
@@ -178,6 +180,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "69px", left: "534px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -189,6 +194,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     This will execute a live query against the cloud data warehouse.
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "45px", right: "-200px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -202,6 +210,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "347px", left: "72px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -227,6 +238,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "305px", left: "460px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -234,6 +248,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
                 <div className="text-container" style={{fontSize: "23px", margin: "10px"}}>
                     <p>Select <strong>Computers</strong></p>                     
+                </div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "28px", left: "345px"}}>
+                    <RippleCircle />
                 </div>
             </FadingDiv>
         )}
@@ -454,6 +471,9 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "43px", left: "-122px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 

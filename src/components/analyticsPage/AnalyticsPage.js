@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
+import { RippleCircle } from "../circleAnimation/RippleCircle.js";
+
 // PNG Imports
 import FullWorkbookEmbedPNG from './images/full_workbook_embed.png';
 import FullWorkbookEmbedWithDrilldownPNG from './images/full_workbook_embed_drilldown.png';
@@ -135,6 +137,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "283px", left: "72px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -146,6 +151,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Click on <strong>Product Name</strong> to drill into it</p>
                 </div> 
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "106px", left: "705px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -159,6 +167,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Click on the icon below to create a bookmark.</p>
                 </div> 
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "407px", left: "148px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -170,6 +181,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Click the <strong>Save</strong> Button</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div> 
+                <div className="circle-pointer-container" style={{position: "absolute", top: "-41px", left: "366px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -181,6 +195,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Toggle into <strong>Explore</strong> mode to see what users can add.</p>
                 </div> 
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "267px", left: "158px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -192,6 +209,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Select <strong>VIZ</strong> to add a new chart</p>
                 </div>    
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>             
+                <div className="circle-pointer-container" style={{position: "absolute", top: "61px", left: "-154px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -200,6 +220,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 <div className="text-container" style={{fontSize: "23px", width: "383px", margin:"20px"}}>
                     <p>Click on <strong>Month</strong> to add it to the X axis</p>
                 </div>  
+                <div className="circle-pointer-container" style={{position: "absolute", top: "26px", left: "-121px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -208,6 +231,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 <div className="text-container" style={{fontSize: "23px", width: "401px", margin:"20px"}}>
                     <p>Click on <strong>Revenue</strong> to add it to the Y axis</p>
                 </div> 
+                <div className="circle-pointer-container" style={{position: "absolute", top: "26px", left: "-121px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -218,6 +244,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
                 </div> 
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "217px", left: "164px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -229,6 +258,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>They can also create <strong>scheduled or conditional alerts</strong>.  Click <strong>Schedule exports</strong> to learn more</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "164px", left: "-91px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -243,6 +275,9 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                     <p>Click <strong>Create</strong>.</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "460px", left: "1105px"}}>
+                    <RippleCircle />
+                </div>
             </FadingDiv>
         )}
 
@@ -298,12 +333,12 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 , display: currStep === 2 ? "inline" : "none"
                 , opacity: "0"
                 , color: "black"
-                , width: "38px"
-                , height:"34px"
+                , width: "53px"
+                , height:"36px"
                 , cursor: "pointer"
                 , position: "absolute"
                 , top: "668px"
-                , left: "859px"
+                , left: "844px"
                    }}
             onClick={() => {
                 nextStep();
@@ -343,12 +378,12 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 , display: currStep === 4 ? "inline" : "none"
                 , opacity: "0"
                 , color: "black"
-                , width: "145px"
+                , width: "177px"
                 , height:"36px"
                 , cursor: "pointer"
                 , position: "absolute"
                 , top: "668px"
-                , left: "931px"
+                , left: "900px"
                    }}
             onClick={() => {
                 nextStep();
@@ -433,12 +468,12 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 , display: currStep === 8 ? "inline" : "none"
                 , opacity: "0"
                 , color: "black"
-                , width: "25px"
+                , width: "58px"
                 , height:"25px"
                 , cursor: "pointer"
                 , position: "absolute"
                 , top: "673px"
-                , left: "256px"
+                , left: "253px"
                    }}
             onClick={() => {
                 nextStep();
@@ -456,7 +491,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                 , display: currStep === 9 ? "inline" : "none"
                 , opacity: "0"
                 , color: "black"
-                , width: "187px"
+                , width: "262px"
                 , height:"27px"
                 , cursor: "pointer"
                 , position: "absolute"
