@@ -97,7 +97,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
     }
   }
 
-  const resetVisbility = ({ direction, steps }) => {
+  const resetVisibility = ({ direction, steps }) => {
     setIsVisible("false");
     if (direction === "next") {
         increaseModalStep();
@@ -161,12 +161,12 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
                     This portal has some features that are native to the Plugs application and some that are embedded from Sigma.
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
-                        previousPage();
+                        resetVisibility({direction: "back", steps: 1});
+                        previousPage(0);
                         }}/>
             </FadingDiv>
         )}
@@ -176,11 +176,11 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="text-container" style={{fontSize: "23px", width: "300px", margin: "20px", marginBottom: "50px"}}>
                     The three KPI tiles above are individual visualizations from Sigma.
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         }}/>
             </FadingDiv>
         )}
@@ -190,11 +190,11 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "50px"}}>
                     And the <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         }}/>
             </FadingDiv>
         )}
@@ -207,7 +207,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         }}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "69px", left: "534px"}}>
                     <RippleCircle />
@@ -225,7 +225,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "45px", right: "-200px"}}>
@@ -246,7 +246,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "347px", left: "72px"}}>
@@ -264,11 +264,11 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#Updating-Controls-within-Sigma" target="blank">Click here</a> to see the documentation
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
             </FadingDiv>
@@ -284,7 +284,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 1});
+                        resetVisibility({direction: "back", steps: 1});
                         }}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "305px", left: "460px"}}>
                     <RippleCircle />
@@ -312,10 +312,10 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
                     onClick={() => {
-                        resetVisbility({direction: "back", steps: 2});
+                        resetVisibility({direction: "back", steps: 2});
                         previousStep(2);
                         }}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
@@ -358,7 +358,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -394,7 +394,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -432,7 +432,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -470,7 +470,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     </CodeBlockContainer>
                 </div>
                 <NextButton onClick={increaseModalStep} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -510,8 +510,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                         </pre>
                     </CodeBlockContainer>
                 </div>
-                <NextButton onClick={() => resetVisbility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
             </FadingDiv>
         )}
@@ -529,7 +529,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
-                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} onClick={() => resetVisbility({direction: "back", steps: 1})}/>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "34px", left: "-122px"}}>
                     <RippleCircle />
                 </div>
@@ -554,7 +554,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                  }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -578,7 +578,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility({direction: "next"});                
+                resetVisibility({direction: "next"});                
             }}
         >
                 clickable div
@@ -600,7 +600,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility({direction: "next"});
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div
@@ -622,7 +622,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                  }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -646,7 +646,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                  }}
             onClick={() => {
                 nextStep();
-                resetVisbility({direction: "next"});
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div

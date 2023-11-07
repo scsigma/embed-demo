@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from "react";
 import styled from "styled-components";
 
-import { RippleCircle } from "../circleAnimation/RippleCircle.js";
-
 // PNG Imports
 import FullWorkbookEmbedPNG from './images/full_workbook_embed.png';
 import FullWorkbookEmbedWithDrilldownPNG from './images/full_workbook_embed_drilldown.png';
@@ -14,6 +12,11 @@ import FullWorkbookEmbedAddMonthPNG from './images/full_workbook_embed_add_viz_m
 import FullWorkbookEmbedAreachartPNG from './images/full_workbook_embed_with_area_chart.png';
 import FullWorkbookEmbedMenuPNG from './images/full_workbook_embed_menu.png';
 import FullWorkbookEmbedScheduledExportPNG from './images/full_workbook_embed_scheduled_export.png';
+
+// Cursor Import
+import { RippleCircle } from "../circleAnimation/RippleCircle.js";
+import { ImArrowLeft2 } from 'react-icons/im';
+
 
 
 const FadingDiv = styled.div`
@@ -40,7 +43,7 @@ const NextButton = styled.button`
     font-size: 18px;
 `;
 
-export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, globalStep }) => {
+export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, previousPage, increaseGlobalStep, decreaseGlobalStep, globalStep }) => {
 
   const screenshotRender = (currStep) => {
     if (currStep === 0) {
@@ -86,17 +89,27 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
     }
   }
 
-  const resetVisbility = () => {
+  const resetVisibility = ({ direction, steps }) => {
     setIsVisible("false");
-    increaseModalStep();
-    const timer = setTimeout(() => {
+    if (direction === "next") {
+        increaseModalStep();
+        const timer = setTimeout(() => {
+            setIsVisible("true");
+          }, 1000);
+    } else {
+        decreaseModalStep(steps);
         setIsVisible("true");
-      }, 3000);
+    }
   }
 
   const increaseModalStep = () => {
     increaseGlobalStep();
     setModalStep(modalStep + 1);
+  }
+
+  const decreaseModalStep = (stepsBack) => {
+    decreaseGlobalStep(stepsBack);
+    setModalStep(modalStep - stepsBack);
   }
 
   const [modalStep, setModalStep] = useState(1);
@@ -124,8 +137,13 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
 
                     <p>These requests would usually be routed to the Plugs analytics team, but Sigma allows those users to answer their own questions and customize their analysis.</p>
                 </div>                
-                <NextButton onClick={resetVisbility} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
-                <div className="global-step-container" style={{width:"fit-content", left: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>            
+                <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
+                    onClick={() => {
+                        resetVisibility({direction: "back", steps: 1});
+                        previousPage(16);
+                        }}/>            
             </FadingDiv>
         )}
 
@@ -297,7 +315,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -320,7 +338,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div
@@ -342,7 +360,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -365,7 +383,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div
@@ -387,7 +405,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div
@@ -409,7 +427,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -432,7 +450,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -455,7 +473,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div
@@ -477,7 +495,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                // resetVisbility();
+                // resetVisibility();
                 increaseModalStep();
             }}
         >
@@ -500,7 +518,7 @@ export const AnalyticsPage = ({ currStep, nextStep, nextPage, increaseGlobalStep
                    }}
             onClick={() => {
                 nextStep();
-                resetVisbility();
+                resetVisibility({direction: "next"});
             }}
         >
                 clickable div

@@ -6,7 +6,6 @@ import { Sidebar } from './components/nativeAppComponents/sidebar.js';
 import PlugsLogo from './components/graphics/plugs_electronics_logo_green.png';
 import { AnalyticsPage } from './components/analyticsPage/AnalyticsPage.js';
 import { SummaryPage } from './components/summaryPage/SummaryPage.js';
-import { ProgressBar } from './components/progressBar/ProgressBar.js';
 import { Header } from './components/nativeAppComponents/header.js';
 import { OutroPage } from './components/outroPage/outroPage.js';
 import { MacWindow, TitleBar, RedButton, YellowButton, GreenButton } from './components/macBorder/MacBorder.js';
@@ -14,7 +13,7 @@ import { MacWindow, TitleBar, RedButton, YellowButton, GreenButton } from './com
 
 const App = () => {
 
-  // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED
+  // THIS IS WHERE WE WILL CONTROL THE PAGE THAT IS BEING VIEWED -- this will be 0 
   const [currPage, setCurrPage] = useState(0);
 
   // THIS IS WHERE WE CONTROL THE STEP IN THIS PROCESS
@@ -49,9 +48,9 @@ const App = () => {
     setCurrStep(0);
   }
 
-  const previousPage = () => {
+  const previousPage = (stepToStartAt) => {
     setCurrPage(currPage - 1);
-    setCurrStep(0);
+    setCurrStep(stepToStartAt);
   }
 
   return (
@@ -113,7 +112,7 @@ const App = () => {
               </div>
 
               <div className='app-contents' style={{ "width":"100%", "backgroundColor":"#ffffff", "color":"white", "display":"flex", "alignItems": "center", "justifyContent": "center"}}>
-                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
+                <AnalyticsPage currStep={currStep} nextStep={nextStep} nextPage={nextPage} previousPage={previousPage} previousStep={previousStep} increaseGlobalStep={increaseGlobalStep} decreaseGlobalStep={decreaseGlobalStep} globalStep={globalStep} />
               </div>
 
             </div>
