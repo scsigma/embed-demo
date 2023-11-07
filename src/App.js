@@ -82,13 +82,13 @@ const App = () => {
     <div className='page-container' style={{"display":"flex", flexDirection: "column", "alignItems":"center", "minHeight":"100vh", "minWidth":"100vw", "position":"absolute"}}>
       <Header/>
 
-      {/* <MacWindow>
-      <TitleBar>
-        <RedButton />
-        <YellowButton />
-        <GreenButton />
-      </TitleBar>
-      </MacWindow> */}
+      <MacWindow>
+        <TitleBar>
+          <RedButton />
+          <YellowButton />
+          <GreenButton />
+        </TitleBar>
+      
       <div className='app-container' style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
         {/* INTRO / PILLARS SCREEN */}
         { currPage === 0 && (
@@ -101,12 +101,9 @@ const App = () => {
         {/* SUMMARY PAGE */}
         { currPage === 2 && (
           <div style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
-            <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
-              <ProgressBar globalStep={globalStep}/>
-            </div>
-            
+
             <div className='navbar-container'>
-              <Navbar className='navbar'/>
+              <Navbar className='navbar' globalStep={globalStep}/>
             </div>
 
             <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
@@ -127,13 +124,8 @@ const App = () => {
         { currPage === 3 && (
           <div style={{"width":"1468px","height":"844px", "display":"flex","flexDirection":"column"}}>
 
-            <div className='progressBar-container' style={{width: "fit-content", height: "20px", position: "relative", top: "45px", left: "138px", color: "white"}}>
-              <ProgressBar globalStep={globalStep}/>
-            </div>
-            
-            
             <div className='navbar-container'>
-              <Navbar className='navbar'/>
+              <Navbar className='navbar' globalStep={globalStep}/>
             </div>
 
             <div className='below-navbar-container' style={{"height":"100%", "display":"flex"}}>
@@ -155,6 +147,7 @@ const App = () => {
           <OutroPage/>
         )}
       </div>
+      </MacWindow>
     </div>
   )
 }

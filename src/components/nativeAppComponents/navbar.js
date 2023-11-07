@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import AcmeLogo from '../graphics/acme_logo.png';
 import AlfonsoHeadshot from '../graphics/alfonso.png';
 
+import { ProgressBar } from '../progressBar/ProgressBar';
+
 const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -32,10 +34,13 @@ const UserAvatar = styled.img`
   border-radius: 50%;
 `;
 
-export const Navbar = () => {
+export const Navbar = ({ globalStep }) => {
   return (
     <NavbarContainer>
-      <Logo src={AcmeLogo} alt="Company Logo" />
+      <div style={{display: "flex", alignItems: "center"}}>
+        <Logo src={AcmeLogo} alt="Company Logo" />
+        <ProgressBar globalStep={globalStep}/>
+      </div>
       <UserInfo>
         <CloudProviderIcon>GCP</CloudProviderIcon>
         <UserAvatar src={AlfonsoHeadshot} alt="User Avatar" />

@@ -471,7 +471,7 @@ export const SummaryPage = ({ currStep, nextStep, nextPage, increaseGlobalStep, 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "43px", left: "-122px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "34px", left: "-122px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
