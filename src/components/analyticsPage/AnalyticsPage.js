@@ -21,7 +21,7 @@ import { ImArrowLeft2 } from 'react-icons/im';
 
 const FadingDiv = styled.div`
   opacity: ${props => (props.isvisible === "true" ? '1' : '0')};
-  transition: opacity 1s;
+  transition: opacity 0.75s;
   background-color: #f4f4f4;
   border-radius: 10px;
   box-shadow: 3px 2px 8px 2px grey;
@@ -95,7 +95,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
         increaseModalStep();
         const timer = setTimeout(() => {
             setIsVisible("true");
-          }, 1000);
+          }, 750);
     } else {
         decreaseModalStep(steps);
         setIsVisible("true");
