@@ -205,7 +205,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "30px"}}>
                     Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-6px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -223,7 +223,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
                     This will execute a live query against the cloud data warehouse.
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -244,7 +244,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -282,7 +282,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -529,7 +529,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
                     <p>Click on the <strong>Analytics</strong> tab to check it out</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "34px", left: "-122px"}}>
                     <RippleCircle />

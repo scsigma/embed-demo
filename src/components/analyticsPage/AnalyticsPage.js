@@ -154,7 +154,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -172,7 +172,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>Click on <strong>Product Name</strong> to drill into it</p>
                 </div> 
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -193,7 +193,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>Click on the icon below to create a bookmark.</p>
                 </div> 
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -212,7 +212,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>Click the <strong>Save</strong> Button</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div> 
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div> 
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -231,7 +231,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>Toggle into <strong>Explore</strong> mode to see what users can add.</p>
                 </div> 
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -250,7 +250,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>Select <strong>VIZ</strong> to add a new chart</p>
                 </div>    
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>             
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>             
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -290,7 +290,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                     <p>Congrats! You just added a chart.</p>
                     <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
                 </div> 
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 3});
@@ -309,7 +309,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
                     <p>They can also create <strong>scheduled or conditional alerts</strong>.  Click <strong>Schedule exports</strong> to learn more</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
@@ -331,7 +331,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                     <p>This capability (along with all the others covered today) are ones that you can give to specific users or even monetize.</p>
                     <p>Click <strong>Create</strong>.</p>
                 </div>
-                <div className="global-step-container" style={{width:"fit-content", right: "20px", bottom: "-5px", position: "absolute"}}><p>{globalStep}/29</p></div>
+                <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
