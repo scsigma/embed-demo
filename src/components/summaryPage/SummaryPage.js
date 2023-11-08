@@ -120,7 +120,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
     setModalStep(modalStep - stepsBack);
   }
 
-  const [modalStep, setModalStep] = useState(1);
+//   const [modalStep, setModalStep] = useState(1);
+  const [modalStep, setModalStep] = useState(globalStep);
 
   const [isVisible, setIsVisible] = useState("false");
 
