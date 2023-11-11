@@ -45,50 +45,6 @@ const NextButton = styled.button`
 
 export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, previousPage, increaseGlobalStep, decreaseGlobalStep, globalStep }) => {
 
-  const screenshotRender = (currStep) => {
-    if (currStep === 0) {
-        return (
-            <img src={FullWorkbookEmbedPNG} style={{width: "100%"}}/>
-        )
-    } else if (currStep > 0 & currStep < 2) {
-        return (
-            <img src={FullWorkbookEmbedWithDrilldownPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 2 & currStep < 3 || currStep >= 4 & currStep < 5) {
-        return (
-            <img src={FullWorkbookEmbedWithComputerBarchartPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 3 & currStep < 4){
-        return (
-            <img src={FullWorkbookEmbedSaveBookmarkPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 5 & currStep < 6) {
-        return (
-            <img src={FullWorkbookEmbedExploreModePNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >=6 & currStep < 7) {
-        return (
-            <img src={FullWorkbookEmbedAddVizPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 7 & currStep < 8) {
-        return (
-            <img src={FullWorkbookEmbedAddMonthPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 8 & currStep < 9) {
-        return (
-            <img src={FullWorkbookEmbedAreachartPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 9 & currStep < 10) {
-        return (
-            <img src={FullWorkbookEmbedMenuPNG} style={{width: "100%"}} />
-        )
-    } else if (currStep >= 10) {
-        return (
-            <img src={FullWorkbookEmbedScheduledExportPNG} style={{width: "100%"}} />
-        )
-    }
-  }
-
   const resetVisibility = ({ direction, steps }) => {
     setIsVisible("false");
     if (direction === "next") {
@@ -116,6 +72,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
   const [isVisible, setIsVisible] = useState("false");
 
+
   useEffect(() => {
     // Use setTimeout to change the state after 3 seconds
     const timer = setTimeout(() => {
@@ -128,7 +85,19 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
 
   return (
     <div className="analytics-page-container" style={{"width":"1222px", "height":"723px", borderRadius: "18px", backgroundColor: "#ffffff", display: "flex", flexDirection:"column", position:"relative", alignItems:"center"}}>
-        {screenshotRender(currStep)}
+
+        {<img src={FullWorkbookEmbedPNG} style={{display: currStep===0 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedWithDrilldownPNG} style={{display: currStep > 0 && currStep < 2 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedWithComputerBarchartPNG} style={{display: currStep === 2 || currStep === 4 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedSaveBookmarkPNG} style={{display: currStep === 3 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedExploreModePNG} style={{display: currStep === 5 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedAddVizPNG} style={{display: currStep === 6 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedAddMonthPNG} style={{display: currStep === 7 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedAreachartPNG} style={{display: currStep === 8 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedMenuPNG} style={{display: currStep === 9 ? "block" : "none", width: "100%"}}/>}
+        {<img src={FullWorkbookEmbedScheduledExportPNG} style={{display: currStep === 10 ? "block" : "none", width: "100%"}}/>}
+        
+        
 
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"      }}>

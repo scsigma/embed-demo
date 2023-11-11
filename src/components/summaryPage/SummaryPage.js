@@ -69,33 +69,14 @@ const NextButton = styled.button`
 
 export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previousPage, increaseGlobalStep, decreaseGlobalStep, globalStep }) => {
 
-  const profitEmbedRender = (currStep) => {
-    if (currStep === 0) {
-        return (
-            <img src={ProfitEmbedMainPNG} style={{width: "612px"}}/>
-        );
-    } else if (currStep === 1) {
-        return (
-            <img src={ProfitEmbedCustomerDropdownPNG} style={{width: "612px"}}/>
-        )
-    } else if (currStep === 2) {
-        return (
-            <img src={ProfitEmbedNickHolmesPNG} style={{width: "612px"}}/>
-        )
-    } else if (currStep === 3) {
-        return (
-            <img src={ProfitEmbedLucyDanielsPNG} style={{width: "612px"}}/>
-        )
-    } else if (currStep === 4) {
-        return (
-            <img src={ProfitEmbedProductFamilyDropdownPNG} style={{width: "612px"}}/>
-        )
-    } else if (currStep >= 5) {
-        return (
-            <img src={ProfitEmbedCustomersFamilyPNG} style={{width: "612px"}}/>
-        )
-    }
-  }
+  const images = [
+    ProfitEmbedMainPNG
+    , ProfitEmbedCustomerDropdownPNG
+    , ProfitEmbedNickHolmesPNG
+    , ProfitEmbedLucyDanielsPNG
+    , ProfitEmbedProductFamilyDropdownPNG
+    , ProfitEmbedCustomersFamilyPNG
+  ];
 
   const resetVisibility = ({ direction, steps }) => {
     setIsVisible("false");
@@ -153,7 +134,11 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
             </div>
 
             <div className='embed-container' style={{width: "612px", height: "499px"}}>
-                {profitEmbedRender(currStep)}
+                {
+                    images.map((src, index)=> (
+                        <img key={index} src={src} style={{display: currStep === index ? "block" : 'none', width: "100%"}}/>
+                    ))
+                }
             </div>
         </div>
 
