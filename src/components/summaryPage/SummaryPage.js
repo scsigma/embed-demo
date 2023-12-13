@@ -154,7 +154,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     The <strong>Profit Snapshot</strong> to the right is a full page from a Sigma workbook, with multiple filters and visualizations.
                     <br/>
                     <br/> 
-                    The Recent Orders table to the left is a custom piece of the application and does not come from Sigma.
+                    The <strong>Recent Orders</strong> table to the left is a custom piece of the application and does not come from Sigma.
                 </div>
                 <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "0px", position: "absolute"}}><p>{globalStep}/29</p></div>
