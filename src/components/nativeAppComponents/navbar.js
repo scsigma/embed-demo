@@ -23,7 +23,7 @@ const UserInfo = styled.div`
   align-items: center;
 `;
 
-const CloudProviderIcon = styled.p`
+const UsernameText = styled.p`
   width: 30px; /* Adjust the size as needed */
   margin-right: 10px;
   color: white;
@@ -42,7 +42,7 @@ export const Navbar = ({ globalStep }) => {
         <ProgressBar globalStep={globalStep}/>
       </div>
       <UserInfo>
-        <CloudProviderIcon>GCP</CloudProviderIcon>
+        <UsernameText>Alfonso</UsernameText>
         <UserAvatar src={AlfonsoHeadshot} alt="User Avatar" />
       </UserInfo>
     </NavbarContainer>
