@@ -144,7 +144,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 1 && (
             <FadingDiv isvisible={isVisible} className="first-modal" style={{height: "auto", position: "absolute", color: "black", top: "200px", left: "-200px"}}>
-                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "50px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "400px", margin: "20px", marginBottom: "50px"}}>
                     This portal has some components that are native to the application and some that come from Sigma.
                     <br/>
                     <br/>
@@ -196,7 +196,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 2 && (
             <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "226px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "30px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "350px", margin: "30px"}}>
                     Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-6px", position: "absolute"}}><p>{globalStep}/29</p></div>
@@ -212,7 +212,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 3 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "260px", left: "236px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "350px", margin: "20px", marginBottom: "30px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "350px", margin: "20px", marginBottom: "30px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
                     This will execute a live query against the cloud data warehouse.
@@ -231,7 +231,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 4 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "14px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "600px", margin: "14px"}}>
                     <p>With Sigma embedding, you can create bidirectional interactions between Sigma and your application.</p>
                     <p>First we will see an action in the app update the Sigma embed.</p>
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
@@ -251,7 +251,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         {isVisible && modalStep === 5 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-97px", left: "272px"   }}>
 
-                <div className="text-container" style={{fontSize: "23px", width: "400px", margin: "20px", marginBottom: "60px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "400px", margin: "20px", marginBottom: "60px"}}>
 
                     <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>postMessage</strong> to pass information from the recent orders list to the embedded iframe.</p>
 
@@ -269,8 +269,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 6 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-76px", left: "600px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
-                    <p>You can also capturing events in Sigma and apply them to other components of the application.</p> 
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "500px", margin: "20px"}}>
+                    <p>You can also capture events in Sigma and apply them to other components of the application.</p> 
                     
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
@@ -287,7 +287,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 7 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
-                <div className="text-container" style={{fontSize: "23px", margin: "10px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", margin: "10px"}}>
                     <p>Select <strong>Computers</strong></p>                     
                 </div>
                 <div className="circle-pointer-container" style={{position: "absolute", top: "28px", left: "345px"}}>
@@ -298,7 +298,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 8 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-100px", left: "300px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px", marginBottom: "50px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "500px", margin: "20px", marginBottom: "50px"}}>
                     <p>Now we see only computer products in <strong>Recent Orders</strong>.</p> 
                     
                     <p>Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.</p>
@@ -319,7 +319,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         {/* BEGINNING OF IFRAME CONTENT */}
         {isVisible && modalStep === 9 && (
             <FadingDiv isvisible={isVisible} className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                <div className="iframe-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>Sigma uses iframe embedding, which is both secure and extensible, allowing us to work with all types of security/authentication frameworks.</p> 
                     
@@ -346,7 +346,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 10 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                <div className="iframe-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>The <strong>:email</strong> field tells Sigma which user from your application is accessing the embed and drives the permissions.</p> 
                     </div>
@@ -382,7 +382,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 11 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                <div className="iframe-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
                     
@@ -420,7 +420,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 12 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                <div className="iframe-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>The <strong>:ua_region</strong> field is an example of a user attribute. User attributes allow you to administer security.</p> 
                         
@@ -458,7 +458,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 13 && (
             <FadingDiv isvisible={isVisible} notransition="true" className="iframe-modal" style={{height: "auto", position: "absolute", color: "black", top: "-50px", left: "200px"   }}>
-                <div className="iframe-container" style={{fontSize: "23px", width: "800px", margin: "20px", marginBottom: "60px"}}>
+                <div className="iframe-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "800px", margin: "20px", marginBottom: "60px"}}>
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>And finally, the <strong>signature</strong> is the unique result of hashing this URL with your secret key.</p> 
                         
@@ -502,7 +502,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
 
         {isVisible && modalStep === 14 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
-                <div className="text-container" style={{fontSize: "23px", width: "700px", margin: "20px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "700px", margin: "20px"}}>
                     <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
                     
                     <p>Plugs also offers a premium analytics experience and charges customers who want more analytical capabilities.</p>
