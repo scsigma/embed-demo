@@ -232,10 +232,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         {isVisible && modalStep === 4 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "600px", margin: "14px"}}>
-                    <p>Now the Profit Snapshot shows Nick’s information.</p> 
-                    
-                    <p>The <strong>Recent Orders</strong> list below is a native piece of Plugs Portal and does not come from Sigma, but we can pass its values to the Sigma embed.</p>
-
+                    <p>With Sigma embedding, you can create bidirectional interactions between Sigma and your application.</p>
+                    <p>First we will see an action in the app update the Sigma embed.</p>
                     <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
@@ -272,7 +270,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         {isVisible && modalStep === 6 && (
             <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-76px", left: "600px"   }}>
                 <div className="text-container" style={{fontSize: "23px", width: "500px", margin: "20px"}}>
-                    <p>Plugs has also created interactions in the other direction, capturing events in Sigma and applying them to other components of the portal.</p> 
+                    <p>You can also capturing events in Sigma and apply them to other components of the application.</p> 
                     
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
                 </div>
@@ -306,6 +304,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     <p>Applying the filter in Sigma fires a javascript event, so the application can listen for that event and capture the information from the filter selection.</p>
 
                     <a href="https://help.sigmacomputing.com/hc/en-us/articles/14395308051091-JavaScript-Events-for-Embedded-Elements#dashboard:variables:onchange" target="blank">Click here</a> to see the documentation.
+                    <p>So, we saw an action in a custom piece of the app update the Sigma embed and an action in the Sigma embed update the app.</p>
                 </div>
                 <NextButton onClick={() => resetVisibility({direction: "next"})} style={{bottom: "10px", right: "10px"}}>Next &rarr;</NextButton>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "17px"}} 
@@ -326,7 +325,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     
                         <p>We’ll use an example to explain how iframe embedding works.</p>
 
-                        <p>At a high level, your application will generate this URL and sign it using a secret key and a hashing function (HMAC-SHA256). This signature is unique to the parameters in the URL and cannot be modified.</p>
+                        <p>You will generate this URL in the backend of your app and sign it using a secret key and a hashing function (HMAC-SHA256). This signature is unique to the parameters in the URL and cannot be modified.</p>
                     </div>
                     <CodeBlockContainer>
                         <pre>
@@ -387,7 +386,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     <div className="text-container" style={{height: "350px", display: "flex", flexDirection: "column", justifyContent: "center"}}>
                         <p>The <strong>:nonce</strong> field makes the URL (and therefore the signature) unique.</p> 
                     
-                        <p>Sigma tracks nonce usage to ensure each nonce is only used once- you cannot copy/paste this URL and use it elsewhere.</p> 
+                        <p>Sigma tracks the nonce to ensure each nonce is only used once; you cannot copy/paste this URL and use it elsewhere.</p> 
                     </div>
                     <CodeBlockContainer>
                         <pre>
@@ -466,7 +465,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                         <p>iframe embedding is secure for two reasons:</p>
 
                         <p>   1. the URL cannot be reused because the nonce can only be used once.</p>
-                        <p>   2. the URL cannot be modified because modifying the URL invalidates the signature. To modify the URL one must then re-sign it, which requires the secret key.</p>
+                        <p>   2. the URL cannot be modified because modifying the URL invalidates the signature. To modify the URL it must be re-signed, which requires the secret key.</p>
                     </div>
                     <CodeBlockContainer>
                         <pre>
