@@ -196,8 +196,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         )} */}
 
         {isVisible && modalStep === 2 && (
-            <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "160px", left: "226px"   }}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "350px", margin: "30px"}}>
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{height: "auto", position: "absolute", color: "black", top: "185px", left: "257px"   }}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "350px", margin: "20px", marginBottom: "30px"}}>
                     Click on the <strong>All Customers</strong> filter to set the Profit Snapshot to an individual customer.
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-6px", position: "absolute"}}><p>{globalStep}/29</p></div>
@@ -205,14 +205,14 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "69px", left: "534px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "42px", left: "510px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 3 && (
-            <FadingDiv isvisible={isVisible} notransition="true" className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "260px", left: "236px"   }}>
+            <FadingDiv isvisible={isVisible} notransition="true" className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "260px", left: "260px"   }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "350px", margin: "20px", marginBottom: "30px"}}>
                     Click on <strong>Nick Holmes</strong> to see his lifetime profit and top products.
 
@@ -224,18 +224,18 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "45px", right: "-200px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "42px", right: "-131px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 4 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-104px", left: "100px"   }}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "600px", margin: "14px"}}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "6px", left: "100px"   }}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "600px", margin: "20px", marginBottom: "30px"}}>
                     <p>With Sigma embedding, you can create bidirectional interactions between Sigma and your application.</p>
                     <p>First we will see an action in the app update the Sigma embed.</p>
-                    <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy:</p>
+                    <p>Click on <strong>Lucy Daniels</strong> and watch the <strong>Profit Snapshot</strong> filter down to Lucy</p>
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} 
@@ -243,16 +243,16 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "347px", left: "72px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "237px", left: "72px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-97px", left: "272px"   }}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-18px", left: "272px"   }}>
 
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "400px", margin: "20px", marginBottom: "60px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "400px", margin: "20px", marginBottom: "50px"}}>
 
                     <p>We have now filtered to see profitability info for only Lucy. We used a <strong style={{color: "navy"}}>postMessage</strong> to pass information from the recent orders list to the embedded iframe.</p>
 
@@ -269,8 +269,8 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         )}
 
         {isVisible && modalStep === 6 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-76px", left: "600px"   }}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "500px", margin: "20px"}}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-5px", left: "683px"   }}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", width: "500px", margin: "20px", marginBottom: "30px"}}>
                     <p>You can also capture events in Sigma and apply them to other components of the application.</p> 
                     
                     <p>Click on the <strong>Product Type</strong> filter to set a value and see that filter applied to the <strong>Recent Orders</strong> list.</p>
@@ -280,18 +280,18 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "305px", left: "460px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "232px", left: "378px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 7 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "690px"   }}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", margin: "10px"}}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "60px", position: "absolute", color: "black", top: "278px", left: "734px"   }}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", margin: "20px"}}>
                     <p>Select <strong>Computers</strong></p>                     
                 </div>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "28px", left: "345px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "26px", left: "310px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
@@ -502,7 +502,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
         
 
         {isVisible && modalStep === 14 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-30px", left: "-33px"   }}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{height: "auto", position: "absolute", color: "black", top: "-67px", left: "-80px"   }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "700px", margin: "20px"}}>
                     <p>So far we've seen a canned dashboard, but Sigma also provides powerful ad hoc analytics capabilities.</p> 
                     
@@ -512,7 +512,7 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
                 </div>
                 <div className="global-step-container" style={{width:"fit-content", left: "35px", bottom: "-7px", position: "absolute"}}><p>{globalStep}/29</p></div>
                 <ImArrowLeft2 style={{position: "absolute", cursor: "pointer", left: "10px", bottom: "10px"}} onClick={() => resetVisibility({direction: "back", steps: 1})}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "34px", left: "-122px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "71px", left: "-77px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
