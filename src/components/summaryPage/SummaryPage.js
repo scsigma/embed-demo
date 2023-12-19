@@ -82,9 +82,10 @@ export const SummaryPage = ({ currStep, nextStep, previousStep, nextPage, previo
     setIsVisible("false");
     if (direction === "next") {
         increaseModalStep();
-        const timer = setTimeout(() => {
-            setIsVisible("true");
-          }, 750);
+        // const timer = setTimeout(() => {
+        //     setIsVisible("true");
+        //   }, 0);
+        setIsVisible("true");
     } else {
         decreaseModalStep(steps);
         setIsVisible("true");
