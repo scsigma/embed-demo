@@ -118,8 +118,8 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
         )}
 
         {isVisible && modalStep === 2 && (
-            <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "29px", left: "330px"}}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "500px", margin:"10px"}}>
+            <FadingDiv isvisible={isVisible} className="second-modal" style={{  height: "auto", position: "absolute", color: "black", top: "59px", left: "225px"}}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "500px", margin:"20px", marginBottom: "30px"}}>
                     <p>One advanced feature is <strong>drill down</strong>, which allows users to drill into any dimension of a pivot table or chart.</p>
 
                     <p>In the chart below, click on the bar for <strong>Computers</strong> to drill into performance for specific products.</p>
@@ -129,14 +129,14 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                     onClick={() => {
                         resetVisibility({direction: "back", steps: 1});
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "283px", left: "72px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "252px", left: "72px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 3 && (
-            <FadingDiv isvisible={isVisible} className="third-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "-105px"      }}>
+            <FadingDiv isvisible={isVisible} className="third-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "-81px"      }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "400px", margin:"20px"}}>
                     <p>Sigma workbooks are built on top of the finest grain of data (data is never pre-aggregated or exported from the CDW), so you <strong>don’t need to preconfigure drill paths</strong>.</p>
 
@@ -148,14 +148,14 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "106px", left: "705px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "106px", left: "670px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 4 && (
-            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "270px", left: "700px"      }}>
+            <FadingDiv isvisible={isVisible} className="fourth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "411px", left: "626px"      }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "400px", margin:"20px"}}>
                     <p>Now the chart shows the top computer products.  From here you could drill down again or show the underlying data.</p>
 
@@ -169,14 +169,14 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "407px", left: "148px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "286px", left: "218px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 5 && (
-            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "440px", left: "500px"      }}>
+            <FadingDiv isvisible={isVisible} className="fifth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "166px", left: "750px"      }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "400px", margin:"20px"}}>
                     <p>Users have the option to set this bookmark as their default view (without overriding any other users’ preferences).</p>
 
@@ -188,14 +188,14 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "-41px", left: "366px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "233px", left: "114px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 6 && (
-            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "410px", left: "750px"      }}>
+            <FadingDiv isvisible={isVisible} className="sixth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "499px", left: "790px"      }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "400px", margin:"20px"}}>
                     <p>You can also allow users to build their own analyses and add elements to this page.</p>
 
@@ -207,14 +207,14 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "267px", left: "158px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "198px", left: "148px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
         )}
 
         {isVisible && modalStep === 7 && (
-            <FadingDiv isvisible={isVisible} className="seventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "100px", left: "270px"      }}>
+            <FadingDiv isvisible={isVisible} className="seventh-modal" style={{  height: "auto", position: "absolute", color: "black", top: "157px", left: "261px"      }}>
                 <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "330px", margin:"20px"}}>
                     <p>Users can add new elements to enhance / customize their analysis</p>
 
@@ -226,7 +226,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 1});
                         previousStep(1);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "61px", left: "-154px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "67px", left: "-144px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
@@ -255,8 +255,8 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
         )}
 
         {isVisible && modalStep === 10 && (
-            <FadingDiv isvisible={isVisible} className="tenth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "459px", left: "120px"      }}>
-                <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "401px", margin:"10px"}}>
+            <FadingDiv isvisible={isVisible} className="tenth-modal" style={{  height: "auto", position: "absolute", color: "black", top: "468px", left: "-159px"      }}>
+                <div className="text-container" style={{fontSize: "18px", color:"#171717", fontFamily: "Lato", width: "401px", margin:"20px", marginBottom: "30px"}}>
                     <p>Congrats! You just added a chart. Sigma's drag-and-drop UI makes it easy for non-technical users to build analytics.</p>
 
                     <p>This workbook can now be shared or exported.  Open the menu using the caret below.</p>
@@ -267,7 +267,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                         resetVisibility({direction: "back", steps: 3});
                         previousStep(3);
                         }}/>
-                <div className="circle-pointer-container" style={{position: "absolute", top: "217px", left: "164px"}}>
+                <div className="circle-pointer-container" style={{position: "absolute", top: "229px", left: "164px"}}>
                     <RippleCircle />
                 </div>
             </FadingDiv>
@@ -370,8 +370,8 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                 , height:"36px"
                 , cursor: "pointer"
                 , position: "absolute"
-                , top: "668px"
-                , left: "844px"
+                , top: "687px"
+                , left: "837px"
                    }}
             onClick={() => {
                 nextStep();
@@ -411,12 +411,12 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                 , display: currStep === 4 ? "inline" : "none"
                 , opacity: "0"
                 , color: "black"
-                , width: "177px"
+                , width: "130px"
                 , height:"36px"
                 , cursor: "pointer"
                 , position: "absolute"
-                , top: "668px"
-                , left: "900px"
+                , top: "687px"
+                , left: "933px"
                    }}
             onClick={() => {
                 nextStep();
@@ -437,7 +437,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                 , height:"82px"
                 , cursor: "pointer"
                 , position: "absolute"
-                , top: "145px"
+                , top: "192px"
                 , left: "42px"
                    }}
             onClick={() => {
@@ -505,8 +505,8 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
                 , height:"25px"
                 , cursor: "pointer"
                 , position: "absolute"
-                , top: "673px"
-                , left: "253px"
+                , top: "694px"
+                , left: "1px"
                    }}
             onClick={() => {
                 nextStep();

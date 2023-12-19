@@ -36,7 +36,7 @@ const Circle = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: blue;
+  background-color: #D113A8;
   border-radius: 50%;
   animation: ${pulseAnimation} 2s linear infinite;
 `;
@@ -45,7 +45,7 @@ const Ripple = styled.div`
   position: absolute;
   width: 45%;
   height: 45%;
-  background-color: blue;
+  background-color: #D113A8;
   border-radius: 50%;
   animation: ${rippleAnimation} 2s cubic-bezier(0.45, 1, 0.55, 0) infinite;
 //   animation-delay: 3s; // Delay the ripple animation by 1 second
