@@ -49,9 +49,10 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
     setIsVisible("false");
     if (direction === "next") {
         increaseModalStep();
-        const timer = setTimeout(() => {
-            setIsVisible("true");
-          }, 750);
+        // const timer = setTimeout(() => {
+        //     setIsVisible("true");
+        //   }, 750);
+        setIsVisible("true");
     } else {
         decreaseModalStep(steps);
         setIsVisible("true");
