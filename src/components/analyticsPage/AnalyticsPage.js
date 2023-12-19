@@ -78,7 +78,7 @@ export const AnalyticsPage = ({ currStep, nextStep, previousStep, nextPage, prev
     // Use setTimeout to change the state after 3 seconds
     const timer = setTimeout(() => {
       setIsVisible("true");
-    }, 3000);
+    }, 500);
 
     // Clear the timeout to prevent memory leaks
     return () => clearTimeout(timer);
